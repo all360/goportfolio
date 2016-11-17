@@ -1,10 +1,20 @@
 export class Gallery {
   id: number;
   name: string;
-  date: Date;
-  about: string;
-  entryFee: number;
-  isRacing: boolean;
-  image: string;
+  client: string;
+  agency: string;
+  role: string;
+  type: string;
+  year: number;
+  description: string;
+  technology:string;
+  imageFull: string;
+  imageThumb: string;
   imageDescription: string;
+  video:string;
+  awards:string;
+  urls:string;
 }
+
+
+
