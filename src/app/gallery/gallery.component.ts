@@ -9,13 +9,19 @@ import { GalleryService } from './gallery.service';
 })
 export class GalleryComponent implements OnInit {
 
-  gallery: Gallery[];
+  gallery: Gallery = [];
 
   constructor(private galleryService: GalleryService) { }
 
   ngOnInit() {
     this.galleryService.getGallery()
       .subscribe(data => this.gallery = data);
+  }
+
+  selectedProject: Gallery;
+
+  onSelect(project: Gallery): void {
+    this.selectedProject = project;
   }
 
 }
