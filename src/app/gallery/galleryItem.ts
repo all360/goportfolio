@@ -1,4 +1,4 @@
-export class Gallery {
+export class GalleryItem {
   id: number;
   name: string;
   client: string;

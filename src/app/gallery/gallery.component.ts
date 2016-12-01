@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Gallery } from './gallery';
+import { GalleryItem } from './galleryItem';
 import { GalleryService } from './gallery.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { GalleryService } from './gallery.service';
 })
 export class GalleryComponent implements OnInit {
 
-  gallery: Gallery = [];
+  gallery: GalleryItem[];
 
   constructor(private galleryService: GalleryService) { }
 
@@ -18,10 +18,10 @@ export class GalleryComponent implements OnInit {
       .subscribe(data => this.gallery = data);
   }
 
-  selectedProject: Gallery;
+  selectedItem: GalleryItem;
 
-  onSelect(project: Gallery): void {
-    this.selectedProject = project;
+  onSelect(item: GalleryItem): void {
+    this.selectedItem = item;
   }
 
 }

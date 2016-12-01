@@ -1,11 +1,11 @@
 <!--<main class="container" role="main">
 
-    <section *ngFor="let project of gallery">
+    <section *ngFor="let item of gallery">
     <div class="panel-body">
         <div class="slide" >
-            <img class="slideImage" [src]="project.imageThumb" [alt]="project.name">
+            <img class="slideImage" [src]="item.imageThumb" [alt]="item.name">
             <img class="slideCase" src="../../assets/images/gallery/silde/kodak35mmslide.png">
-            <h3 class="slideTitle">{{project.name}}</h3>
+            <h3 class="slideTitle">{{item.name}}</h3>
         </div>
     </div>
     </section>
@@ -31,9 +31,7 @@
           <li class="active"><a href="#">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li *ngIf="selectedProject">
-            <p>{{selectedProject.name}} details!</p>
-          </li>
+          <li *ngIf="selectedItem"> {{selectedItem.name}}</li>
         </ul>
 
       </div><!--/.nav-collapse -->
@@ -42,20 +40,13 @@
 
 
   <div class="container-fluid">
-    <section *ngFor="let project of gallery" (click)="onSelect(project)">
+    <section *ngFor="let item of gallery" (click)="onSelect(item)">
       <div class="slide" >
-        <img class="slideImage" [src]="project.imageThumb" [alt]="project.name">
+        <img class="slideImage" [src]="item.imageThumb" [alt]="item.name">
         <img class="slideCase" src="../../assets/images/gallery/silde/kodak35mmslide.png">
-        <h3 class="slideTitle">{{project.name}}</h3>
+        <h3 class="slideTitle">{{item.name}}</h3>
       </div>
     </section>
   </div>
-
-
-
-
-
-
-
 
 </main>
