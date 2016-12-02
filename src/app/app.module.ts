@@ -1,3 +1,5 @@
+import './rxjs-extensions';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -9,6 +11,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { GallerySearchComponent } from './gallery-search/gallery-search.component';
 import { GalleryService } from './gallery/gallery.service';
 
 /*import {enableProdMode} from '@angular/core';
@@ -18,7 +21,8 @@ enableProdMode();
 @NgModule({
   declarations: [
     AppComponent,
-    GalleryComponent
+    GalleryComponent,
+    GallerySearchComponent
   ],
   imports: [
     BrowserModule,

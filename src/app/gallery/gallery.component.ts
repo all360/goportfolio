@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { GalleryItem } from './galleryItem';
 import { GalleryService } from './gallery.service';
 
@@ -10,6 +11,7 @@ import { GalleryService } from './gallery.service';
 export class GalleryComponent implements OnInit {
 
   gallery: GalleryItem[];
+  selectedItem: GalleryItem;
 
   constructor(private galleryService: GalleryService) { }
 
@@ -23,10 +25,14 @@ export class GalleryComponent implements OnInit {
       .then(data => this.gallery = data);
   }
 
-  selectedItem: GalleryItem;
 
   onSelect(item: GalleryItem): void {
     this.selectedItem = item;
+  }
+
+  gotoDetail(): void {
+    console.log( "this.selectedHero.id", this.selectedItem.id );
+    //this.router.navigate(['/detail', this.selectedHero.id]);
   }
 
 }
