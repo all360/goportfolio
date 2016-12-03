@@ -15,6 +15,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { GallerySearchComponent } from './gallery-search/gallery-search.component';
 import { GalleryService } from './gallery/gallery.service';
 import { ItemDetailsComponent } from './item-details/item-details.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 /*import {enableProdMode} from '@angular/core';
 enableProdMode();
@@ -25,16 +26,30 @@ enableProdMode();
     AppComponent,
     GalleryComponent,
     GallerySearchComponent,
-    ItemDetailsComponent
+    ItemDetailsComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
       {
+        path: '',
+        redirectTo: '/navigation',
+        pathMatch: 'full'
+      },
+      {
+        path: 'navigation',
+        component: NavigationComponent
+      },
+      {
         path: 'gallery',
         component: GalleryComponent
-      }
+      },
+      {
+        path: 'detail/:id',
+        component: ItemDetailsComponent
+      },
     ]),
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService)
