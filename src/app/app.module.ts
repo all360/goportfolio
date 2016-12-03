@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule }   from '@angular/router';
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -16,6 +15,8 @@ import { GallerySearchComponent } from './gallery-search/gallery-search.componen
 import { GalleryService } from './gallery/gallery.service';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { NavigationComponent } from './navigation/navigation.component';
+
+import {AppRoutingModule} from "./app-routing.module";
 
 /*import {enableProdMode} from '@angular/core';
 enableProdMode();
@@ -32,25 +33,7 @@ enableProdMode();
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        redirectTo: '/navigation',
-        pathMatch: 'full'
-      },
-      {
-        path: 'navigation',
-        component: NavigationComponent
-      },
-      {
-        path: 'gallery',
-        component: GalleryComponent
-      },
-      {
-        path: 'detail/:id',
-        component: ItemDetailsComponent
-      },
-    ]),
+    AppRoutingModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],

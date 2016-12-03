@@ -29,4 +29,9 @@ export class GalleryService {
     console.error('An error occurred', error); // for demo purposes only
     return Promise.reject(error.message || error);
   }
+
+  getGalleryItem(id: number): Promise<GalleryItem> {
+    return this.getGallery()
+      .then(galleryItems => galleryItems.find(item => item.id === id));
+  }
 }

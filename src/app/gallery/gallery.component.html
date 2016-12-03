@@ -28,7 +28,13 @@
 
   <div class="container-fluid">
 
-    <item-details [galleryItem]="selectedItem" ></item-details>
+    <div *ngIf="selectedItem">
+      <h2>
+        {{selectedItem.name | uppercase}} is my hero
+      </h2>
+      <button (click)="gotoDetail()">View Details</button>
+    </div>
+
 
     <section *ngFor="let item of gallery" [class.selected]="item === selectedItem" (click)="onSelect(item)">
       <div class="slide" >

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router }            from '@angular/router';
 import { Observable }        from 'rxjs/Observable';
 import { Subject }           from 'rxjs/Subject';
 
@@ -18,7 +19,8 @@ export class GallerySearchComponent implements OnInit {
   galleryItems: Observable<GalleryItem[]>;
   private searchTerms = new Subject<string>();
 
-  constructor( private gallerySearchService: GallerySearchService) { }
+  constructor( private gallerySearchService: GallerySearchService,
+               private router: Router) { }
 
   // Push a search term into the observable stream.
   search(term: string): void {
@@ -44,8 +46,7 @@ export class GallerySearchComponent implements OnInit {
 
   gotoDetail(item: GalleryItem): void {
     let link = ['/detail', item.id];
-    console.log("link", link);
-    //this.router.navigate(link);
+    this.router.navigate(link);
   }
 
 

@@ -13,7 +13,8 @@ export class GalleryComponent implements OnInit {
   gallery: GalleryItem[];
   selectedItem: GalleryItem;
 
-  constructor(private galleryService: GalleryService) { }
+  constructor(private router: Router,
+              private galleryService: GalleryService) { }
 
   ngOnInit() {
       this.getGallery()
@@ -32,7 +33,7 @@ export class GalleryComponent implements OnInit {
 
   gotoDetail(): void {
     console.log( "this.selectedHero.id", this.selectedItem.id );
-    //this.router.navigate(['/detail', this.selectedHero.id]);
+    this.router.navigate(['/detail', this.selectedItem.id]);
   }
 
 }

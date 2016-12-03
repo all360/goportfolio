@@ -11,8 +11,6 @@ export class GallerySearchService {
 
   search( term: string): Observable<GalleryItem[]>{
 
-    console.log( "term", term );
-
     return this.http
       .get(`app/gallery/?name=${term}`)
       .map((r: Response) => r.json().data as GalleryItem[]);
