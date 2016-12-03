@@ -47,3 +47,7 @@
   font-size: 16px;
 
 }
+
+section .selected {
+  background-color: #1b6d85;
+}
