@@ -29,6 +29,7 @@ export class GalleryComponent implements OnInit {
 
   onSelect(item: GalleryItem): void {
     this.selectedItem = item;
+    this.gotoDetail();
   }
 
   gotoDetail(): void {

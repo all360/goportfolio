@@ -6,7 +6,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { GalleryComponent } from './gallery/gallery.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/navigation', pathMatch: 'full' },
+  { path: '', redirectTo: '/gallery', pathMatch: 'full' },
   { path: 'navigation', component: NavigationComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'detail/:id', component: ItemDetailsComponent }

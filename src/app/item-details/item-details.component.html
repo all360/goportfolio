@@ -1,8 +1,14 @@
-<div *ngIf="galleryItem">
-  <h2>{{galleryItem.name}} details!</h2>
-  <div><label>id: </label>{{galleryItem.id}}</div>
-  <button (click)="goBack()">Back</button>
+<div class="block block-fill-height text-center" *ngIf="galleryItem">
+  <div class="block-xs-bottom">
+    <div class="container-fluid">
+      <h1 class="block-title">{{galleryItem.name}}</h1>
+      <h4 class="text-muted">{{galleryItem.description}}</h4>
+      <button class="btn btn-primary m-t" (click)="goBack()">Back</button>
+      <div><label>id: </label>{{galleryItem.id}}</div>
+    </div>
+  </div>
 </div>
+
 
 
 
