@@ -23,7 +23,7 @@
 
 <form class="navbar-form navbar-right">
   <div class="form-group">
-    <input #searchBox id="search-box" type="text" class="form-control" placeholder="Search" (keyup)="search(searchBox.value)">
+    <input #searchBox id="search-box" type="text" class="form-control" placeholder="Search" autocomplete="off" (keyup)="search(searchBox.value)">
   </div>
 
   <div *ngFor="let item of galleryItems | async" (click)="gotoDetail(item)" class="search-result" >
