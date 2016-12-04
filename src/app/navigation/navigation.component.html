@@ -1,4 +1,5 @@
-<nav class="navbar navbar-default navbar-static-top navbar-padded text-uppercase app-navbar">
+<!--<nav class="navbar navbar-default navbar-static-top navbar-padded text-uppercase app-navbar">-->
+  <nav class="navbar navbar-default navbar-fixed-top app-navbar navbar-padded text-uppercase">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed p-x-0" data-toggle="collapse" data-target="#navbar-collapse">
@@ -11,6 +12,7 @@
         <span>{{title}}</span>
       </a>
     </div>
+
     <div class="navbar-collapse collapse" id="navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li >
@@ -22,14 +24,35 @@
         <li >
           <a routerLink="/detail/4">Contact</a>
         </li>
-
-        <li >
-          <gallery-search class="pos-a">Search</gallery-search>
-        </li>
       </ul>
-    </div><!--/.nav-collapse -->
+      <gallery-search></gallery-search>
+    </div>
   </div>
 </nav>
+
+<!--
+<nav class="navbar navbar-default navbar-static-top navbar-padded text-uppercase app-navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed p-x-0" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+
+      <gallery-search></gallery-search>
+    </div>
+  </div>
+</nav>-->
 
 <router-outlet></router-outlet>
 

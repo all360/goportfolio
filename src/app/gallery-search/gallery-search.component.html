@@ -10,7 +10,8 @@
   </div>
 </div>
 -->
-<div id="search-component">
+<!--<div id="search-component"> -->
+<!--
   <form class="form-inline">
     <input class="form-control m-b" #searchBox id="search-box" placeholder="search" (keyup)="search(searchBox.value)"/>
     <div *ngFor="let item of galleryItems | async"
@@ -18,4 +19,33 @@
       {{item.name}}
     </div>
   </form>
-</div>
+-->
+
+<form class="navbar-form navbar-right">
+  <div class="form-group">
+    <input #searchBox id="search-box" type="text" class="form-control" placeholder="Search" (keyup)="search(searchBox.value)">
+  </div>
+
+  <div *ngFor="let item of galleryItems | async" (click)="gotoDetail(item)" class="search-result" >
+      {{item.name}}
+  </div>
+
+</form>
+
+
+<!--
+<form class="navbar-form navbar-left">
+  <div class="form-group">
+    <input #searchBox id="search-box" type="text" class="form-control" placeholder="Search" (keyup)="search(searchBox.value)">
+    <ul class="dropdown-menu">
+      <li *ngFor="let item of galleryItems | async"
+           (click)="gotoDetail(item)" class="search-result" >
+        <a href="#">{{item.name}}</a>
+      </li>
+    </ul>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+-->
+
+<!--</div>-->

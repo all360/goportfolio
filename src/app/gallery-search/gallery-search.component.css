@@ -14,6 +14,8 @@
   color: #1a1a1a;
   background-color: white;
   cursor: pointer;
+  position: absolute;
+  float: right;
 }
 /*
 #search-box{
