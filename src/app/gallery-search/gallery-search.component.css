@@ -1,3 +1,9 @@
+#search-component {
+  /*position: absolute;
+  float: right;
+  margin-right: 100px;*/
+}
+
 .search-result{
   border-bottom: 1px solid gray;
   border-left: 1px solid gray;
@@ -9,15 +15,17 @@
   background-color: white;
   cursor: pointer;
 }
+/*
 #search-box{
   width: 200px;
   height: 20px;
 }
 
-#search-component{
-  /*height: 200px;*/
-}
+
+
 
 input {
   color: #1a1a1a;
 }
+*/
+
