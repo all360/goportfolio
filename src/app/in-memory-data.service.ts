@@ -13,7 +13,7 @@ export class InMemoryDataService implements InMemoryDbService {
         year: 2016,
         description: "Developed Spiritual Me App (Lifestyle app) that guides users through a series of exercises allowing them to practice meditation, whilst being inspired by nature, art and spiritual quotes. The exercises range from drawing to games of physics. Launched in the Android and Apple AppStore which ranked #1 in its category - Responsible for all phases, from design, writing code, testing, debugging and deployment - Localized the app for seven languages - Implemented in-app-purchases and push notification",
         technology: ["Objective-C", "Haxe", "openFL"],
-        imageFull: "../assets/images/gallery/slideImages/dreamer.png",
+        imageFull: "../assets/images/gallery/slideImages/startup-2.jpg",
         imageThumb: "../assets/images/gallery/slideImages/dreamer.png",
         imageDescription: "",
         video:"",
