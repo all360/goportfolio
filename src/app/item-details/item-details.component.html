@@ -10,28 +10,54 @@
 </div>-->
 
 
-<div class="block block-secondary app-iphone-block" *ngIf="galleryItem">
+<div class="block p-b-0" *ngIf="galleryItem">
   <div class="container">
     <div class="row app-align-center">
 
-      <div class="col-sm-5">
-        <img class="app-iphone" [src]="galleryItem.imageFull" style="width: 100%;">
+      <div class="col-sm-5 col-sm-push-7">
+        <img [src]="galleryItem.imageFull" style="width: 100%;">
       </div>
 
-      <div class="col-sm-6 col-sm-offset-1">
-        <h6 class="text-muted text-uppercase">Rich Information</h6>
+      <div class="col-sm-6 col-sm-pull-5">
+        <h6 class="text-muted text-uppercase">{{galleryItem.type}}</h6>
         <h3 class="m-t-0">{{galleryItem.name}}</h3>
-        <p class="lead m-b-md">We combine immediate real time events with rich historical data to help answer the toughest questions about retention, growth, and engagement.</p>
-        <div class="row hidden-sm">
+        <p class="lead m-b-md">{{galleryItem.description}}</p>
+
+        <div class="row">
           <div class="col-sm-6 m-b-md">
-            <h5 class="m-y-0">Data frequency</h5>
-            <p>We poll for data on a millisecond basis. You can react to new information in seconds rather than days. <a href="#" class="text-primary">Learn more.</a></p>
+            <h5 *ngIf="galleryItem.technology" class="m-y-0">Technology</h5>
+            <p>{{galleryItem.technology}}</p>
           </div>
-          <div class="col-sm-6">
-            <h5 class="m-y-0">Reliability & uptime</h5>
-            <p>We process our data across a massively distributed network of reliable servers to ensure 99.99% uptime, always. <a href="#" class="text-primary">Learn more</a>.</p>
+          <div *ngIf="galleryItem.agency" class="col-sm-6 m-b-md">
+            <h5 class="m-y-0">Agency</h5>
+            <p>{{galleryItem.agency}}</p>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-sm-6 m-b-md">
+            <h5 *ngIf="galleryItem.role" class="m-y-0">My Roll</h5>
+            <p>{{galleryItem.role}}</p>
+          </div>
+          <div *ngIf="galleryItem.year" class="col-sm-6 m-b-md">
+            <h5 class="m-y-0">Year</h5>
+            <p>{{galleryItem.year}}</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div *ngIf="galleryItem.urls[0]" class="col-sm-6 m-b-md">
+            <a class="btn btn-default" [href]="galleryItem.urls[0].link" role="button">
+              {{galleryItem.urls[0].title}}
+            </a>
+          </div>
+          <div *ngIf="galleryItem.urls[1]" class="col-sm-6 m-b-md">
+            <a class="btn btn-default" [href]="galleryItem.urls[1].link" role="button">
+              {{galleryItem.urls[1].title}}
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
 

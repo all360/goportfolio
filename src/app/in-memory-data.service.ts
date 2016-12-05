@@ -12,13 +12,18 @@ export class InMemoryDataService implements InMemoryDbService {
         type: "Mobile App",
         year: 2016,
         description: "Developed Spiritual Me App (Lifestyle app) that guides users through a series of exercises allowing them to practice meditation, whilst being inspired by nature, art and spiritual quotes. The exercises range from drawing to games of physics. Launched in the Android and Apple AppStore which ranked #1 in its category - Responsible for all phases, from design, writing code, testing, debugging and deployment - Localized the app for seven languages - Implemented in-app-purchases and push notification",
-        technology: ["Objective-C", "Haxe", "openFL"],
+        technology: ["Objective-C" , "Haxe", "openFL"],
         imageFull: "../assets/images/gallery/slideImages/startup-2.jpg",
         imageThumb: "../assets/images/gallery/slideImages/dreamer.png",
         imageDescription: "",
         video:"",
         awards:"",
-        urls: [ "SpiritualMeApp.com", "http://goo.gl/XUPYkr", "https://goo.gl/EGPeHU", "https://goo.gl/PCSYIO"]
+        urls: [{ title:"View on the App Store",
+                 link: "https://itunes.apple.com/us/app/spiritual-me-guided-meditations/id985365789?ls=1&mt=8"
+              },
+              { title:"View on Google Play",
+                link: "https://play.google.com/store/apps/details?id=com.spiritualmeapp.masters"
+              }]
       }, {
         id: 2,
         name: "Google vote",
@@ -34,7 +39,8 @@ export class InMemoryDataService implements InMemoryDbService {
         imageDescription: "",
         video:"",
         awards:"",
-        urls: ["www.axis-studios.com"]
+        urls: [{ title:"View Agency",
+          link:"https://www.axis-studios.com"}]
       }, {
         id: 3,
         name: "WaveRunners Walk Around",
@@ -50,7 +56,8 @@ export class InMemoryDataService implements InMemoryDbService {
         imageDescription: "",
         video:"",
         awards:"",
-        urls: ["www.CraneMorley.com"]
+        urls: [{ title:"View Agency",
+          link:"www.CraneMorley.com"}]
       }, {
         id: 4,
         name: "Disney’s Story iPhone App",
@@ -66,7 +73,8 @@ export class InMemoryDataService implements InMemoryDbService {
         imageDescription: "",
         video:"",
         awards:"",
-        urls: ["www.MOceanLA.com"]
+        urls: [{ title:"View Agency",
+                 link:"www.MOceanLA.com"}]
       }, {
         id: 5,
         name: "Tron Legacy theatrical website",
@@ -82,7 +90,8 @@ export class InMemoryDataService implements InMemoryDbService {
         imageDescription: "",
         video:"",
         awards:"",
-        urls: ["www.BLTCommunications.com"]
+        urls: [{ title:"View Agency",
+          link:"www.BLTCommunications.com"}]
       }, {
         id: 6,
         name: "Twilight Saga: Eclipse theatrical",
@@ -194,7 +203,8 @@ export class InMemoryDataService implements InMemoryDbService {
         imageDescription: "",
         video:"",
         awards:[],
-        urls: ["https://itunes.apple.com/us/app/the-noog-network/id1000772961"]
+        urls: [{ title:"View Agency",
+          link:"https://itunes.apple.com/us/app/the-noog-network/id1000772961"}]
       }
     ];
     return {gallery};
