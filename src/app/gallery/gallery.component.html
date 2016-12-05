@@ -8,14 +8,11 @@
       <button (click)="gotoDetail()">View Details</button>
     </div>
     -->
-
-
-    <section *ngFor="let item of gallery" [class.selected]="item === selectedItem" (click)="onSelect(item)">
-      <div class="slide" >
-        <img class="slideImage" [src]="item.imageThumb" [alt]="item.name">
-        <img class="slideCase" src="../../assets/images/gallery/silde/kodak35mmslide.png">
-        <h3 class="slideTitle">{{item.name}}</h3>
-      </div>
-
-    </section>
-  </div>
+   <section *ngFor="let item of gallery" [class.selected]="item === selectedItem" (click)="onSelect(item)">
+        <div class="slide" >
+          <img class="slideImage" [src]="item.imageThumb" [alt]="item.name">
+          <img class="slideCase" src="../../assets/images/gallery/silde/kodak35mmslide.png">
+          <h3 class="slideTitle">{{item.name}}</h3>
+        </div>
+   </section>
+</div>
