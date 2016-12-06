@@ -40,7 +40,7 @@ export class InMemoryDataService implements InMemoryDbService {
         video:"",
         awards:"",
         urls: [{ title:"View Agency",
-          link:"https://www.axis-studios.com"}]
+          link:"http://www.axis-studios.com"}]
       }, {
         id: 3,
         name: "WaveRunners Walk Around",
@@ -57,7 +57,7 @@ export class InMemoryDataService implements InMemoryDbService {
         video:"",
         awards:"",
         urls: [{ title:"View Agency",
-          link:"www.CraneMorley.com"}]
+          link:"http://www.CraneMorley.com"}]
       }, {
         id: 4,
         name: "Disney’s Story iPhone App",
@@ -74,7 +74,7 @@ export class InMemoryDataService implements InMemoryDbService {
         video:"",
         awards:"",
         urls: [{ title:"View Agency",
-                 link:"www.MOceanLA.com"}]
+                 link:"http://www.MOceanLA.com"}]
       }, {
         id: 5,
         name: "Tron Legacy theatrical website",
@@ -91,7 +91,7 @@ export class InMemoryDataService implements InMemoryDbService {
         video:"",
         awards:"",
         urls: [{ title:"View Agency",
-          link:"www.BLTCommunications.com"}]
+          link:"http://www.BLTCommunications.com"}]
       }, {
         id: 6,
         name: "Twilight Saga: Eclipse theatrical",
