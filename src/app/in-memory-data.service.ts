@@ -68,7 +68,7 @@ export class InMemoryDataService implements InMemoryDbService {
         year: 2013,
         description: "Developed rich media ads for Disney’s Story iPhone App, Responsible for storyboarding, creating animated transitions and optimizing the design for file size",
         technology: ["GreenSock Animation Platform (GSAP)", "HTML5", "CSS3"],
-        imageFull: "../assets/images/gallery/slideImages/pov/img-0-2.png",
+        imageFull: "../assets/images/gallery/slideImages/pov/pro_finalcut_large.png",
         imageThumb: "../assets/images/gallery/slideImages/simpson1.png",
         imageDescription: "",
         video:"",
