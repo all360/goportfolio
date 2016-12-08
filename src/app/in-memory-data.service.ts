@@ -34,12 +34,19 @@ export class InMemoryDataService implements InMemoryDbService {
         role: "Rich Media Developer",
         type: "Rich Media Ads",
         year: 2016,
-        description: "Deve22loped mobile ad units for the Google Elections 2016 campaign Responsible for coding, animating, QA and deployment with DoubleClick Creative SolutionsClients include: Google, Starbucks and Marriott.",
+        description: "Developed mobile ad units for the Google Elections 2016 campaign Responsible for coding, animating, QA and deployment with DoubleClick Creative SolutionsClients include: Google, Starbucks and Marriott.",
         technology: ["JavaScript", "HTML5", "CSS3", "SASS", "Gulp"],
         imageFull: "../assets/images/gallery/slideImages/pov/app_store_large.jpg",
         imageThumb: "../assets/images/gallery/slideImages/goportfolio.png",
         imageDescription: "",
-        videos:"",
+        carousel:[{ title:"Eclipse", image:"../assets/images/gallery/slideImages/eclips/eclips1_940x528_0.jpg"},
+          { title:"Eclipse", image:"../assets/images/gallery/slideImages/eclips/eclips2_940x528.jpg"},
+          { title:"Eclipse", image:"../assets/images/gallery/slideImages/eclips/eclips3_940x528.jpg"},
+          { title:"Eclipse", image:"../assets/images/gallery/slideImages/eclips/TL_Saga_940x528_0.jpg"},
+        ],
+        videos:[{ title:"Spiritual Me",
+          link:"https://www.youtube.com/embed/B9n1lJ_FLNM?rel=0&amp;controls=0&amp;showinfo=0"
+        }],
         awards:"",
         urls: [{ title:"View Agency",
           link:"http://www.axis-studios.com"}]
@@ -56,7 +63,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/pov/bia_photos_large.jpg",
         imageThumb: "../assets/images/gallery/slideImages/simpson5.png",
         imageDescription: "",
-        videos:[{}],
+        videos:"",
         awards:"",
         urls: [{ title:"View Agency",
           link:"http://www.CraneMorley.com"}]
@@ -90,10 +97,16 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/pov/productivity_hardware_large.jpg",
         imageThumb: "../assets/images/gallery/slideImages/modernica.png",
         imageDescription: "",
-        videos:[{}],
+        videos:"",
+        videos:[{ title:"Minion Mayhem The Ride",
+          link:"https://www.youtube.com/embed/AYH2-otsUHg?rel=0&amp;controls=0&amp;showinfo=0"
+        }],
         awards:"",
         urls: [{ title:"View Agency",
-          link:"http://www.BLTCommunications.com"}]
+          link:"http://www.BLTCommunications.com"},
+          {
+          title:"View Tron Project",
+          link: "http://disney.com.au/tron/"}]
       }, {
         id: 6,
         name: "Twilight Saga: Eclipse theatrical",
@@ -107,7 +120,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/pov/ipad-hero-holiday-music-201611.png",
         imageThumb: "../assets/images/gallery/slideImages/goportfolio2.png",
         imageDescription: "",
-        videos:[{}],
+        videos:"",
         awards:"",
         urls: []
       }, {
@@ -123,7 +136,9 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/pov/gallery_hardware_large.jpg",
         imageThumb: "../assets/images/gallery/slideImages/fullThrottle.png",
         imageDescription: "",
-        videos:[{}],
+        videos:[{ title:"Jim Carrey Official Site",
+          link:"https://www.youtube.com/embed/0l9xPcThPoo?rel=0&amp;controls=0&amp;showinfo=0"
+        }],
         awards:["webby"],
         urls: []
       }, {
@@ -139,9 +154,10 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/pov/overview_retina_large.jpg",
         imageThumb: "../assets/images/gallery/slideImages/kiteRunner3.png",
         imageDescription: "",
-        videos:[{}],
+        videos:"",
         awards:[],
-        urls: []
+        urls: [{ title:"Wallace and Gromit",
+          link:"http://adgallery.zenfs.com/uk/uip/wallaceandgromit/index.html"}]
       }, {
         id: 9,
         name: "KISSFMi",
@@ -155,7 +171,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/pov/pro_finalcut_large.png",
         imageThumb: "../assets/images/gallery/slideImages/goportfolio2.png",
         imageDescription: "",
-        videos:[{}],
+        videos:"",
         awards:[],
         urls: []
       }, {
@@ -171,7 +187,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/kiteRunner.png",
         imageThumb: "../assets/images/gallery/slideImages/kiteRunner.png",
         imageDescription: "",
-        videos:[{}],
+        videos:"",
         awards:[],
         urls: []
       }, {
@@ -187,7 +203,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/goportfolio3.png",
         imageThumb: "../assets/images/gallery/slideImages/goportfolio3.png",
         imageDescription: "",
-        videos:[{}],
+        videos:"",
         awards:[],
         urls: []
       }, {
@@ -203,7 +219,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/kiteRunner.png",
         imageThumb: "../assets/images/gallery/slideImages/kiteRunner.png",
         imageDescription: "",
-        videos:[{}],
+        videos:"",
         awards:[],
         urls: [{ title:"View Agency",
           link:"https://itunes.apple.com/us/app/the-noog-network/id1000772961"}]

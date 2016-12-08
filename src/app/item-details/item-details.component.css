@@ -1,5 +1,48 @@
+.app-block-main {
+  overflow: hidden
+}
+
+.app-block-main img{
+  height: 100%;
+  max-height: 400px;
+}
+
+.app-block-main .image-holder, .app-block-carousel .image-holder{
+  text-align: center;
+}
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px ) {
+
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px ) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+  .app-block-main img{
+    height: 100%;
+    max-height: 650px;
+  }
+
+  .app-block-main .image-holder{
+    text-align: right;
+  }
+
+}
 
 .app-block-video{
 
-  background-color: #F4F5F6;
+  background-color: #f5f5f7;
+}
+
+.app-block-carousel{
+
+
 }
