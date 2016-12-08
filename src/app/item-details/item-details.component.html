@@ -10,27 +10,27 @@
 
       <div class="col-sm-6 col-sm-pull-5 col-lg-5 col-lg-pull-8 ">
         <h6 class="text-muted text-uppercase">{{galleryItem.type}}</h6>
-        <h3 class="m-t-0">{{galleryItem.name}}</h3>
+        <h1 class="m-t-0 block-title">{{galleryItem.name}}</h1>
         <p class="lead m-b-md">{{galleryItem.description}}</p>
 
         <div class="row">
           <div class="col-sm-6 m-b-md">
-            <h5 *ngIf="galleryItem.technology" class="m-y-0">Technology</h5>
+            <h5 *ngIf="galleryItem.technology" class="m-y-0 text-muted text-uppercase">Technology</h5>
             <p>{{galleryItem.technology.join(", ") }}</p>
           </div>
           <div *ngIf="galleryItem.agency" class="col-sm-6 m-b-md">
-            <h5 class="m-y-0">Agency</h5>
+            <h5 class="m-y-0 text-muted text-uppercase">Agency</h5>
             <p>{{galleryItem.agency}}</p>
           </div>
         </div>
 
         <div class="row">
           <div class="col-sm-6 m-b-md">
-            <h5 *ngIf="galleryItem.role" class="m-y-0">My Roll</h5>
+            <h5 *ngIf="galleryItem.role" class="m-y-0 text-muted text-uppercase">My Roll</h5>
             <p>{{galleryItem.role}}</p>
           </div>
           <div *ngIf="galleryItem.year" class="col-sm-6 m-b-md">
-            <h5 class="m-y-0">Year</h5>
+            <h5 class="m-y-0 text-muted text-uppercase">Year</h5>
             <p>{{galleryItem.year}}</p>
           </div>
         </div>
@@ -38,12 +38,12 @@
         <div class="row">
           <div *ngIf="galleryItem.urls[0]" class="col-sm-6 m-b-md">
             <a class="btn btn-default" [href]="galleryItem.urls[0].link" role="button">
-              {{galleryItem.urls[0].title}}
+              {{galleryItem.urls[0].title | uppercase }}
             </a>
           </div>
           <div *ngIf="galleryItem.urls[1]" class="col-sm-6 m-b-md">
             <a class="btn btn-default" [href]="galleryItem.urls[1].link" role="button">
-              {{galleryItem.urls[1].title}}
+              {{galleryItem.urls[1].title | uppercase }}
             </a>
           </div>
         </div>
@@ -65,7 +65,7 @@
   </div>
 </div>
 
-<div class="block app-block-carousel" *ngIf="galleryItem && galleryItem.carousel">
+<div class="block block-inverse app-block-carousel" *ngIf="galleryItem && galleryItem.carousel">
   <div class="container">
         <div id="app-carousel" class="carousel carousel-light slide" data-ride="carousel">
 
@@ -93,6 +93,41 @@
         </div>
   </div>
 </div>
+
+
+<div class="block">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-8 col-sm-offset-2 text-center m-b-lg">
+        <p class="lead m-x-auto">With over <strong>20 years of collective experience</strong>, we take the unthinkable and make it just a couple quick taps away.</p>
+      </div>
+
+      <div class="col-sm-12 text-center">
+        <ul class="list-inline">
+          <!--<li><i class="devicon-css3-plain-wordmark" style="font-size: 75px"></i></li>
+          <li><i class="devicon-git-plain-wordmark" style="font-size: 75px"></i></li>
+          <li><i class="devicon-gulp-plain" style="font-size: 75px"></i></li>
+          <li><i class="devicon-html5-plain-wordmark" style="font-size: 75px"></i></li>
+          <li><i class="devicon-php-plain" style="font-size: 75px"></i></li>
+          <li><i class="devicon-javascript-plain" style="font-size: 75px"></i></li>
+          <li><i class="devicon-sass-original" style="font-size: 75px"></i></li>-->
+          <li><i class="devicon-photoshop-plain" style="font-size: 75px"></i></li>
+          <li><i class="devicon-bootstrap-plain-wordmark" style="font-size: 75px"></i></li>
+          <li><i class="devicon-mysql-plain-wordmark" style="font-size: 75px"></i></li>
+          <li><i class="devicon-angularjs-plain" style="font-size: 75px"></i></li>
+          <li><i class="devicon-less-plain-wordmark" style="font-size: 75px"></i></li>
+          <li><i class="devicon-react-original-wordmark" style="font-size: 75px"></i></li>
+          <li><i class="devicon-ssh-plain-wordmark" style="font-size: 75px"></i></li>
+          <li><i class="devicon-wordpress-plain-wordmark" style="font-size: 75px"></i></li>
+          <li><i class="devicon-illustrator-plain" style="font-size: 75px"></i></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <div class="block block-inverse block-secondary app-code-block" *ngIf="galleryItem">
   <div class="container">
