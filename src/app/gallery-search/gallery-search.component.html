@@ -1,18 +1,5 @@
-<!--
-<div id="search-component">
-  <h4>Hero Search</h4>
-  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
-  <div>
-    <div *ngFor="let item of galleryItems | async"
-         (click)="gotoDetail(item)" class="search-result" >
-      {{item.name}}
-    </div>
-  </div>
-</div>
--->
+<form id="search-component" class="navbar-form navbar-right p-x-md">
 
-
-<form id="search-component" class="navbar-form navbar-right">
   <div class="form-group">
     <input #searchBox id="search-box" type="text" class="form-control" placeholder="Search" autocomplete="off" (keyup)="search(searchBox.value)">
   </div>
