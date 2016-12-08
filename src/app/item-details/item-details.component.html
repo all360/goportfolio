@@ -26,7 +26,7 @@
         <div class="row">
           <div class="col-sm-6 m-b-md">
             <h5 *ngIf="galleryItem.technology" class="m-y-0">Technology</h5>
-            <p>{{galleryItem.technology}}</p>
+            <p>{{galleryItem.technology.join(", ") }}</p>
           </div>
           <div *ngIf="galleryItem.agency" class="col-sm-6 m-b-md">
             <h5 class="m-y-0">Agency</h5>
@@ -60,7 +60,19 @@
 
       </div>
     </div>
+  </div>
+</div>
 
+
+<div class="block block-inverse app-block-video" *ngIf="galleryItem && galleryItem.videos">
+  <div class="container">
+    <div class="row m-b-lg">
+        <div class="col-sm-12">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe [src]="galleryItem.videos[0].link | safe" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
 
@@ -80,18 +92,6 @@
         </button>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="block" *ngIf="galleryItem">
-  <div class="container">
-    <div class="row m-b-lg">
-        <div class="col-sm-12">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe src="https://www.youtube.com/embed/B9n1lJ_FLNM?rel=0&amp;controls=0&amp;showinfo=0" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
   </div>
 </div>
 

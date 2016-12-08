@@ -16,7 +16,9 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/pov/startup-2.jpg",
         imageThumb: "../assets/images/gallery/slideImages/dreamer.png",
         imageDescription: "",
-        video:"",
+        videos:[{ title:"Spiritual Me",
+                  link:"https://www.youtube.com/embed/B9n1lJ_FLNM?rel=0&amp;controls=0&amp;showinfo=0"
+        }],
         awards:"",
         urls: [{ title:"View on the App Store",
                  link: "https://itunes.apple.com/us/app/spiritual-me-guided-meditations/id985365789?ls=1&mt=8"
@@ -37,7 +39,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/pov/app_store_large.jpg",
         imageThumb: "../assets/images/gallery/slideImages/goportfolio.png",
         imageDescription: "",
-        video:"",
+        videos:"",
         awards:"",
         urls: [{ title:"View Agency",
           link:"http://www.axis-studios.com"}]
@@ -54,7 +56,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/pov/bia_photos_large.jpg",
         imageThumb: "../assets/images/gallery/slideImages/simpson5.png",
         imageDescription: "",
-        video:"",
+        videos:[{}],
         awards:"",
         urls: [{ title:"View Agency",
           link:"http://www.CraneMorley.com"}]
@@ -71,7 +73,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/pov/pro_finalcut_large.png",
         imageThumb: "../assets/images/gallery/slideImages/simpson1.png",
         imageDescription: "",
-        video:"",
+        videos:"",
         awards:"",
         urls: [{ title:"View Agency",
                  link:"http://www.MOceanLA.com"}]
@@ -83,12 +85,12 @@ export class InMemoryDataService implements InMemoryDbService {
         role: "Senior Developer",
         type: "Website",
         year: 2013,
-        description: "Worked as a team to develop websites, Facebook applications, games, and rich media ad campaigns, Worked with Adobe Flash Media Server for recording/ sharing streaming videos within the Facebook app",
+        description: "Worked as a team to develop websites, Facebook applications, games, and rich media ad campaigns, Worked with Adobe Flash Media Server for recording/ sharing streaming videoss within the Facebook app",
         technology: ["Flash", "HTML", "PHP"],
         imageFull: "../assets/images/gallery/slideImages/pov/productivity_hardware_large.jpg",
         imageThumb: "../assets/images/gallery/slideImages/modernica.png",
         imageDescription: "",
-        video:"",
+        videos:[{}],
         awards:"",
         urls: [{ title:"View Agency",
           link:"http://www.BLTCommunications.com"}]
@@ -105,7 +107,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/pov/ipad-hero-holiday-music-201611.png",
         imageThumb: "../assets/images/gallery/slideImages/goportfolio2.png",
         imageDescription: "",
-        video:"",
+        videos:[{}],
         awards:"",
         urls: []
       }, {
@@ -121,7 +123,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/pov/gallery_hardware_large.jpg",
         imageThumb: "../assets/images/gallery/slideImages/fullThrottle.png",
         imageDescription: "",
-        video:"",
+        videos:[{}],
         awards:["webby"],
         urls: []
       }, {
@@ -137,7 +139,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/pov/overview_retina_large.jpg",
         imageThumb: "../assets/images/gallery/slideImages/kiteRunner3.png",
         imageDescription: "",
-        video:"",
+        videos:[{}],
         awards:[],
         urls: []
       }, {
@@ -153,7 +155,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/pov/pro_finalcut_large.png",
         imageThumb: "../assets/images/gallery/slideImages/goportfolio2.png",
         imageDescription: "",
-        video:"",
+        videos:[{}],
         awards:[],
         urls: []
       }, {
@@ -169,7 +171,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/kiteRunner.png",
         imageThumb: "../assets/images/gallery/slideImages/kiteRunner.png",
         imageDescription: "",
-        video:"",
+        videos:[{}],
         awards:[],
         urls: []
       }, {
@@ -185,7 +187,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/goportfolio3.png",
         imageThumb: "../assets/images/gallery/slideImages/goportfolio3.png",
         imageDescription: "",
-        video:"",
+        videos:[{}],
         awards:[],
         urls: []
       }, {
@@ -201,7 +203,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/kiteRunner.png",
         imageThumb: "../assets/images/gallery/slideImages/kiteRunner.png",
         imageDescription: "",
-        video:"",
+        videos:[{}],
         awards:[],
         urls: [{ title:"View Agency",
           link:"https://itunes.apple.com/us/app/the-noog-network/id1000772961"}]

@@ -17,6 +17,7 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
 import { NavigationComponent } from './navigation/navigation.component';
 
 import {AppRoutingModule} from "./app-routing.module";
+import { SafePipePipe } from './safe-pipe.pipe';
 
 /*import {enableProdMode} from '@angular/core';
 enableProdMode();
@@ -28,7 +29,8 @@ enableProdMode();
     GalleryComponent,
     GallerySearchComponent,
     ItemDetailsComponent,
-    NavigationComponent
+    NavigationComponent,
+    SafePipePipe
   ],
   imports: [
     BrowserModule,
