@@ -10,13 +10,13 @@
 
       <div class="col-sm-6 col-sm-pull-5 col-lg-5 col-lg-pull-8 ">
         <h6 class="text-muted text-uppercase">{{galleryItem.type}}</h6>
-        <h1 class="m-t-0 block-title">{{galleryItem.name}}</h1>
-        <p class="lead m-b-md">{{galleryItem.description}}</p>
+        <h1 class="m-t-0 block-title">{{galleryItem.description[0]}}</h1>
+        <p class="lead m-b-md">{{galleryItem.description[1]}}</p>
 
         <div class="row">
           <div class="col-sm-6 m-b-md">
-            <h5 *ngIf="galleryItem.technology" class="m-y-0 text-muted text-uppercase">Technology</h5>
-            <p>{{galleryItem.technology.join(", ") }}</p>
+            <h5 *ngIf="galleryItem.description[2]" class="m-y-0 text-muted text-uppercase">Technology</h5>
+            <p>{{galleryItem.description[2].join(", ") }}</p>
           </div>
           <div *ngIf="galleryItem.agency" class="col-sm-6 m-b-md">
             <h5 class="m-y-0 text-muted text-uppercase">Agency</h5>

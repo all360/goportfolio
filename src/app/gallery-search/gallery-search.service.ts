@@ -12,7 +12,7 @@ export class GallerySearchService {
   search( term: string): Observable<GalleryItem[]>{
 
     return this.http
-      .get(`app/gallery/?name=${term}`)
+      .get(`app/gallery/?description=${term}`)
       .map((r: Response) => r.json().data as GalleryItem[]);
   }
 

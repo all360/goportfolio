@@ -13,24 +13,8 @@ export class GalleryService {
   private galleryUrl = 'app/gallery'; // URI to web api
   constructor(private http: Http) { }
 
-  /*getGallery() {
-    return this.http.get('app/galleryData.json')
-      .map(response => <GalleryItem[]> response.json().galleryData);
-  }
-  */
-
-  /*
-  getGallery():Promise<GalleryItem[]> {
-    return this.http.get( this.galleryUrl )
-      .toPromise()
-      .then(response => response.json().data as GalleryItem[])
-      .catch(this.handleError);
-  }
-  */
 
   getGallery( type:string, value:string ):Promise<GalleryItem[]> {
-
-    console.log( type, "tyep" );
 
     return this.http
       .get( `app/gallery/?`+type+`=`+ value )
