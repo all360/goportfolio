@@ -9,7 +9,7 @@
     </div>
     -->
    <div class="row">
-     <div class="col-md-12">
+     <div class="col-md-12 app-gallery-container">
        <section *ngFor="let item of gallery" [class.selected]="item === selectedItem" (click)="onSelect(item)">
             <div class="slide" >
               <img class="slideImage" [src]="item.imageThumb" [alt]="item.name">
