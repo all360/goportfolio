@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/gallery', pathMatch: 'full' },
   { path: 'navigation', component: NavigationComponent },
   { path: 'gallery', component: GalleryComponent },
+  { path: 'gallery/:type/:value', component: GalleryComponent },
   { path: 'detail/:id', component: ItemDetailsComponent }
 ];
 

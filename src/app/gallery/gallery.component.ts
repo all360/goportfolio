@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { GalleryItem } from './galleryItem';
 import { GalleryService } from './gallery.service';
 
@@ -14,16 +15,23 @@ export class GalleryComponent implements OnInit {
   selectedItem: GalleryItem;
 
   constructor(private router: Router,
+              private route: ActivatedRoute,
               private galleryService: GalleryService) { }
 
   ngOnInit() {
-      this.getGallery()
+      this.getGallery();
   }
 
   getGallery(): void {
+
+    this.route.params
+      .switchMap((params: Params) => this.galleryService.getGallery( params['type'], params['value'] ))
+      .subscribe(data => this.gallery = data);
+    /*
     this.galleryService
       .getGallery()
       .then(data => this.gallery = data);
+      */
   }
 
 

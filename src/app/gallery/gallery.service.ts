@@ -28,9 +28,12 @@ export class GalleryService {
   }
   */
 
-  getGallery():Promise<GalleryItem[]> {
+  getGallery( type:string, value:string ):Promise<GalleryItem[]> {
+
+    console.log( type, "tyep" );
+
     return this.http
-      .get( `app/gallery/?type=app` )
+      .get( `app/gallery/?`+type+`=`+ value )
       .toPromise()
       .then(response => response.json().data as GalleryItem[])
       .catch(this.handleError);

@@ -212,7 +212,7 @@ export class InMemoryDataService implements InMemoryDbService {
         client: "NoogNetwork",
         agency: "",
         role: "App Developer",
-        type: "ios App",
+        type: "ios App game",
         year: 2015,
         description: "",
         technology: ["OpenFl","XCode"],
