@@ -1,17 +1,11 @@
 <form id="search-component" class="navbar-form navbar-right p-x-md">
 
   <div class="form-group">
-    <input #searchBox id="search-box" list="somethingelse" type="text" class="form-control" placeholder="SEARCH" autocomplete="off" (keyup)="search(searchBox.value)">
+    <input #searchBox id="search-box" type="text" class="form-control" placeholder="SEARCH" autocomplete="off" (keyup)="search(searchBox.value)">
     <div *ngFor="let item of galleryItems | async" (click)="gotoDetail(item)" class="search-result" >
       {{item.name}}
     </div>
   </div>
-<!--
-list="somethingelse"
-  <datalist id="somethingelse">
-    <option *ngFor="let item of galleryItems | async" (click)="gotoDetail(item)" class="search-result" [value]="item.name">{{item.name}}</option>
-  </datalist>
-  -->
 
 </form>
 
