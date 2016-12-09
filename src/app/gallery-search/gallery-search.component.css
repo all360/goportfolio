@@ -14,11 +14,13 @@
   color: #1a1a1a;
   background-color: white;
   cursor: pointer;
+  /*float: right;
   position: absolute;
-  float: right;
+  */
 }
 
 #search-box{
+  width: 200px;
   height: 36px;
 }
 
