@@ -21,6 +21,7 @@ export class ItemDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+
     this.route.params
       .switchMap((params: Params) => this.galleryService.getGalleryItem(+params['id']))
       .subscribe(item => this.galleryItem = item);

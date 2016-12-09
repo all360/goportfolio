@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http } from '@angular/http';
+import { Headers, Http, Response } from '@angular/http';
+
+import { Observable } from 'rxjs';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -17,8 +19,18 @@ export class GalleryService {
   }
   */
 
+  /*
   getGallery():Promise<GalleryItem[]> {
     return this.http.get( this.galleryUrl )
+      .toPromise()
+      .then(response => response.json().data as GalleryItem[])
+      .catch(this.handleError);
+  }
+  */
+
+  getGallery():Promise<GalleryItem[]> {
+    return this.http
+      .get( `app/gallery/?type=app` )
       .toPromise()
       .then(response => response.json().data as GalleryItem[])
       .catch(this.handleError);
