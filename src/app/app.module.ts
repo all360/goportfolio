@@ -18,6 +18,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 
 import {AppRoutingModule} from "./app-routing.module";
 import { SafePipePipe } from './safe-pipe.pipe';
+import { FooterComponent } from './footer/footer.component';
 
 /*import {enableProdMode} from '@angular/core';
 enableProdMode();
@@ -30,7 +31,8 @@ enableProdMode();
     GallerySearchComponent,
     ItemDetailsComponent,
     NavigationComponent,
-    SafePipePipe
+    SafePipePipe,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

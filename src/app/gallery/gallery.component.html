@@ -1,13 +1,4 @@
  <div class="container-fluid">
-
-    <!--
-    <div *ngIf="selectedItem">
-      <h2>
-        {{selectedItem.name | uppercase}} is my hero
-      </h2>
-      <button (click)="gotoDetail()">View Details</button>
-    </div>
-    -->
    <div class="row">
      <div class="col-md-12 app-gallery-container">
        <section *ngFor="let item of gallery" [class.selected]="item === selectedItem" (click)="onSelect(item)">
