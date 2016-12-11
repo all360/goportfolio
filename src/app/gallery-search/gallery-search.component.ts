@@ -18,22 +18,18 @@ export class GallerySearchComponent implements OnInit {
 
   galleryItems: Observable<GalleryItem[]>;
   private searchTerms = new Subject<string>();
-  myValue: string;
 
   constructor( private gallerySearchService: GallerySearchService,
                private router: Router) { }
 
   // Push a search term into the observable stream.
   search(term: string): void {
-    if( term.length > 1){
-      console.log(term);
+    if( term === null || term.length > 1){
       this.searchTerms.next(term);
     }
   }
 
   ngOnInit(): void {
-    this.myValue = "";
-
     this.galleryItems = this.searchTerms
       .debounceTime(300)        // wait for 300ms pause in events
       .distinctUntilChanged()   // ignore if next search term is same as previous
@@ -52,8 +48,10 @@ export class GallerySearchComponent implements OnInit {
   gotoDetail(item: GalleryItem): void {
     let link = ['/detail', item.id];
     this.router.navigate(link);
+  }
 
-    this.myValue = "";
+  clearSearch():void{
+    this.search(null);
   }
 
 
