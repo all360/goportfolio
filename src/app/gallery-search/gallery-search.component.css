@@ -5,6 +5,7 @@
 }
 
 .search-result{
+  /*
   border-bottom: 1px solid gray;
   border-left: 1px solid gray;
   border-right: 1px solid gray;
@@ -14,6 +15,7 @@
   color: #1a1a1a;
   background-color: white;
   cursor: pointer;
+  */
   /*float: right;
   position: absolute;
   */
