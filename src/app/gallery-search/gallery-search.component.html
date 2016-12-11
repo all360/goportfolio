@@ -1,21 +1,12 @@
-<!--<form id="search-component" class="navbar-form navbar-right p-x-md">
-
-  <div class="form-group">
-    <input #searchBox id="search-box" type="text" class="form-control input-sm" placeholder="SEARCH" autocomplete="off" (keyup)="search(searchBox.value)">
-    <div *ngFor="let item of galleryItems | async" (click)="gotoDetail(item)" class="search-result" >
-      {{item.name}}
-    </div>
-  </div>
-
-</form> (focusout)="" -->
-
 <form id="search-component" class="navbar-form navbar-right p-x-md">
 
   <div class="form-group">
     <input #searchBox id="search-box" type="text" class="form-control input-sm" placeholder="SEARCH" autocomplete="off"  (focusout)="searchBox.value=''; clearSearch()" (keyup)="search(searchBox.value)">
 
-    <ul class="nav nav-stacked">
-      <li *ngFor="let item of galleryItems | async" (click)="gotoDetail(item); clearSearch()" >{{item.name}}</li>
+    <ul class="app-search-list dropdown-menu">
+      <li class="search-result" *ngFor="let item of galleryItems | async" >
+        <a (click)="gotoDetail(item); clearSearch()">{{item.name}}</a>
+      </li>
     </ul>
   </div>
 

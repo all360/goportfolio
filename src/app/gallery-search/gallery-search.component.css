@@ -3,8 +3,19 @@
   float: right;
   margin-right: 100px;*/
 }
+.app-search-list.dropdown-menu{
 
-.search-result{
+  display: block;
+  float: left;
+  margin-top: -30px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  min-width: 200px;
+  left: auto;
+  right: auto;
+}
+
+.search-result2{
   /*
   border-bottom: 1px solid gray;
   border-left: 1px solid gray;
