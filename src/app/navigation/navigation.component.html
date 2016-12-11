@@ -1,5 +1,5 @@
 <!--<nav class="navbar navbar-default navbar-static-top navbar-padded text-uppercase app-navbar">-->
-  <nav class="navbar navbar-default navbar-fixed-top navbar-padded text-uppercase p-l-md">
+<nav class="navbar navbar-default navbar-fixed-top navbar-padded text-uppercase p-l-md">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed p-x-0" data-toggle="collapse" data-target="#navbar-collapse">
@@ -23,21 +23,20 @@
             Gallery <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li><a routerLink="/gallery">All Projects</a></li>
+            <li ><a routerLink="/gallery">Featured</a></li>
+            <li><a routerLink="/gallery">All Slides</a></li>
             <li role="separator" class="divider"></li>
             <li><a routerLink="/gallery/type/website">Websites</a></li>
             <li><a routerLink="/gallery/type/app">Apps</a></li>
             <li><a routerLink="/gallery/type/ads">Rich Media Ads</a></li>
             <li><a routerLink="/gallery/type/ads">Games</a></li>
             <li role="separator" class="divider"></li>
-            <li><a routerLink="/gallery">Featured</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a routerLink="/gallery/technology/html5">HTML5 / CSS3</a></li>
-            <li><a routerLink="/gallery/technology/Angular">Angular</a></li>
+            <li class="hidden-xs"><a routerLink="/gallery/technology/html5">HTML5 / CSS3</a></li>
+            <li class="hidden-xs"><a routerLink="/gallery/technology/Angular">Angular</a></li>
           </ul>
         </li>
       </ul>
-      <gallery-search class=""></gallery-search>
+      <gallery-search></gallery-search>
     </div>
   </div>
 </nav>

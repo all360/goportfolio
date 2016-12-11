@@ -9,9 +9,8 @@ export class NavigationComponent implements OnInit {
 
   title = 'Adrian Ramirez';
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
