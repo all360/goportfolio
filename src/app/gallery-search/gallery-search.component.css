@@ -1,11 +1,8 @@
 #search-component {
-  /*position: absolute;
-  float: right;
-  margin-right: 100px;*/
+
 }
 .app-search-list.dropdown-menu{
 
-  display: block;
   float: left;
   margin-top: -30px;
   border-top-right-radius: 0;
@@ -13,35 +10,14 @@
   min-width: 200px;
   left: auto;
   right: auto;
+  padding: 0;
 }
 
-.search-result2{
-  /*
-  border-bottom: 1px solid gray;
-  border-left: 1px solid gray;
-  border-right: 1px solid gray;
-  width:195px;
-  height: 30px;
-  padding: 2px;
-  color: #1a1a1a;
-  background-color: white;
-  cursor: pointer;
-  */
-  /*float: right;
-  position: absolute;
-  */
+.search-result{
+  padding: 5px 0;
 }
 
 #search-box{
   width: 200px;
   height: 36px;
 }
-
-
-
-/*
-input {
-  color: #1a1a1a;
-}
-*/
-
