@@ -14,7 +14,7 @@ export class InMemoryDataService implements InMemoryDbService {
         description: ["Spiritual Me",
           "Developed Spiritual Me App (Lifestyle app) that guides users through a series of exercises allowing them to practice meditation, whilst being inspired by nature, art and spiritual quotes. The exercises range from drawing to games of physics. Launched in the Android and Apple AppStore which ranked #1 in its category - Responsible for all phases, from design, writing code, testing, debugging and deployment - Localized the app for seven languages - Implemented in-app-purchases and push notification",
           ["Objective-C" , "Haxe", "openFL"]],
-
+        technology: ["Objective-C" , "Haxe", "openFL"],
         imageFull: "../assets/images/gallery/slideImages/pov/startup-2.jpg",
         imageThumb: "../assets/images/gallery/slideImages/dreamer.png",
         imageDescription: "",
@@ -39,6 +39,7 @@ export class InMemoryDataService implements InMemoryDbService {
         description: [ "Google vote",
             "Developed mobile ad units for the Google Elections 2016 campaign Responsible for coding, animating, QA and deployment with DoubleClick Creative SolutionsClients include: Google, Starbucks and Marriott.",
           ["JavaScript", "HTML5", "CSS3", "SASS", "Gulp"]],
+        technology: ["JavaScript", "HTML5", "CSS3", "SASS", "Gulp"],
         imageFull: "../assets/images/gallery/slideImages/pov/app_store_large.jpg",
         imageThumb: "../assets/images/gallery/slideImages/goportfolio.png",
         imageDescription: "",
@@ -63,6 +64,7 @@ export class InMemoryDataService implements InMemoryDbService {
         year: 2015,
         description: [ "WaveRunners Walk Around","Developed interactive On-Boarding and Coaching Applications for learning management systems. Clients include GM, Yamaha, Hyundai and Mercedes-Benz. Responsible for UX, prototyping, front end development, mobile testing, debugging and deployment",
          ["jQuery", "AngularJS", "JavaScript", "Node.js", "Bootstrap", "HTML5", "CSS3", "LESS", "Git"]],
+        technology: ["jQuery", "AngularJS", "JavaScript", "Node.js", "Bootstrap", "HTML5", "CSS3", "LESS", "Git"],
         imageFull: "../assets/images/gallery/slideImages/pov/bia_photos_large.jpg",
         imageThumb: "../assets/images/gallery/slideImages/simpson5.png",
         imageDescription: "",
@@ -72,7 +74,7 @@ export class InMemoryDataService implements InMemoryDbService {
           link:"http://www.CraneMorley.com"}]
       }, {
         id: 4,
-        name: "Disney’s Story iPhone App",
+        name: "Disney’s Story App",
         client: "Disney",
         agency: "MOcean",
         role: "Rich Media Developer",
@@ -80,6 +82,7 @@ export class InMemoryDataService implements InMemoryDbService {
         year: 2013,
         description:["Disney’s Story", "Developed rich media ads for Disney’s Story iPhone App, Responsible for storyboarding, creating animated transitions and optimizing the design for file size",
          ["GreenSock Animation Platform (GSAP)", "HTML5", "CSS3"]],
+        technology: ["GreenSock Animation Platform (GSAP)", "HTML5", "CSS3"],
         imageFull: "../assets/images/gallery/slideImages/pov/pro_finalcut_large.png",
         imageThumb: "../assets/images/gallery/slideImages/simpson1.png",
         imageDescription: "",
@@ -89,7 +92,7 @@ export class InMemoryDataService implements InMemoryDbService {
                  link:"http://www.MOceanLA.com"}]
       }, {
         id: 5,
-        name: "Tron Legacy theatrical website",
+        name: "Tron Legacy website",
         client: "Disney",
         agency: "BLT Communication",
         role: "Senior Developer",
@@ -97,6 +100,7 @@ export class InMemoryDataService implements InMemoryDbService {
         year: 2013,
         description:["Tron Legacy", "Worked as a team to develop websites, Facebook applications, games, and rich media ad campaigns, Worked with Adobe Flash Media Server for recording/ sharing streaming videoss within the Facebook app",
          ["Flash", "HTML", "PHP"]],
+        technology: ["Flash", "HTML", "PHP"],
         imageFull: "../assets/images/gallery/slideImages/pov/productivity_hardware_large.jpg",
         imageThumb: "../assets/images/gallery/slideImages/modernica.png",
         imageDescription: "",
@@ -112,7 +116,7 @@ export class InMemoryDataService implements InMemoryDbService {
           link: "http://disney.com.au/tron/"}]
       }, {
         id: 6,
-        name: "Twilight Saga: Eclipse theatrical",
+        name: "Twilight Saga: Eclipse",
         client: "Disney",
         agency: "The Cimarron Group",
         role: "Senior Developer",
@@ -120,6 +124,7 @@ export class InMemoryDataService implements InMemoryDbService {
         year: 2010,
         description: [ "Twilight Saga", "Developed theatrical websites using AS3, Flash/Flex, jQuery and JavaScript, Served as a Lead Developer on The Twilight Saga: Eclipse theatrical, Used with Agile practices, Iterative development, UML Activity diagrams and modeling., Established a new AS3 Class code library for the interactive department.",
          ["Flash", "jQuery", "PHP", "FLEX"]],
+        technology: ["Flash", "jQuery", "PHP", "FLEX"],
         imageFull: "../assets/images/gallery/slideImages/pov/ipad-hero-holiday-music-201611.png",
         imageThumb: "../assets/images/gallery/slideImages/goportfolio2.png",
         imageDescription: "",
@@ -128,7 +133,7 @@ export class InMemoryDataService implements InMemoryDbService {
         urls: []
       }, {
         id: 7,
-        name: "The Simpsons Movie website",
+        name: "The Simpsons Movie",
         client: "FOX",
         agency: "65 Media",
         role: "Senior Developer",
@@ -136,6 +141,7 @@ export class InMemoryDataService implements InMemoryDbService {
         year: 2009,
         description: [ "The Simpsons Movie","Developed websites and games with AS3 libraries including Papervision 3d and Box2D Physics Engine. Object-Oriented Analysis and Design, Implemented SVN source control, design patterns, and shared AS3 code libraries for the interactive department.",
          ["Flash"]],
+        technology: ["Flash"],
         imageFull: "../assets/images/gallery/slideImages/pov/gallery_hardware_large.jpg",
         imageThumb: "../assets/images/gallery/slideImages/fullThrottle.png",
         imageDescription: "",
@@ -146,7 +152,7 @@ export class InMemoryDataService implements InMemoryDbService {
         urls: []
       }, {
         id: 8,
-        name: "The Curse of the Were-Rabbit (Wallace & Gromit) theatrical website",
+        name: "The Curse of the Were-Rabbit",
         client: "DreamWorks",
         agency: "The Cannery Agency",
         role: "Senior Flash Developer",
@@ -154,6 +160,7 @@ export class InMemoryDataService implements InMemoryDbService {
         year: 2006,
         description: [ "Wallace & Gromit","Developed flash theatrical websites and games",
          ["Flash"]],
+        technology: ["Flash"],
         imageFull: "../assets/images/gallery/slideImages/pov/overview_retina_large.jpg",
         imageThumb: "../assets/images/gallery/slideImages/kiteRunner3.png",
         imageDescription: "",
@@ -171,6 +178,7 @@ export class InMemoryDataService implements InMemoryDbService {
         year: 2001,
         description: ["KISSFMi", "",
          ["Flash"]],
+        technology: ["Flash"],
         imageFull: "../assets/images/gallery/slideImages/pov/pro_finalcut_large.png",
         imageThumb: "../assets/images/gallery/slideImages/goportfolio2.png",
         imageDescription: "",
@@ -187,6 +195,7 @@ export class InMemoryDataService implements InMemoryDbService {
         year: 2005,
         description: [ "goPortfolio", "goPortfolio",
          ["Flash"]],
+        technology: ["Flash"],
         imageFull: "../assets/images/gallery/slideImages/kiteRunner.png",
         imageThumb: "../assets/images/gallery/slideImages/kiteRunner.png",
         imageDescription: "",
@@ -203,6 +212,7 @@ export class InMemoryDataService implements InMemoryDbService {
         year: 2005,
         description: ["Modernica","Modernica",
          ["Flash"]],
+        technology: ["Flash"],
         imageFull: "../assets/images/gallery/slideImages/goportfolio3.png",
         imageThumb: "../assets/images/gallery/slideImages/goportfolio3.png",
         imageDescription: [ ,"", []],
@@ -219,6 +229,7 @@ export class InMemoryDataService implements InMemoryDbService {
         year: 2015,
         description: [ "NoogNetwork","NoogNetwork",
          ["OpenFl","XCode"]],
+        technology: ["OpenFl","XCode"],
         imageFull: "../assets/images/gallery/slideImages/kiteRunner.png",
         imageThumb: "../assets/images/gallery/slideImages/kiteRunner.png",
         imageDescription: "",
