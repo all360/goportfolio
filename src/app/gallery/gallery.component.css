@@ -5,20 +5,6 @@
   margin: 1px;
 }
 
-.slideCase{
-  width: 300px;
-  height: 300px;
-  position: absolute;
-}
-
-.slideImage{
-  width: 211px;
-  height: 142px;
-  position: absolute;
-  margin-top: 80px;
-  margin-left: 45px;
-}
-
 .slide img:hover{
   color: #607D8B;
   background-color: rgba(255,100,0,0.4);
@@ -29,19 +15,36 @@
   color: white;
 }
 
-.slideTitle{
-  color:#1a1a1a;
-  position: absolute;
+.slide-case{
   width: 300px;
-  padding: 0 10px;
-  text-align: center;
+  height: 300px;
+  position: absolute;
+}
 
-  /*font-family: 'Permanent Marker', cursive;
-  font-family: 'Coming Soon', cursive;
-  font-family: 'Gloria Hallelujah', cursive;
-  font-family: 'Rock Salt', cursive;
-  font-family: 'Homemade Apple', cursive;
-  */
+.slide-image{
+  width: 211px;
+  height: 142px;
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 45px;
+}
+
+.slide-icon{
+  position: absolute;
+  margin-top: 244px;
+  margin-left: 19px;
+  opacity: 0.1;
+  color: #808080;
+  font-size: 35px;
+}
+
+.slide-title,
+.slide-client{
+  position: absolute;
+  color:#1a1a1a;
+  width: 300px;
+  padding: 10px 10px 0 10px;
+  text-align: center;
   font-family: 'Roboto Mono', monospace;
   font-size: 18px;
 
@@ -49,6 +52,21 @@
   opacity: 0.3;
 
 }
+
+.slide-client{
+
+  margin-top: 238px;
+  font-size: 15px
+
+}
+
+
+/*font-family: 'Permanent Marker', cursive;
+  font-family: 'Coming Soon', cursive;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Rock Salt', cursive;
+  font-family: 'Homemade Apple', cursive;
+  */
 
 section .selected {
   background-color: #1b6d85;

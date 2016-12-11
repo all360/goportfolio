@@ -8,6 +8,7 @@ export class GalleryItem {
   year: number;
   description: string;
   technology:string;
+  techIcon:string;
   imageFull: string;
   imageThumb: string;
   imageDescription: string;

@@ -3,9 +3,11 @@
      <div class="col-md-12 app-gallery-slides">
        <section *ngFor="let item of gallery" [class.selected]="item === selectedItem" (click)="onSelect(item)">
             <div class="slide" >
-              <img class="slideImage" [src]="item.imageThumb" [alt]="item.name">
-              <img class="slideCase" src="../../assets/images/gallery/silde/kodak35mmslide.png">
-              <h3 class="slideTitle">{{item.name}}</h3>
+              <img class="slide-image" [src]="item.imageThumb" [alt]="item.name">
+              <img class="slide-case" src="../../assets/images/gallery/silde/kodak35mmslide.png">
+              <h3 class="slide-title">{{item.name}}</h3>
+              <h3 class="slide-client">{{item.client}}</h3>
+              <i class="slide-icon" [ngClass]="item.techIcon"></i>
             </div>
        </section>
      </div>
