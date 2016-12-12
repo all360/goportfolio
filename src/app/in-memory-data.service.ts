@@ -19,7 +19,7 @@ export class InMemoryDataService implements InMemoryDbService {
           {name:"android", link:"devicon-android-plain"},
           {name:"photoshop", link:"devicon-photoshop-plain"},
           {name:"illustrator", link:"devicon-illustrator-plain"}],
-        imageFull: "../assets/images/gallery/slideImages/pov/startup-2.jpg",
+        imageFull: "../assets/images/gallery/slides/spiritual-me/iphone-perspective-screen-1.jpg",
         imageThumb: "../assets/images/gallery/slideImages/dreamer.png",
         imageDescription: "",
         videos:[{ title:"Spiritual Me",
@@ -31,7 +31,8 @@ export class InMemoryDataService implements InMemoryDbService {
               },
               { title:"View on Google Play",
                 link: "https://play.google.com/store/apps/details?id=com.spiritualmeapp.masters"
-              }]
+              }],
+        layout:"bottom",
       }, {
         id: 2,
         name: "Google vote",

@@ -28,11 +28,6 @@ export class GalleryComponent implements OnInit {
     this.route.params
       .switchMap((params: Params) => this.galleryService.getGallery( params['type'], params['value'] ))
       .subscribe(data => this.gallery = data);
-    /*
-    this.galleryService
-      .getGallery()
-      .then(data => this.gallery = data);
-      */
   }
 
 
@@ -49,7 +44,7 @@ export class GalleryComponent implements OnInit {
 
 
   gotoDetail(): void {
-    console.log( "this.selectedHero.id", this.selectedItem.id );
+    console.log( "selectedItem.id", this.selectedItem.id );
     this.router.navigate(['/detail', this.selectedItem.id]);
   }
 

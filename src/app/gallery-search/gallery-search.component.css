@@ -11,6 +11,7 @@
   left: auto;
   right: auto;
   padding: 0;
+  cursor: pointer;
 }
 
 .search-result{

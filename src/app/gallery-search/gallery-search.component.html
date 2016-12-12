@@ -1,11 +1,12 @@
 <form id="search-component" class="navbar-form navbar-right p-x-md hidden-xs">
 
   <div class="form-group">
-    <input #searchBox id="search-box" type="text" class="form-control input-sm" placeholder="SEARCH" autocomplete="off"  (focusout)="searchBox.value=''; clearSearch()" (keyup)="search(searchBox.value)">
+    <input #searchBox id="search-box" type="text" (focusout)="clearSearch()" class="form-control input-sm" placeholder="SEARCH" autocomplete="off"
+           (keyup)="search(searchBox.value);" [(ngModel)]="name" name="first">
 
     <ul class="app-search-list dropdown-menu" [style.display]="searchBox.value.length > 1 ? 'block' : 'none'">
-      <li class="search-result" *ngFor="let item of galleryItems | async" >
-        <a (click)="gotoDetail(item); clearSearch()">{{item.name}}</a>
+      <li class="search-result" *ngFor="let item of galleryItems | async" (click)="gotoDetail(item); clearSearch()">
+        <a>{{item.name}}</a>
       </li>
     </ul>
   </div>

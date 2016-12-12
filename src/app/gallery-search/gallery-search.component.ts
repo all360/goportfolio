@@ -18,9 +18,11 @@ export class GallerySearchComponent implements OnInit {
 
   galleryItems: Observable<GalleryItem[]>;
   private searchTerms = new Subject<string>();
+  public name: string = "";
 
   constructor( private gallerySearchService: GallerySearchService,
-               private router: Router) { }
+               private router: Router) {
+  }
 
   // Push a search term into the observable stream.
   search(term: string): void {
@@ -48,9 +50,11 @@ export class GallerySearchComponent implements OnInit {
   gotoDetail(item: GalleryItem): void {
     let link = ['/detail', item.id];
     this.router.navigate(link);
+    this.name = "";
   }
 
   clearSearch():void{
+    console.log( "clearSearch" );
     this.search(null);
   }
 

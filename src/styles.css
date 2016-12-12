@@ -1,7 +1,10 @@
 body {
   padding-top: 90px;
   color: #2a2730;
+  height: 100%;
+  margin: 0;
 }
+
 
 
 
@@ -18,7 +21,7 @@ body {
   height: 100%;
   margin: 0;
 }
-
+h1
 .container-fluid{
   margin-top: 50px;
 }

@@ -16,6 +16,7 @@ export class GalleryItem {
   awards:string;
   urls:string;
   carousel:string;
+  layout:string;
 }
 
 
