@@ -2,9 +2,7 @@
   <div class="container">
     <div class="row">
 
-      <!--[ngClass]="{p-b-0: galleryItem.layout == 'bottom'}-->
-
-      <div class="col-sm-5 col-sm-push-7 col-lg-7 col-lg-push-6"}>
+      <div class="col-sm-5 col-sm-push-7 col-lg-7 col-lg-push-6">
         <div class="image-holder">
           <img [src]="galleryItem.imageFull">
         </div>
@@ -96,7 +94,7 @@
   </div>
 </div>
 
-
+<!--
 <div class="block" *ngIf="galleryItem && galleryItem.techIcon">
   <div class="container">
     <div class="row">
@@ -108,8 +106,8 @@
       <div class="col-sm-12">
         <ul class="list-inline text-center">
           <li *ngFor="let icon of galleryItem.techIcon">
-            <i [class]="icon.link"></i>
-          </li>
+           <i [class]="icon.link"></i>
+          </li>-->
           <!--<li><i class="devicon-css3-plain-wordmark" style="font-size: 75px"></i></li>
           <li><i class="devicon-git-plain-wordmark" style="font-size: 75px"></i></li>
           <li><i class="devicon-gulp-plain" style="font-size: 75px"></i></li>
@@ -128,12 +126,13 @@
           <li><i class="devicon-illustrator-plain"></i></li>
           <li><i class="devicon-apple-original"></i></li>
           <li><i class="devicon-android-plain"></i></li>-->
-
+<!--
         </ul>
       </div>
     </div>
   </div>
 </div>
+-->
 
 <!--
 <div class="block block-inverse block-secondary app-code-block" *ngIf="galleryItem">

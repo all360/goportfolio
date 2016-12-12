@@ -1,6 +1,5 @@
 export class GalleryItem {
   id: number;
-  layout:string;
   name: string;
   client: string;
   agency: string;

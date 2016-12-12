@@ -5,8 +5,6 @@ export class InMemoryDataService implements InMemoryDbService {
     let gallery = [
       {
         id: 1,
-        /*layout:{ verticalAlign:"bottom", horizAlign:"bottom" },*/
-        layout:"bottom",
         name: "Spiritual Me",
         client: "",
         agency: "",
@@ -114,7 +112,6 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slideImages/pov/productivity_hardware_large.jpg",
         imageThumb: "../assets/images/gallery/slideImages/modernica.png",
         imageDescription: "",
-        videos:"",
         videos:[{ title:"Minion Mayhem The Ride",
           link:"https://www.youtube.com/embed/AYH2-otsUHg?rel=0&amp;controls=0&amp;showinfo=0"
         }],

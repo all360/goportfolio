@@ -7,7 +7,9 @@
               <img class="slide-case" src="../../assets/images/gallery/silde/kodak35mmslide.png">
               <h3 class="slide-title">{{item.name}}</h3>
               <h3 class="slide-client">{{item.client}}</h3>
-              <i class="slide-icon" (mouseover)="item.over()" [ngClass]="item.techIcon"></i>
+              <span *ngIf="item.techIcon">
+                <i class="slide-icon" [ngClass]="item.techIcon[0].link"></i>
+              </span>
             </div>
        </section>
      </div>

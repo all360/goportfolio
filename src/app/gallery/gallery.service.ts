@@ -23,6 +23,15 @@ export class GalleryService {
       .catch(this.handleError);
   }
 
+  getGalleryById():Promise<GalleryItem[]> {
+
+    return this.http
+      .get( `app/gallery`)
+      .toPromise()
+      .then(response => response.json().data as GalleryItem[])
+      .catch(this.handleError);
+  }
+
 
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only
@@ -30,7 +39,7 @@ export class GalleryService {
   }
 
   getGalleryItem(id: number): Promise<GalleryItem> {
-    return this.getGallery()
+    return this.getGalleryById()
       .then(galleryItems => galleryItems.find(item => item.id === id));
   }
 }
