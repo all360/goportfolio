@@ -5,6 +5,7 @@ export class InMemoryDataService implements InMemoryDbService {
     let gallery = [
       {
         id: 1,
+        layout:{ verticalAlign:"bottom", horizAlign:"bottom" },
         name: "Spiritual Me",
         client: "",
         agency: "",
@@ -15,7 +16,10 @@ export class InMemoryDataService implements InMemoryDbService {
           "Developed Spiritual Me App (Lifestyle app) that guides users through a series of exercises allowing them to practice meditation, whilst being inspired by nature, art and spiritual quotes. The exercises range from drawing to games of physics. Launched in the Android and Apple AppStore which ranked #1 in its category - Responsible for all phases, from design, writing code, testing, debugging and deployment - Localized the app for seven languages - Implemented in-app-purchases and push notification",
           ["Objective-C" , "Haxe", "openFL"]],
         technology: ["Objective-C" , "Haxe", "openFL"],
-        techIcon: ["devicon-html5-plain-wordmark"],
+        techIcon: [{name:"Apple", link:"devicon-apple-original"},
+          {name:"android", link:"devicon-android-plain"},
+          {name:"photoshop", link:"devicon-photoshop-plain"},
+          {name:"illustrator", link:"devicon-illustrator-plain"}],
         imageFull: "../assets/images/gallery/slideImages/pov/startup-2.jpg",
         imageThumb: "../assets/images/gallery/slideImages/dreamer.png",
         imageDescription: "",

@@ -95,7 +95,7 @@
 </div>
 
 
-<div class="block" *ngIf="galleryItem">
+<div class="block" *ngIf="galleryItem && galleryItem.techIcon">
   <div class="container">
     <div class="row">
 
@@ -103,15 +103,18 @@
         <p class="lead m-x-auto">With over <strong>20 years of collective experience</strong>, we take the unthinkable and make it just a couple quick taps away.</p>
       </div>
 
-      <div class="col-sm-12 text-center">
-        <ul class="list-inline">
+      <div class="col-sm-12">
+        <ul class="list-inline text-center">
+          <li *ngFor="let icon of galleryItem.techIcon">
+            <i [class]="icon.link"></i>
+          </li>
           <!--<li><i class="devicon-css3-plain-wordmark" style="font-size: 75px"></i></li>
           <li><i class="devicon-git-plain-wordmark" style="font-size: 75px"></i></li>
           <li><i class="devicon-gulp-plain" style="font-size: 75px"></i></li>
           <li><i class="devicon-html5-plain-wordmark" style="font-size: 75px"></i></li>
           <li><i class="devicon-php-plain" style="font-size: 75px"></i></li>
           <li><i class="devicon-javascript-plain" style="font-size: 75px"></i></li>
-          <li><i class="devicon-sass-original" style="font-size: 75px"></i></li>-->
+          <li><i class="devicon-sass-original" style="font-size: 75px"></i></li>
           <li><i class="devicon-photoshop-plain" style="font-size: 75px"></i></li>
           <li><i class="devicon-bootstrap-plain-wordmark" style="font-size: 75px"></i></li>
           <li><i class="devicon-mysql-plain-wordmark" style="font-size: 75px"></i></li>
@@ -120,9 +123,9 @@
           <li><i class="devicon-react-original-wordmark" style="font-size: 75px"></i></li>
           <li><i class="devicon-ssh-plain-wordmark" style="font-size: 75px"></i></li>
           <li><i class="devicon-wordpress-plain-wordmark" style="font-size: 75px"></i></li>
-          <li><i class="devicon-illustrator-plain" style="font-size: 75px"></i></li>
-          <li><i class="devicon-apple-original" style="font-size: 75px"></i></li>
-          <li><i class="devicon-android-plain" style="font-size: 75px"></i></li>
+          <li><i class="devicon-illustrator-plain"></i></li>
+          <li><i class="devicon-apple-original"></i></li>
+          <li><i class="devicon-android-plain"></i></li>-->
 
         </ul>
       </div>

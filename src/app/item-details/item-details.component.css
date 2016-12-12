@@ -13,18 +13,29 @@
 
 i{
   color: #2a2730;
+  font-size: 30px;
+}
+
+li{
+  margin: 0 auto;
+  width: 14%;
 }
 
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px ) {
 
+  i{
+    font-size: 50px;
+  }
 
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px ) {
-
+  i{
+    font-size: 70px;
+  }
 }
 
 /* Large devices (large desktops, 1200px and up) */
