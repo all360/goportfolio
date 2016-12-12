@@ -13,6 +13,7 @@ export class GalleryComponent implements OnInit {
 
   gallery: GalleryItem[];
   selectedItem: GalleryItem;
+  isMouseOver: boolean;
 
   constructor(private router: Router,
               private route: ActivatedRoute,
@@ -39,6 +40,13 @@ export class GalleryComponent implements OnInit {
     this.selectedItem = item;
     this.gotoDetail();
   }
+
+
+  over():void{
+    this.isMouseOver = true;
+    console.log("Mouseover called" , this.isMouseOver);
+  }
+
 
   gotoDetail(): void {
     console.log( "this.selectedHero.id", this.selectedItem.id );

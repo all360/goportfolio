@@ -6,13 +6,13 @@
 }
 
 .slide img:hover{
-  color: #607D8B;
-  background-color: rgba(255,100,0,0.4);
+  /*color: #607D8B;
+  background-color: rgba(255,100,0,0.4);*/
 }
 
 .slide img.selected:hover {
-  background-color: #BBD8DC !important;
-  color: white;
+  /*background-color: #BBD8DC !important;
+  color: white;*/
 }
 
 .slide-case{
@@ -27,6 +27,33 @@
   position: absolute;
   margin-top: 80px;
   margin-left: 45px;
+}
+
+.slide-mouseover-filter{
+
+  filter: brightness(2.2);
+}
+
+.slide-image-filter{
+  filter: brightness(.2);
+  animation-name: example;
+  animation-duration: 1s;
+  animation-delay: 250ms;
+  animation-fill-mode: forwards;
+  /* filter: sepia(100%);
+  filter: sepia(61%) saturate(2.8) brightness(.5);
+  filter: saturate(2) brightness(0.7);
+  filter: brightness(.2);
+  filter: contrast(1) saturate(1) sepia(0); */
+}
+
+@keyframes example {
+  from {
+    filter: brightness(.2);
+  }
+  to {
+    filter: brightness(1.1);
+  }
 }
 
 .slide-icon{
