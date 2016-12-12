@@ -2,10 +2,8 @@ export class GalleryItem {
   id: number;
   name: string;
   client: string;
-  agency: string;
-  role: string;
+  bulletPoints: string;
   type: string;
-  year: number;
   description: string;
   technology:string;
   techIcon:string;

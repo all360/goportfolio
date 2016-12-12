@@ -13,25 +13,26 @@
         <h1 class="m-t-0 block-title">{{galleryItem.description[0]}}</h1>
         <p class="lead m-b-md">{{galleryItem.description[1]}}</p>
 
-        <div class="row">
+        <div *ngIf="galleryItem.bulletPoints && galleryItem.description[2]" class="row">
           <div class="col-sm-6 m-b-md">
-            <h5 *ngIf="galleryItem.description[2]" class="m-y-0 text-muted text-uppercase">Technology</h5>
-            <p>{{galleryItem.description[2].join(", ") }}</p>
+            <h5 class="m-y-0 text-muted text-uppercase">{{galleryItem.description[2]}}</h5>
+            <p>{{galleryItem.description[3].join(", ") }}</p>
           </div>
-          <div *ngIf="galleryItem.agency" class="col-sm-6 m-b-md">
-            <h5 class="m-y-0 text-muted text-uppercase">Agency</h5>
-            <p>{{galleryItem.agency}}</p>
+
+          <div class="col-sm-6 m-b-md">
+            <h5 class="m-y-0 text-muted text-uppercase">{{galleryItem.bulletPoints[0].name}}</h5>
+            <p>{{galleryItem.bulletPoints[0].value}}</p>
           </div>
         </div>
 
         <div class="row">
           <div class="col-sm-6 m-b-md">
-            <h5 *ngIf="galleryItem.role" class="m-y-0 text-muted text-uppercase">My Roll</h5>
-            <p>{{galleryItem.role}}</p>
+            <h5 class="m-y-0 text-muted text-uppercase">{{galleryItem.bulletPoints[1].name}}</h5>
+            <p>{{galleryItem.bulletPoints[1].value}}</p>
           </div>
-          <div *ngIf="galleryItem.year" class="col-sm-6 m-b-md">
-            <h5 class="m-y-0 text-muted text-uppercase">Year</h5>
-            <p>{{galleryItem.year}}</p>
+          <div class="col-sm-6 m-b-md">
+            <h5 class="m-y-0 text-muted text-uppercase">{{galleryItem.bulletPoints[2].name}}</h5>
+            <p>{{galleryItem.bulletPoints[2].value}}</p>
           </div>
         </div>
 
