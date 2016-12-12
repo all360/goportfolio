@@ -5,7 +5,8 @@ export class InMemoryDataService implements InMemoryDbService {
     let gallery = [
       {
         id: 1,
-        layout:{ verticalAlign:"bottom", horizAlign:"bottom" },
+        /*layout:{ verticalAlign:"bottom", horizAlign:"bottom" },*/
+        layout:"bottom",
         name: "Spiritual Me",
         client: "",
         agency: "",
