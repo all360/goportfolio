@@ -29,9 +29,11 @@ export class InMemoryDataService implements InMemoryDbService {
         }],
         awards:"",
         urls: [{ title:"View on the App Store",
+                 image:"../assets/images/gallery/slides/spiritual-me/app_store.png",
                  link: "https://itunes.apple.com/us/app/spiritual-me-guided-meditations/id985365789?ls=1&mt=8"
               },
               { title:"View on Google Play",
+                image:"../assets/images/gallery/slides/spiritual-me/google_play.png",
                 link: "https://play.google.com/store/apps/details?id=com.spiritualmeapp.masters"
               }],
         layout:"bottom",

@@ -1,3 +1,7 @@
+.app-image-btn{
+  width: 100%;
+  max-width: 150px;
+}
 .app-block-main {
   overflow: hidden
 }
@@ -10,6 +14,18 @@
 .app-block-main .image-holder, .app-block-carousel .image-holder{
   text-align: center;
 }
+
+.block-inverse, .block-inverse .block-bg-img {
+  background-color: #2a2730;
+}
+.block-inverse i{
+  color: #ffffff;
+}
+
+.app-block-video{}
+
+.app-block-carousel{}
+
 
 i{
   color: #2a2730;
@@ -62,14 +78,10 @@ h1{
     text-align: right;
   }
 
-}
-
-.app-block-video{
-
-  background-color: #2a2730;
-}
-
-.app-block-carousel{
-
+  .app-image-btn{
+    max-width: 180px;
+  }
 
 }
+
+

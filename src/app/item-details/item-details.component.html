@@ -37,15 +37,19 @@
         </div>
 
         <div class="row">
-          <div *ngIf="galleryItem.urls[0]" class="col-sm-6 m-b-md">
-            <a class="btn btn-default" [href]="galleryItem.urls[0].link" role="button">
-              {{galleryItem.urls[0].title | uppercase }}
-            </a>
-          </div>
-          <div *ngIf="galleryItem.urls[1]" class="col-sm-6 m-b-md">
-            <a class="btn btn-default" [href]="galleryItem.urls[1].link" role="button">
-              {{galleryItem.urls[1].title | uppercase }}
-            </a>
+          <div class="col-sm-6 m-b-md" *ngFor="let btn of galleryItem.urls">
+
+            <span [ngSwitch]="btn.image">
+
+              <a *ngSwitchCase="null" class="btn btn-default" [href]="btn.link" role="button">{{btn.title | uppercase }}</a>
+
+              <a *ngSwitchCase="''" class="btn btn-default" [href]="btn.link" role="button">{{btn.title | uppercase }}</a>
+
+              <a *ngSwitchDefault [href]="btn.link">
+                <img class="app-image-btn" [src]="btn.image" >
+              </a>
+            </span>
+
           </div>
         </div>
 
