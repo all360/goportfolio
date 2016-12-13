@@ -74,12 +74,12 @@
   <div class="container">
     <div class="row m-y-lg">
       <div class="col-sm-12">
-        <blockquote class="pull-quote">
-          <img class="img-circle" src="../assets/images/gallery/slides/spiritual-me/app-store-icon.jpg">
+        <blockquote class="pull-quote" *ngFor="let quote of galleryItem.quotes">
+          <img class="img-circle" [src]="quote.image">
           <p>
-            “They need to stop sleeping on me and get some understanding about this here game I spit!”
+            “<strong>{{quote.title}}</strong>{{quote.text}}”
           </p>
-          <cite>Mark Otto, Huge Nerd</cite>
+          <cite>{{quote.cite}}</cite>
         </blockquote>
       </div>
     </div>
@@ -119,9 +119,17 @@
 <div class="block app-block-tech-icons" *ngIf="galleryItem && galleryItem.techIcon">
   <div class="container">
     <div class="row">
+<!--
+      <blockquote class="pull-quote" *ngFor="let quote of galleryItem.quotes">
+        <img class="img-circle" [src]="quote.image">
+        <p>
+          “<strong>{{quote.title}}</strong>{{quote.text}}”
+        </p>
+        <cite>{{quote.cite}}</cite>
+      </blockquote>-->
 
-      <div class="col-sm-8 col-sm-offset-2 text-center m-b-lg">
-        <p class="lead m-x-auto">With over <strong>20 years of collective experience</strong>, we take the unthinkable and make it just a couple quick taps away.</p>
+      <div class="col-sm-8 col-sm-offset-2 text-center m-b-lg" *ngFor="let statement of galleryItem.statements">
+        <p class="lead m-x-auto">{{statement.text}}</p>
       </div>
 
       <div class="col-sm-12">

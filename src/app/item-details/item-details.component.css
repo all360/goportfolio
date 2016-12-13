@@ -55,6 +55,10 @@ h1{
   color: black;
 }
 
+.carousel-inner>.item>a>img, .carousel-inner>.item>img {
+  max-height: 650px;
+}
+
 .carousel-indicators{
   display: none;
 }

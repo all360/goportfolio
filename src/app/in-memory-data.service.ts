@@ -27,11 +27,11 @@ export class InMemoryDataService implements InMemoryDbService {
         videos:[{ title:"Spiritual Me",
                   link:"https://www.youtube.com/embed/B9n1lJ_FLNM?rel=0&amp;controls=0&amp;showinfo=0"
         }],
-        quotes:[{user:"byPusspot - Nov 23, 2016, App Store user", title:"Simply relaxing....", text:"I've been meditating for about 5 years now. I like the simplistic techniques the app offers which I believe are beneficial for both beginners and pros. I also like that you can track your progress. Love the creative part as well!", image:"../assets/images/gallery/slides/spiritual-me/app-store-icon.jpg"}],
-        carousel:[{ title:"Eclipse", image:"../assets/images/gallery/slideImages/eclips/eclips1_940x528_0.jpg"},
-          { title:"Eclipse", image:"../assets/images/gallery/slideImages/eclips/eclips2_940x528.jpg"},
-          { title:"Eclipse", image:"../assets/images/gallery/slideImages/eclips/eclips3_940x528.jpg"},
-          { title:"Eclipse", image:"../assets/images/gallery/slideImages/eclips/TL_Saga_940x528_0.jpg"},
+        quotes:[{cite:"byPusspot - Nov 23, 2016, App Store user", title:"Simply relaxing.... ",
+                text:"I've been meditating for about 5 years now. I like the simplistic techniques the app offers which I believe are beneficial for both beginners and pros. I also like that you can track your progress. Love the creative part as well!",
+                image:"../assets/images/gallery/slides/spiritual-me/app-store-icon.jpg"}],
+        carousel:[{ title:"Spiritual Me", image:"../assets/images/gallery/slides/spiritual-me/screenshots1-3.jpg"},
+          { title:"Spiritual Me", image:"../assets/images/gallery/slides/spiritual-me/screenshots4-5.jpg"},
         ],
         awards:"",
         urls: [{ title:"View on the App Store",
@@ -42,7 +42,10 @@ export class InMemoryDataService implements InMemoryDbService {
                 image:"../assets/images/gallery/slides/spiritual-me/google_play.png",
                 link: "https://play.google.com/store/apps/details?id=com.spiritualmeapp.masters"
               }],
-        layout:"bottom",
+        statements:[{cite:"byPusspot - Nov 23, 2016, App Store user", title:"Simply relaxing.... ",
+                    text:"Spiritual Me app is localized 7 different languages.",
+                    image:""}],
+
       }, {
         id: 2,
         name: "Google vote",
