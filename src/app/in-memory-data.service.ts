@@ -6,7 +6,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 1,
         name: "Spiritual Me",
-        client: "",
+        client: "App Store",
         bulletPoints:[{name:"role", value:"Creator"},
                       {name:"stores", value:"App Store, Google Play, Amazon Underground"},
                       {name:"year", value:"2016"}
