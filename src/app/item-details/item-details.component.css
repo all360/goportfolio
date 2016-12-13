@@ -1,3 +1,9 @@
+.app-image-main{
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+
 .app-image-btn{
   width: 100%;
   max-width: 150px;
@@ -32,7 +38,7 @@ i{
   font-size: 30px;
 }
 
-li{
+.app-block-tech-icons li{
   margin: 0 auto;
   width: 14%;
 }
@@ -40,6 +46,23 @@ li{
 h1{
   font-size: 44px;
 }
+
+.carousel .icon-chevron-thin-left,
+.carousel .icon-chevron-thin-right{
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  color: black;
+}
+
+.carousel-indicators{
+  display: none;
+}
+
+.pull-quote>img {
+  border: 1px solid #2a2730;
+}
+
 
 
 /* Small devices (tablets, 768px and up) */

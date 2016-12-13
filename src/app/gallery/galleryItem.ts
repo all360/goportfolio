@@ -11,6 +11,7 @@ export class GalleryItem {
   imageThumb: string;
   imageDescription: string;
   videos:string;
+  quotes:string;
   awards:string;
   urls:string;
   carousel:string;

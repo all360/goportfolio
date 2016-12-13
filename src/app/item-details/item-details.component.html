@@ -1,10 +1,10 @@
-<div class="m-t-lg app-block-main" *ngIf="galleryItem">
+<div class="m-y-lg app-block-main" *ngIf="galleryItem">
   <div class="container">
     <div class="row">
 
       <div class="col-sm-5 col-sm-push-7 col-lg-7 col-lg-push-6">
         <div class="image-holder">
-          <img [src]="galleryItem.imageFull">
+          <img class="app-image-main" [src]="galleryItem.imageFull">
         </div>
       </div>
 
@@ -58,9 +58,9 @@
   </div>
 </div>
 
-<div class="block block-inverse app-block-video" *ngIf="galleryItem && galleryItem.videos">
-  <div class="container">
-    <div class="row m-b-lg">
+<div class="block block-inverse app-block-video p-x-0" *ngIf="galleryItem && galleryItem.videos">
+  <div class="container p-x-0">
+    <div class="row m-y-lg">
         <div class="col-sm-12">
           <div class="embed-responsive embed-responsive-16by9">
             <iframe [src]="galleryItem.videos[0].link | safe" allowfullscreen></iframe>
@@ -70,9 +70,25 @@
   </div>
 </div>
 
-<div class="block block-inverse app-block-carousel" *ngIf="galleryItem && galleryItem.carousel">
+<div class="block app-block-quote" *ngIf="galleryItem">
   <div class="container">
-        <div id="app-carousel" class="carousel carousel-light slide" data-ride="carousel">
+    <div class="row m-y-lg">
+      <div class="col-sm-12">
+        <blockquote class="pull-quote">
+          <img class="img-circle" src="../assets/images/gallery/slides/spiritual-me/app-store-icon.jpg">
+          <p>
+            “They need to stop sleeping on me and get some understanding about this here game I spit!”
+          </p>
+          <cite>Mark Otto, Huge Nerd</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="block block-inverse app-block-carousel p-x-0" *ngIf="galleryItem && galleryItem.carousel">
+  <div class="container-fluid p-x-0">
+    <div id="app-carousel" class="carousel carousel-light slide" data-ride="carousel">
 
           <ol class="carousel-indicators">
             <li *ngFor="let slide of galleryItem.carousel; let idx = index" [ngClass]="{active: idx === 0 }"
@@ -81,7 +97,7 @@
 
           <div class="carousel-inner" role="listbox">
             <div *ngFor="let slide of galleryItem.carousel; let id = index" [ngClass]="{active: id === 0 }" class="item">
-              <img class="img-responsive center-block" [src]="slide.link" [alt]="slide.title">
+              <img class="img-responsive center-block" [src]="slide.image" [alt]="slide.title">
             </div>
           </div>
 
@@ -95,12 +111,12 @@
             <span class="sr-only">Next</span>
           </a>
 
-        </div>
+    </div>
   </div>
 </div>
 
 
-<div class="block" *ngIf="galleryItem && galleryItem.techIcon">
+<div class="block app-block-tech-icons" *ngIf="galleryItem && galleryItem.techIcon">
   <div class="container">
     <div class="row">
 
