@@ -1,3 +1,9 @@
+.hitter {
+  height: 300px;
+  position: absolute;
+  width: 300px;
+}
+
 .slide{
   width: 300px;
   height: 300px;
@@ -29,17 +35,45 @@
   margin-left: 45px;
 }
 
-.slide-mouseover-filter{
-
-  filter: brightness(2.2);
+.slide-mouseleave-filter {
+  animation-name: slide-leave-animation;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
 }
 
+@keyframes slide-leave-animation {
+  from {
+    filter: brightness(1.5);
+  }
+  to {
+    filter: brightness(1);
+  }
+}
+
+.slide-mouseover-filter {
+  animation-name: slide-over-animation;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-over-animation {
+  from {
+    filter: brightness(1);
+  }
+  to {
+    filter: brightness(1.5);
+  }
+}
+
+
 .slide-image-filter{
+
   filter: brightness(.2);
-  animation-name: example;
+  animation-name: slide-fadein-animation;
   animation-duration: 1s;
   animation-delay: 250ms;
   animation-fill-mode: forwards;
+
   /* filter: sepia(100%);
   filter: sepia(61%) saturate(2.8) brightness(.5);
   filter: saturate(2) brightness(0.7);
@@ -47,12 +81,13 @@
   filter: contrast(1) saturate(1) sepia(0); */
 }
 
-@keyframes example {
+@keyframes slide-fadein-animation {
   from {
     filter: brightness(.2);
   }
   to {
-    filter: brightness(1.1);
+    filter: brightness(1);
+    filter: none;
   }
 }
 

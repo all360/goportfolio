@@ -16,6 +16,7 @@ export class GalleryItem {
   urls:string;
   carousel:string;
   statements:string;
+  filter:string;
 }
 
 

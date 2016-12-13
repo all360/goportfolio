@@ -42,6 +42,17 @@ export class GalleryComponent implements OnInit {
     console.log("Mouseover called" , this.isMouseOver);
   }
 
+  getFilterClass(item: GalleryItem):string{
+    return item.filter;
+  }
+
+  setFilterClassOver(item: GalleryItem):void{
+    item.filter = "slide-mouseover-filter";
+  }
+
+  setFilterClassLeave(item: GalleryItem):void{
+    item.filter = "slide-mouseleave-filter";
+  }
 
   gotoDetail(): void {
     console.log( "selectedItem.id", this.selectedItem.id );
