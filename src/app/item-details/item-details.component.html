@@ -40,11 +40,8 @@
           <div class="col-sm-6 m-b-md" *ngFor="let btn of galleryItem.urls">
 
             <span [ngSwitch]="btn.image">
-
               <a *ngSwitchCase="null" class="btn btn-default" [href]="btn.link" role="button">{{btn.title | uppercase }}</a>
-
               <a *ngSwitchCase="''" class="btn btn-default" [href]="btn.link" role="button">{{btn.title | uppercase }}</a>
-
               <a *ngSwitchDefault [href]="btn.link">
                 <img class="app-image-btn" [src]="btn.image" >
               </a>
@@ -115,19 +112,9 @@
   </div>
 </div>
 
-
 <div class="block app-block-tech-icons" *ngIf="galleryItem && galleryItem.techIcon">
   <div class="container">
     <div class="row">
-<!--
-      <blockquote class="pull-quote" *ngFor="let quote of galleryItem.quotes">
-        <img class="img-circle" [src]="quote.image">
-        <p>
-          “<strong>{{quote.title}}</strong>{{quote.text}}”
-        </p>
-        <cite>{{quote.cite}}</cite>
-      </blockquote>-->
-
       <div class="col-sm-8 col-sm-offset-2 text-center m-b-lg" *ngFor="let statement of galleryItem.statements">
         <p class="lead m-x-auto">{{statement.text}}</p>
       </div>
