@@ -3,6 +3,7 @@
   width: 280px;
   overflow-x: hidden;
   overflow-y: scroll;
+  position: fixed;
 }
 
 li>i{
@@ -22,4 +23,14 @@ ul{
 strong{
   font-weight: 100;
   text-transform: uppercase;
+  letter-spacing: .05em;
+}
+cite{
+  letter-spacing: .05em;
+}
+h5{
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
