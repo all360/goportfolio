@@ -1,4 +1,25 @@
 .app-profile-container{
   margin-top: 90px;
   width: 280px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+li>i{
+  font-size: 20px;
+  padding-right: 6px;
+  padding-left: 15px;
+}
+
+ul{
+  margin-left: 20px;
+}
+
+.no-logo{
+  margin-left: 44px;
+}
+
+strong{
+  font-weight: 100;
+  text-transform: uppercase;
 }
