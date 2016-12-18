@@ -40,9 +40,9 @@
           <div class="col-sm-6 m-b-md" *ngFor="let btn of galleryItem.urls">
 
             <span [ngSwitch]="btn.image">
-              <a *ngSwitchCase="null" class="btn btn-default" [href]="btn.link" role="button">{{btn.title | uppercase }}</a>
-              <a *ngSwitchCase="''" class="btn btn-default" [href]="btn.link" role="button">{{btn.title | uppercase }}</a>
-              <a *ngSwitchDefault [href]="btn.link">
+              <a *ngSwitchCase="null" class="btn btn-default" [href]="btn.link" target="_blank" role="button">{{btn.title | uppercase }}</a>
+              <a *ngSwitchCase="''" class="btn btn-default" [href]="btn.link" target="_blank" role="button">{{btn.title | uppercase }}</a>
+              <a *ngSwitchDefault [href]="btn.link" target="_blank">
                 <img class="app-image-btn" [src]="btn.image" >
               </a>
             </span>
@@ -67,7 +67,7 @@
   </div>
 </div>
 
-<div class="block app-block-quote" *ngIf="galleryItem">
+<div class="block app-block-quote" *ngIf="galleryItem && galleryItem.quotes">
   <div class="container">
     <div class="row m-y-lg">
       <div class="col-sm-12">

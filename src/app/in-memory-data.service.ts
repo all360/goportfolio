@@ -46,8 +46,42 @@ export class InMemoryDataService implements InMemoryDbService {
                     text:"Spiritual Me app is localized 7 different languages.",
                     image:""}],
 
-      }, {
+      },
+      {
         id: 2,
+        type: "website",
+        name: "Union Gospel Mission",
+        client: "UGM Dallas",
+        bulletPoints:[{name:"role", value:"Front-end Developer"},
+          {name:"agency", value:"Russ Reid"},
+          {name:"year", value:"2016"}
+        ],
+        description: [ "Union Gospel Mission",
+          "One month project developing the Dallas union g mission website. WordPress website",
+          "Technology",
+          ["JavaScript", "HTML5", "CSS3", "LESS", "Gulp", "WordPress", "PHP", "ugm"]],
+        technology: ["WordPress", "HTML5", "CSS3", "LESS", "Gulp", "PHP", "Bootstrap"],
+        techIcon: [{name:"WordPress", link:"devicon-wordpress-plain"},
+          {name:"less", link:"devicon-less-plain-wordmark"},
+          {name:"CSS3", link:"devicon-css3-plain-wordmark"},
+          {name:"PHP", link:"devicon-php-plain"},
+          {name:"Bootstrap", link:"devicon-bootstrap-plain-wordmark"}],
+        imageFull: "../assets/images/gallery/slides/ugm/ugm.jpg",
+        imageThumb: "../assets/images/gallery/slides/ugm/ugm-thumb.jpg",
+        imageDescription: "",
+        awards:"",
+        urls: [{ title:"View Site",
+          image:"",
+          link:"https://www.ugmdallas.org"}],
+        statements:[{cite:"byPusspot - Nov 23, 2016, App Store user", title:"Simply relaxing.... ",
+          text:'"I used phpStorm and live watch for rapid a development process"',
+          image:""}],
+
+
+
+      },
+      {
+        id: 3,
         name: "Google vote",
         client: "Google",
         agency: "Axis Studios",
@@ -74,7 +108,7 @@ export class InMemoryDataService implements InMemoryDbService {
         urls: [{ title:"View Agency",
           link:"http://www.axis-studios.com"}]
       }, {
-        id: 3,
+        id: 4,
         name: "WaveRunners Walk Around",
         client: "Yamaha",
         agency: "Crane Morley",
@@ -93,7 +127,7 @@ export class InMemoryDataService implements InMemoryDbService {
         urls: [{ title:"View Agency",
           link:"http://www.CraneMorley.com"}]
       }, {
-        id: 4,
+        id: 5,
         name: "Disney’s Story App",
         client: "Disney",
         agency: "MOcean",
@@ -112,7 +146,7 @@ export class InMemoryDataService implements InMemoryDbService {
         urls: [{ title:"View Agency",
                  link:"http://www.MOceanLA.com"}]
       }, {
-        id: 5,
+        id: 6,
         name: "Tron Legacy website",
         client: "Disney",
         agency: "BLT Communication",
@@ -136,7 +170,7 @@ export class InMemoryDataService implements InMemoryDbService {
           title:"View Tron Project",
           link: "http://disney.com.au/tron/"}]
       }, {
-        id: 6,
+        id: 7,
         name: "Twilight Saga: Eclipse",
         client: "Disney",
         agency: "The Cimarron Group",
@@ -154,7 +188,7 @@ export class InMemoryDataService implements InMemoryDbService {
         awards:"",
         urls: []
       }, {
-        id: 7,
+        id: 8,
         name: "The Simpsons Movie",
         client: "FOX",
         agency: "65 Media",
@@ -174,7 +208,7 @@ export class InMemoryDataService implements InMemoryDbService {
         awards:["webby"],
         urls: []
       }, {
-        id: 8,
+        id: 9,
         name: "The Curse of the Were-Rabbit",
         client: "DreamWorks",
         agency: "The Cannery Agency",
@@ -193,7 +227,7 @@ export class InMemoryDataService implements InMemoryDbService {
         urls: [{ title:"Wallace and Gromit",
           link:"http://adgallery.zenfs.com/uk/uip/wallaceandgromit/index.html"}]
       }, {
-        id: 9,
+        id: 10,
         name: "KISSFMi",
         client: "KISSFM",
         agency: "FMiTV Networks",
@@ -210,7 +244,7 @@ export class InMemoryDataService implements InMemoryDbService {
         awards:[],
         urls: []
       }, {
-        id: 10,
+        id: 11,
         name: "GoPortfolio",
         client: "",
         agency: "",
@@ -227,7 +261,7 @@ export class InMemoryDataService implements InMemoryDbService {
         awards:[],
         urls: []
       }, {
-        id: 11,
+        id: 12,
         name: "Modernica.com",
         client: "Modernica",
         agency: "",
@@ -244,7 +278,7 @@ export class InMemoryDataService implements InMemoryDbService {
         awards:[],
         urls: []
       }, {
-        id: 12,
+        id: 13,
         name: "NoogNetwork.com",
         client: "NoogNetwork",
         agency: "",
