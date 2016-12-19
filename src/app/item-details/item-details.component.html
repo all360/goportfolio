@@ -83,6 +83,37 @@
   </div>
 </div>
 
+
+<div class="block block-inverse app-block-carousel p-x-0" *ngIf="galleryItem && galleryItem.carousel">
+  <div class="container-fluid p-x-0">
+    <div id="app-carousel" class="carousel carousel-light slide" data-ride="carousel">
+
+      <ol class="carousel-indicators">
+        <li *ngFor="let slide of galleryItem.carousel; let idx = index" [ngClass]="{active: idx === 0 }"
+            data-target="#app-carousel" [attr.data-slide-to]="idx" ></li>
+      </ol>
+
+      <div class="carousel-inner" role="listbox">
+        <div *ngFor="let slide of galleryItem.carousel; let id = index" [ngClass]="{active: id === 0 }" class="item">
+          <!--<img class="img-responsive center-block" [src]="slide.image" [alt]="slide.title">-->
+          <iframe [src]="'http://devicon.fr/' | safe" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <a class="left carousel-control" href="#app-carousel" role="button" data-slide="prev">
+        <span class="icon icon-chevron-thin-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+
+      <a class="right carousel-control" href="#app-carousel" role="button" data-slide="next">
+        <span class="icon icon-chevron-thin-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+  </div>
+</div>
+<!--
 <div class="block block-inverse app-block-carousel p-x-0" *ngIf="galleryItem && galleryItem.carousel">
   <div class="container-fluid p-x-0">
     <div id="app-carousel" class="carousel carousel-light slide" data-ride="carousel">
@@ -111,7 +142,7 @@
     </div>
   </div>
 </div>
-
+-->
 <div class="block app-block-tech-icons" *ngIf="galleryItem && galleryItem.techIcon">
   <div class="container">
     <div class="row">
