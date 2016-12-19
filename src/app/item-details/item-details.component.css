@@ -59,6 +59,12 @@ h1{
   max-height: 650px;
 }
 
+.carousel-inner>.item>a>iframe, .carousel-inner>.item>iframe {
+  height: 500px;
+  width: 320px;
+  border: 0;
+}
+
 .carousel-indicators{
   display: none;
 }

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="ad.size" content="width=300,height=250">
+<title>Countdown_register-Alt_1_EN_320x480_HTML5</title>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<!--
+ * Dynamic Content Enable code for Profile: 1090632
+ *
+ * The following code initializes the following dynamic variables for
+ * development testing and live serving of Fields associated to the above profile
+-->
+
+<!-- DynamicContent Start: HTML5 invocation code. -->
+<script type="text/javascript">
+
+// Dynamic Content variables and sample values
+    Enabler.setProfileId(1090632);
+    var devDynamicContent = {};
+
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1= [{}];
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0]._id = 0;
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].ID = 0;
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].is_default = "YES";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].reporting_label = "New York";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].state_text = "New York";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].state_abbreviation = "NY";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].start_date = "2026-10-06";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].end_date = "10/15/2026";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].hide_date_mail = "10/14/2026";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].hide_date_in_person = "Keep";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].hide_date_online = "10/14/2026";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].register_deadline_mail = "10/14/2026";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].register_deadline_in_person = "10/15/2026";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].register_deadline_online = "11/02/2026";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].last_register_date = "11/02/2026";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].clickthrough_english = {};
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].clickthrough_english.Url = "https://www.google.com/#q=register+to+vote";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].clickthrough_spanish = {};
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].clickthrough_spanish.Url = "https://www.google.com/#q=register+to+vote";
+    
+
+    Enabler.setDevDynamicContent(devDynamicContent);
+
+</script>
+
+<!--
+ * You may access the variables in the following manner
+ * AFTER the Studio Enabler is initialized.
+ * var ID = devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].ID;
+ * Note: be sure to use "dynamicContent", not "devDynamicContent"
+ * Note: be sure to use ExitOverride to create your exit URL dynamically; follow the instructions on our Help center: https://support.google.com/richmedia/answer/2664807
+-->
+
+<script>
+
+var bannerSize = {width: 320, height:480};
+var body, container, hitter, cta, chompInterval, selectedCandidate, selectedIssue;
+var currentFrame = 1;
+var loopCount = 0;
+var loopLimit = 2;
+var dynamicContent = null;
+var bannerTime = new Date().getTime();
+chompData = window.chompData || {
+    currentElementId: 'startFrame'
+};
+
+function alog(message){
+    if(console){
+        if(console.log){
+            console.log(message);
+        }
+    }
+};
+function checkLocal(){
+    // This just sets the background color and centers the unit if you're either on a local server or on the Axis client server
+    var isLocal = location.href.indexOf("file") > -1 || location.href.indexOf("127.0.0.1") > -1;
+    var isAxis = location.href.indexOf("axis-studios.com") > -1;
+    if(isLocal || isAxis){
+        document.getElementById('body').classList.add('local');
+        document.getElementById('container').classList.add('local');
+    }
+};
+
+function setButton(tgt){
+    // Umm, need a comment?
+    tgt.addEventListener('mouseover', overButton);
+    tgt.addEventListener('mouseout', outButton);
+}
+function overButton(evt){
+    var tgt = evt.currentTarget;// Get the current target to account for bubbled events
+    switch(tgt.id){
+        case 'hitter':
+        case 'cta':
+            cta.classList.add('over');
+            break;
+    }
+}
+function outButton(evt){
+    var tgt = evt.currentTarget;
+    switch(tgt.id){
+        case 'hitter':
+        case 'cta':
+            cta.classList.remove('over');
+            break;
+    }
+}
+function clickthrough(){
+    var url = devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].clickthrough_english.Url;
+    var state = devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].reporting_label;
+    if(url == null || url == undefined || url == 'undefined' || url == ''){
+        Enabler.exit('clickthrough');
+    }else{
+        Enabler.exitOverride('Clickthrough_'+state, url);
+    }
+}
+
+var showMail = true;
+var showInPerson = true;
+var showOnline = true;
+var showPageCount = 0;
+
+function getMonth( endDate ){
+
+    var month = new Array();
+    month[0] = "January";
+    month[1] = "February";
+    month[2] = "March";
+    month[3] = "April";
+    month[4] = "May";
+    month[5] = "June";
+    month[6] = "July";
+    month[7] = "August";
+    month[8] = "September";
+    month[9] = "October";
+    month[10] = "November";
+    month[11] = "December";
+
+    return month[ endDate.getMonth()];
+}
+
+function formatDate( dateA ){
+    if(typeof(dateA)  == 'object'){
+        dateA = dateA['RawValue'];
+    }
+    // convert to short date
+    alog( dateA );
+    if( dateA.indexOf("/") == -1){
+        var dateB = dateA.slice(0, 10).split('-');   
+        var dateC = dateB[1] +'/'+ dateB[2] +'/'+ dateB[0];
+
+        return dateC;
+    }
+    else{
+        return dateA;
+    }  
+}
+
+function init(){
+    var dcInterval = setInterval(function(){
+        if(dynamicContent){
+            clearInterval(dcInterval);
+            // Dynamic state content
+            var stateText = devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].state_text;
+            var deadlineMailDate = new Date( formatDate(devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].register_deadline_mail ));
+            var deadlineInPersonDate = new Date( formatDate(devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].register_deadline_in_person));
+            var deadlineOnlineDate = new Date( formatDate(devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].register_deadline_online));
+            var lastRegistrationDate = new Date( formatDate(devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].last_register_date ));
+            
+            var absenteeState = document.getElementById('absenteeState');
+            
+            
+            document.getElementById('registerDayMail').innerHTML = deadlineMailDate.getDate();
+            document.getElementById('registerDayPerson').innerHTML = deadlineInPersonDate.getDate();
+            document.getElementById('registerDayOnline').innerHTML = deadlineOnlineDate.getDate();
+
+            document.getElementById('registerMonthMail').innerHTML = getMonth( deadlineMailDate );
+            document.getElementById('registerMonthPerson').innerHTML = getMonth( deadlineInPersonDate );
+            document.getElementById('registerMonthOnline').innerHTML = getMonth( deadlineOnlineDate );
+
+
+            var today = new Date();
+            var startDate = new Date( formatDate(devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].start_date));
+            var endDate = new Date( formatDate(devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].end_date));
+
+            var btn = document.getElementById('cta').getElementsByTagName("h2")[0];
+
+            if ((isNaN( startDate.getTime()) || isNaN( endDate.getTime()))){
+                absenteeState.innerHTML = "Don't miss the deadline<br>to register to vote.";
+                btn.innerHTML = "LEARN MORE";
+                initGeneric();
+}
+else
+{
+    var tx2 = absenteeState.innerHTML;
+                tx2 = tx2.split('{State}').join(stateText);
+                tx2 = tx2.split('{Date}').join( getMonth( lastRegistrationDate ) + " " + lastRegistrationDate.getDate() );
+                absenteeState.innerHTML = tx2;
+
+                setPagesDisplayState();
+                init2();
+            }       
+        }
+    }, 50);
+}
+
+function setPagesDisplayState()
+{
+    
+    var today = new Date();
+    var hideDateMail = devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].hide_date_mail.toLowerCase();
+    var hideDateInPerson = devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].hide_date_in_person.toLowerCase();
+    var hideDateOnline = devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_To_Register__160902_Sheet1[0].hide_date_online.toLowerCase();
+
+    var elements = document.getElementsByClassName('page');
+    var arr = Array.prototype.slice.call(elements);
+
+    if ( hideDateMail === "keep" || today <= new Date(formatDate(hideDateMail)) ){
+        showMail = true;
+        showPageCount ++;
+    }
+    else{
+        showMail = false;
+        arr[2].classList.add('gone');
+        document.getElementById('header1').classList.add('gone');
+        document.getElementById('header2').classList.remove('gone');
+    }
+
+    if ( hideDateInPerson === "keep" || today <= new Date(formatDate(hideDateInPerson)) ){
+        showInPerson = true;
+        showPageCount ++;
+    }
+    else{
+        
+        showInPerson = false;
+        arr[1].classList.add('gone');
+        document.getElementById('header2').classList.add('gone');
+    }
+
+    if ( hideDateOnline === "keep" || today <= new Date(formatDate(hideDateOnline)) ){
+        showOnline = true;
+        showPageCount ++;
+        if( showPageCount == 1)
+        {
+            document.getElementById('header3').classList.remove('gone');
+        }  
+    }
+    else{
+        showOnline = false;
+        arr[0].classList.add('gone');
+    }
+
+}
+
+function setChompState(state){
+    var cn = body.className.split(' ');
+    for(var i=0;i<cn.length;i++){
+        if(cn[i].indexOf('chomp') > -1){
+            cn[i] = 'chomp'+state;
+            body.className = cn.join(' ');
+            return;
+        }
+    }
+    cn[cn.length] = 'chomp'+state;
+    body.className = cn.join(' ');
+    return;
+}
+
+function initGeneric(){
+     
+    body = document.getElementById('body');
+    container = document.getElementById('container');
+    container.classList.remove('gone');
+    hitter = document.getElementById('hitter');
+    cta = document.getElementById('cta');
+    
+    setButton(hitter);
+    setButton(cta);
+    checkLocal();
+    
+    // Set local
+    var local = body.className.indexOf('local') > -1 ? 'local' : '';
+    var prefix = local + '';
+    body.className = prefix;
+    
+    
+    document.getElementById('startFrame').classList.add('gone');
+    document.getElementById('endFrame').classList.remove('gone');
+    setChompState(2);
+    body.classList.add('chompEnd');
+}
+
+function init2() {
+
+    if(loopCount == 0){
+        setTimeout(function(){
+            alog('TIME IS UP');
+        }, 14500);
+    }
+    body = document.getElementById('body');
+    container = document.getElementById('container');
+    container.classList.remove('gone');
+    hitter = document.getElementById('hitter');
+    cta = document.getElementById('cta');
+    
+    setButton(hitter);
+    setButton(cta);
+    checkLocal();
+    
+    // Set local
+    var local = body.className.indexOf('local') > -1 ? 'local' : '';
+    var prefix = local + '';
+    body.className = prefix;
+    
+    // set the chomp lines as accessible variables
+    var topChomper = document.getElementById('chomperTop');
+    var botChomper = document.getElementById('chomperBot');
+    
+    // Add listener for chomper animations
+    // this function just sets all of the platform prefixes
+    var pfx = ["webkit", "moz", "MS", "o", ""];
+    function prefixedEventListener(element, type, callback) {
+        for (var p = 0; p < pfx.length; p++) {
+            if (!pfx[p]) type = type.toLowerCase();
+            element.addEventListener(pfx[p]+type, callback, false);
+        }
+    }
+    prefixedEventListener(topChomper, 'AnimationEnd', function(evt){
+        switch(evt.animationName){
+            case 'chomp1TopAnimationStart':// Signifies the end of the first half of the first chomp animation
+                document.getElementById('startFrame').classList.add('gone');// This hides the start frame
+                document.getElementById('vote').classList.remove('gone');// Make 'vote' div visible
+                body.classList.remove('chompStart');// First half of chomp done
+                body.classList.add('chompEnd');// This fires the second half of the first chomp animation which reveals the vote text
+                break;
+            case 'chomp1TopAnimationEnd':
+                
+                var count = 0;
+                var timeArr = [ 1500, 4500, 7500];
+                
+
+                body.classList.remove('chompEnd');
+
+
+                if( showMail == true && showPageCount > 1)
+                {
+                    setTimeout(function(){
+                        
+                        body.classList.add('dropDate1');
+                    
+                        setTimeout(function(){
+                            document.getElementById('header1').classList.add('gone');
+                            document.getElementById('header2').classList.remove('gone');
+                        }, 300);
+
+                    }, timeArr[ count ]);
+
+                    count++;
+                }
+                
+                if( (showInPerson == true) && ( showPageCount > 2 || (showPageCount > 1 && count == 0)))
+                {
+                    setTimeout(function(){
+                        
+                        body.classList.add('dropDate2');
+
+                        setTimeout(function(){
+                            document.getElementById('header2').classList.add('gone');
+                            document.getElementById('header3').classList.remove('gone');
+                        }, 300);
+
+                    }, timeArr[count]);
+                    count++;
+                }
+
+                setTimeout(function(){
+                    setChompState(2);
+                    body.classList.add('chompStart');
+                }, timeArr[count]);
+
+                console.log( count );
+                console.log( showPageCount );
+             
+                break;
+             
+            case 'chomp2TopAnimationStart':
+                document.getElementById('vote').classList.add('gone');// Now we're chomped down, we can get rid of the 'vote'
+                document.getElementById('endFrame').classList.remove('gone');// And make the end frame text visible
+                body.classList.remove('chompStart');// First half of chomp done
+                body.classList.add('chompEnd');// This fires the second half of the second chomp animation which reveals the end frame text
+                break;
+            case 'chomp2TopAnimationEnd':
+                body.classList.add('bannerEnd');// Now the second chomp is done, setting this class makes the cta and footer stuff appear
+                break;
+        }
+    });
+
+	// animate
+    setTimeout(function(){
+        //typeText(text, totalTime, target)
+        typeText('When’s the last day to register to vote', 1200, document.getElementById('inputField'));
+    }, 400);
+    
+
+    setTimeout(function(){
+        document.getElementById('startFrame').classList.add('end');// Animate first text field zooming out
+        setTimeout(function(){
+            setChompState(1);// When chomp state is set to 1 the class 'chomp1' gets added to body which sets it to play the first chomp
+            body.classList.add('chompStart');// This fires the first half of the first chomp animation 
+        }, 1800);
+        
+    }, 1100);// Animate first text field zooming out
+    
+    
+    /*
+    setTimeout(function(){
+        //typeText(text, totalTime, target)
+        document.getElementById('style').appendChild(document.createTextNode(css));
+        //typeText('Can I register online to vote', 1200, document.getElementById('inputField'));
+    }, 2000);*/
+};
+// Easing
+// t: current time, b: begInnIng value, c: change In value, d: duration
+function easeInQuad(t, b, c, d) {
+    return c*(t/=d)*t + b;
+}
+function easeOutQuad(t, b, c, d) {
+    return -c *(t/=d)*(t-2) + b;
+}
+function easeInCubic(t, b, c, d) {
+    return c*(t/=d)*t*t + b;
+}
+function easeOutCubic(t, b, c, d){// Cubic
+    var tc = (t/=d)*t*t;
+    return b+c*(tc);
+};
+function easeInExpo(t, b, c, d) {
+    return (t==0) ? b : c * Math.pow(2, 10 * (t/d - 1)) + b;
+}
+function easeOutExpo(t, b, c, d) {// Exponential
+    return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
+};
+function easeInQuint(t, b, c, d) {
+    return c*(t/=d)*t*t*t*t + b;
+}
+function easeOutQuint(t, b, c, d) {// Quintic
+    var ts = (t/=d)*t;
+    var tc = ts*t;
+    return b+c*(tc*ts);
+};
+function easeInSine(t, b, c, d) {
+    return -c * Math.cos(t/d * (Math.PI/2)) + c + b;
+}
+function easeOutSine(t, b, c, d) {
+    return c * Math.sin(t/d * (Math.PI/2)) + b;
+};
+
+// This takes a string of text, how long you want it to take, and the DOM element you want it written in and "types" it out with easing - NIFTY!
+function typeText(text, totalTime, target){
+    var letters = text.split('');// Split into individual letters array
+    // Initialize variables
+    var startTime = new Date().getTime();
+    var currentLetter = 0;
+    var now = startTime;
+    var newText = '';
+    var typeInterval = setInterval(function(){
+        // set letters and cursor based on easing function
+        now = new Date().getTime() - startTime;
+        currentLetter = Math.max(currentLetter, easeOutCubic(now, 0, letters.length, totalTime));
+        newText = '';
+        for(var i=0;i<currentLetter;i++){
+            newText += letters[i];
+        }
+        if(now > totalTime){
+            newText = text + '<span class="typingCursor blinking">|</span>';// Also appends a cursor to it, with a blinking class so that when you're at the end of the text the cursor blinks
+            target.classList.add('done');
+            clearInterval(typeInterval);
+        }else{
+            newText += '<span class="typingCursor">|</span>';
+        }
+        target.innerHTML = newText;
+    }, 1);
+}
+
+// Class list support for #$&!@>% IE
+if("document"in self){if(!("classList"in document.createElement("_"))||document.createElementNS&&!("classList"in document.createElementNS("http://www.w3.org/2000/svg","g"))){(function(t){"use strict";if(!("Element"in t))return;var e="classList",i="prototype",n=t.Element[i],s=Object,r=String[i].trim||function(){return this.replace(/^\s+|\s+$/g,"")},a=Array[i].indexOf||function(t){var e=0,i=this.length;for(;e<i;e++){if(e in this&&this[e]===t){return e}}return-1},o=function(t,e){this.name=t;this.code=DOMException[t];this.message=e},l=function(t,e){if(e===""){throw new o("SYNTAX_ERR","An invalid or illegal string was specified")}if(/\s/.test(e)){throw new o("INVALID_CHARACTER_ERR","String contains an invalid character")}return a.call(t,e)},c=function(t){var e=r.call(t.getAttribute("class")||""),i=e?e.split(/\s+/):[],n=0,s=i.length;for(;n<s;n++){this.push(i[n])}this._updateClassName=function(){t.setAttribute("class",this.toString())}},u=c[i]=[],f=function(){return new c(this)};o[i]=Error[i];u.item=function(t){return this[t]||null};u.contains=function(t){t+="";return l(this,t)!==-1};u.add=function(){var t=arguments,e=0,i=t.length,n,s=false;do{n=t[e]+"";if(l(this,n)===-1){this.push(n);s=true}}while(++e<i);if(s){this._updateClassName()}};u.remove=function(){var t=arguments,e=0,i=t.length,n,s=false,r;do{n=t[e]+"";r=l(this,n);while(r!==-1){this.splice(r,1);s=true;r=l(this,n)}}while(++e<i);if(s){this._updateClassName()}};u.toggle=function(t,e){t+="";var i=this.contains(t),n=i?e!==true&&"remove":e!==false&&"add";if(n){this[n](t)}if(e===true||e===false){return e}else{return!i}};u.toString=function(){return this.join(" ")};if(s.defineProperty){var h={get:f,enumerable:true,configurable:true};try{s.defineProperty(n,e,h)}catch(d){if(d.number===-2146823252){h.enumerable=false;s.defineProperty(n,e,h)}}}else if(s[i].__defineGetter__){n.__defineGetter__(e,f)}})(self)}else{(function(){"use strict";var t=document.createElement("_");t.classList.add("c1","c2");if(!t.classList.contains("c2")){var e=function(t){var e=DOMTokenList.prototype[t];DOMTokenList.prototype[t]=function(t){var i,n=arguments.length;for(i=0;i<n;i++){t=arguments[i];e.call(this,t)}}};e("add");e("remove")}t.classList.toggle("c3",false);if(t.classList.contains("c3")){var i=DOMTokenList.prototype.toggle;DOMTokenList.prototype.toggle=function(t,e){if(1 in arguments&&!this.contains(t)===!e){return e}else{return i.call(this,t)}}}t=null})()}}
+</script>
+</head>
+<body id="body" onload="init();" class="">
+    <div id="container" class="gone">
+       <div id="startFrame">
+            <h1 class="textHolder logo1"><img class="text" src="images/sprite.png" width="0" height="1" alt="" />Google</h1>
+            <div class="inputBox">
+                <div class="inputText" id="inputField"></div>
+                <div class="mic" ><img class="text" src="images/sprite.png" width="0" height="1" alt="" />mic</div>
+            </div>
+        </div>
+
+        <div id="vote" class="gone">
+
+            <div class="text">
+              <h2 id="header1">Last day to<br/>register by mail:</h2>
+              <h2 id="header2" class="gone">Last day to<br/>register in person:</h2>
+              <h2 id="header3" class="gone">Last day to<br/>register online:</h2>
+            </div>
+            <div class="calendar">
+                <div class="background"></div>
+                    
+                <div class="page" >
+                    <div class="fill"></div>
+                    <div class="month">
+                        <div class="text" id="registerMonthOnline">May</div>
+                    </div>
+                    <div class="date">
+                        <div class="text" id="registerDayOnline">28</div>
+                    </div>
+                </div>    
+                <div class="page" >
+                    <div class="fill"></div>
+                    <div class="month">
+                        <div class="text" id="registerMonthPerson">May</div>
+                    </div>
+                    <div class="date">
+                        <div class="text" id="registerDayPerson">28</div>
+                    </div>
+                </div>
+                    
+                <div class="page">
+                    <div class="fill"></div>
+                    <div class="month">
+                        <div class="text" id="registerMonthMail">May</div>
+                    </div>
+                    <div class="date">
+                        <div class="text" id="registerDayMail">28</div>
+                    </div>
+                </div>
+                
+               <div class="ring"></div>
+               <div class="ring"></div>     
+            </div>
+        </div>
+        <div id="endFrame" class="gone">
+            <div class="text">
+              <h1 id="absenteeState">{State}<br/>voter registration<br/>ends {Date}</h1>
+            </div>
+        </div>
+        <div id="chomper">
+            <div class="top" id="chomperTop"><div class="googleRedBack chompLine fullWidth botBar"></div></div>
+            <div class="bot" id="chomperBot"><div class="googleBlueBack chompLine fullWidth topBar"></div></div>
+        </div>
+        <div id="footer">
+            <a href="#" id="cta" onclick="clickthrough();">
+                <div class="bg"></div>
+                <h2>GET STARTED</h2>
+            </a>
+            <h1 class="textHolder logo"><img class="text" src="images/sprite.png" width="0" height="1" alt="" />Google</h1>
+            <h1 class="tagline">#EveryoneIn2026</h1>
+        </div>
+        
+       <a href="#" onclick="clickthrough();" id="hitter"><!--&nbsp;--></a>
+        
+        <a href="#" onclick="" id="closeX">
+            <div class="line"></div>
+            <div class="line"></div>
+        </a>
+       <!--<img src="tempImages/Count2Reg-alt_640x960_2.jpg" class="template"/>-->
+    </div>
+    
+</body>
+</html>
