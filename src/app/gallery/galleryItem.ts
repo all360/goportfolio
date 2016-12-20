@@ -8,6 +8,7 @@ export class GalleryItem {
   technology:string;
   techIcon:string;
   imageFull: string;
+  iframeFull: string;
   imageThumb: string;
   imageDescription: string;
   videos:string;

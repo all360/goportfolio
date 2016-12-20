@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="ad.size" content="width=300,height=600">
+<title>Truth_SquadLess_1_EN_300x600_HTML5</title>
+
+<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+<script>
+var clickTag = 'http://www.google.com';
+
+var bannerSize = {width: 300, height:600};
+var version = 'watch';// options are 'enlist', 'watch'
+var truthFlickerInterval, truthFlickerState = 0, squadLogoFrame = 0, squadLogoInterval;
+
+function alog(message){
+    if(console){
+        if(console.log){
+            console.log(message);
+        }
+    }
+};
+function clickthrough(){
+	//Enabler.exit('clickthrough');
+	window.open(clickTag);
+};
+
+function init() {
+    body = document.getElementById('body');
+    body.classList.add(version);
+    container = document.getElementById('container');
+    //container.classList.remove('gone');
+    hitter = document.getElementById('hitter');
+    cta = document.getElementById('cta');
+    hitter.addEventListener('mouseover', function(){
+        cta.classList.add('over');
+    });
+    hitter.addEventListener('mouseout', function(){
+        cta.classList.remove('over');
+    });
+    exes = document.getElementById('exes');
+    
+    // Animate the unit
+    // Animate text and cta
+    setTimeout(function(){
+    	container.classList.remove('gone');
+    }, 200);
+    
+    setTimeout(function(){
+        body.classList.add('frame2');
+        setTimeout(function(){ setWord(1); }, 50);
+        setTimeout(function(){ setWord(2); }, 250);
+        setTimeout(function(){ setWord(3); }, 500);
+        setTimeout(function(){ setWord(4); }, 750);
+        setTimeout(function(){ setWord(5); }, 1000);
+        setTimeout(function(){ setWord(6); }, 1250);
+        setTimeout(function(){ setWord(7); }, 1500);
+        setTimeout(function(){ setWord(8); }, 1750);
+    }, 1000);
+   
+ 
+    setTimeout(function(){
+        body.classList.add('done2');
+    }, 4000);
+    
+    setTimeout(function(){
+    	setWord();
+        body.classList.remove('frame2');
+        body.classList.add('frame3');
+        
+        setTimeout(function(){ setWord(1); }, 50);
+        setTimeout(function(){ setWord(2); }, 250);
+        setTimeout(function(){ setWord(3); }, 500);
+        setTimeout(function(){ setWord(4); }, 750);
+        setTimeout(function(){ setWord(5); }, 1000);
+        setTimeout(function(){ setWord(6); }, 1250);
+        setTimeout(function(){ setWord(7); }, 1500);
+        setTimeout(function(){ setWord(8); }, 1750);
+    }, 4500);
+     
+    setTimeout(function(){
+        body.classList.add('done3');
+    }, 7000);
+    setTimeout(function(){
+    	setWord();
+        body.classList.remove('frame3');
+        body.classList.add('frame4');
+        setTimeout(function(){ setWord(1); }, 50);
+        setTimeout(function(){ setWord(2); }, 250);
+    }, 7500);
+    
+    setTimeout(function(){
+        body.classList.add('done4');
+    }, 8500);
+    setTimeout(function(){
+    	setWord();
+        body.classList.remove('frame4');
+        body.classList.add('frame5');
+        setTimeout(function(){ setWord(1); }, 50);
+        setTimeout(function(){ setWord(2); }, 250);
+        setTimeout(function(){ setWord(3); }, 500);
+        setTimeout(function(){ setWord(4); }, 750);
+    }, 9000);
+    
+    setTimeout(function(){
+        body.classList.add('done5');
+    }, 11000);
+    setTimeout(function(){
+    	setWord();
+        goTruthFlickerInterval();
+        setTimeout(function(){
+            body.classList.remove('frame5');
+            body.classList.add('frame6');
+        }, 500);
+        setTimeout(function(){
+        	var squad = document.getElementById('squadLogo').getElementsByClassName('squadless')[0];
+        	//455x386
+        	var logoPositions = [
+        		'0px 0px',
+        		'-455px 0px',
+        		'-910px 0px',
+        		'-1365px 0px',
+        		'-1820px 0px',
+        		'-2275px 0px',
+        		'-2730px 0px',
+        		'0px -386px',
+        		'-455px -386px',
+        		'-910px -386px',
+        		'-1365px -386px',
+        		'-1820px -386px',
+        		'-2275px -386px',
+        		'-2730px -386px',
+        		'0px -772px',
+        		'-455px -772px',
+        		'-910px -772px',
+        		'-1365px -772px',
+        		'-1820px -772px',
+        		'-2275px -772px',
+        		'-2730px -772px',
+        		'0px -1158px',
+        		'-455px -1158px',
+        		'-910px -1158px',
+        		'-1365px -1158px',
+        		'-1820px -1158px',
+        		'-2275px -1158px',
+        		'-2730px -1158px'
+        	];
+        	squadLogoInterval = setInterval(function(){
+        		squad.style.backgroundPosition = logoPositions[squadLogoFrame];
+	        	squadLogoFrame += 1;
+	        	if(squadLogoFrame == logoPositions.length){
+	        		clearInterval(squadLogoInterval);
+	        	}
+        	}, 1000/24);
+        	
+        }, 3200);
+    }, 11500);
+    
+    setTimeout(function(){
+        body.classList.add('cta');
+    }, 13000);
+};
+
+
+function setWord(ndx){
+    if(body.className.indexOf('word') > -1){
+    	var classes = body.className.split(' ');
+    	for(var i=0;i<classes.length;i++){
+    		if(classes[i].indexOf('word') > -1){
+    			classes[i] = '';
+    		}
+    	}
+        body.className = classes.join(' ');
+    }
+    if(ndx){
+    	body.classList.add('word'+ndx);
+    }
+}
+function goTruthFlickerInterval(){
+	truthFlickerInterval = setInterval(function(){
+		var truthFlickerSizes = [
+			'scale(.5) translate(-10px, 10px)',
+			'scale(.6) translate(-30px, 40px)',
+			'scale(.7) translate(-55px, 80px)',
+			'scale(.8) translate(-60px, 120px)',
+            'scale(0.90) translate(-80px, 292px)',
+			'scale(0.96) translate(-71px, 282px)',
+			'scale(0.90) translate(-80px, 292px)',
+			'scale(1.3) translate(-83px, 90px)',
+			'scale(.6) translate(-80px, 90px)',
+			'scale(.4) translate(0px, 0px)'
+		];
+
+		document.getElementById('truthLogo').style.transform = truthFlickerSizes[Math.min(truthFlickerState, truthFlickerSizes.length-1)];
+		truthFlickerState += 1;
+		if(truthFlickerState == 5 || truthFlickerState == 7){// This is so we can make it stop longer at full size centered
+			var t = truthFlickerState == 5 ? 300 : 1200;
+			clearInterval(truthFlickerInterval);
+			setTimeout(function(){
+				goTruthFlickerInterval();
+			}, t);
+		}else{
+			if(truthFlickerState == truthFlickerSizes.length){
+				clearInterval(truthFlickerInterval);
+			}
+		}
+	}, 50);
+  
+};
+
+// Class list support
+if("document"in self){if(!("classList"in document.createElement("_"))||document.createElementNS&&!("classList"in document.createElementNS("http://www.w3.org/2000/svg","g"))){(function(t){"use strict";if(!("Element"in t))return;var e="classList",i="prototype",n=t.Element[i],s=Object,r=String[i].trim||function(){return this.replace(/^\s+|\s+$/g,"")},a=Array[i].indexOf||function(t){var e=0,i=this.length;for(;e<i;e++){if(e in this&&this[e]===t){return e}}return-1},o=function(t,e){this.name=t;this.code=DOMException[t];this.message=e},l=function(t,e){if(e===""){throw new o("SYNTAX_ERR","An invalid or illegal string was specified")}if(/\s/.test(e)){throw new o("INVALID_CHARACTER_ERR","String contains an invalid character")}return a.call(t,e)},c=function(t){var e=r.call(t.getAttribute("class")||""),i=e?e.split(/\s+/):[],n=0,s=i.length;for(;n<s;n++){this.push(i[n])}this._updateClassName=function(){t.setAttribute("class",this.toString())}},u=c[i]=[],f=function(){return new c(this)};o[i]=Error[i];u.item=function(t){return this[t]||null};u.contains=function(t){t+="";return l(this,t)!==-1};u.add=function(){var t=arguments,e=0,i=t.length,n,s=false;do{n=t[e]+"";if(l(this,n)===-1){this.push(n);s=true}}while(++e<i);if(s){this._updateClassName()}};u.remove=function(){var t=arguments,e=0,i=t.length,n,s=false,r;do{n=t[e]+"";r=l(this,n);while(r!==-1){this.splice(r,1);s=true;r=l(this,n)}}while(++e<i);if(s){this._updateClassName()}};u.toggle=function(t,e){t+="";var i=this.contains(t),n=i?e!==true&&"remove":e!==false&&"add";if(n){this[n](t)}if(e===true||e===false){return e}else{return!i}};u.toString=function(){return this.join(" ")};if(s.defineProperty){var h={get:f,enumerable:true,configurable:true};try{s.defineProperty(n,e,h)}catch(d){if(d.number===-2146823252){h.enumerable=false;s.defineProperty(n,e,h)}}}else if(s[i].__defineGetter__){n.__defineGetter__(e,f)}})(self)}else{(function(){"use strict";var t=document.createElement("_");t.classList.add("c1","c2");if(!t.classList.contains("c2")){var e=function(t){var e=DOMTokenList.prototype[t];DOMTokenList.prototype[t]=function(t){var i,n=arguments.length;for(i=0;i<n;i++){t=arguments[i];e.call(this,t)}}};e("add");e("remove")}t.classList.toggle("c3",false);if(t.classList.contains("c3")){var i=DOMTokenList.prototype.toggle;DOMTokenList.prototype.toggle=function(t,e){if(1 in arguments&&!this.contains(t)===!e){return e}else{return i.call(this,t)}}}t=null})()}}
+</script>
+
+<style type="text/css">
+    body, html {
+    margin: 0;
+    padding: 0;
+}
+
+div, img, a, h1, h2, h3, h4, span, canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-family: arial, sans-serif;
+    font-weight: normal;
+}
+
+body.local {
+    background-color: #363636;
+}
+
+#container {
+    position: absolute;
+    overflow: hidden;
+    width: 300px;
+    height: 600px;
+    background-color: #ffffff;
+}
+
+#container.local {
+    top: 50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.textHolder, .textHolder span {
+    overflow: hidden;    /*background-color: rgba(255, 0, 0, .5);*/
+}
+
+.text {
+    width: 656px;
+    height: 634px;
+    position: relative;
+}
+
+.background {
+    width: 300px;
+    height: 100%;
+    overflow: hidden;
+    background-color: #f36e21;
+}
+
+.background .dots, .pic4 .dots, .overlay .dots {
+    background-image: url('images/sprite.png');
+    background-position: -304px -6px;
+    background-size: 656px 634px;
+    width: 300px;
+    height: 347px;
+    opacity: .23;
+}
+
+.background .dots.bottom, .pic4 .dots.bottom {
+    background-position: -304px 0px;
+    top: 349px;
+    height: 250px;
+}
+
+.overlay .dots {
+    -webkit-transform: rotate(-13deg);
+    -ms-transform: rotate(-13deg);
+    transform: rotate(-13deg);
+    left: 109px;
+    top: -100px;
+}
+
+.overlay {
+    top: 372px;
+    left: -120px;
+    width: 500px;
+    height: 261px;
+    background-color: black;
+    -webkit-transform: rotate(13deg);
+    -ms-transform: rotate(13deg);
+    transform: rotate(13deg);
+    overflow: hidden;
+}
+
+.background .halftone, .overlay .halftone, .pic4 .halftone {
+    width: 196%;
+    height: 150%;
+    -webkit-transform: rotate(15deg) translate(-36%, -15%);
+    -ms-transform: rotate(15deg) translate(-36%, -15%);
+    transform: rotate(15deg) translate(-36%, -15%);
+    background-image: url('images/halftone.jpg');    /* background-repeat: repeat-y; */
+    opacity: 0.07;
+}
+
+.picHolder {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.picHolder .pic {
+    top: 0px;
+    left: 0px;
+    width: 599px;
+    height: 844px;
+}
+
+.pic2 .pic {
+    left: -100%;
+}
+
+.pic3 .pic {
+    left: 0px;
+    top: -424px;
+}
+
+.pic4 .pic {
+    left: -300px;
+    top: -425px;
+}
+
+.pic4 .cover {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0;
+}
+
+body.frame6 .pic4 .cover {
+    -webkit-transition: 2s ease-out;
+    -webkit-transition: 2000ms ease-out 1.95195ms;
+    transition: 2000ms ease-out 1.95195ms;
+    opacity: 1;
+}
+
+#truthLogo {
+    -webkit-transform: scale(.36);
+    -ms-transform: scale(.36);
+    transform: scale(.36);
+    top: -7px;
+    left: 77px;
+    width: 290px;
+    height: 87px;
+    overflow: hidden;
+}
+
+#truthLogo img {
+    top: -540px;
+}
+
+.heading1 {
+    top: 211px;
+    left: 41px;
+    width: 234px;
+    height: 157px;
+}
+
+.heading1 span {
+    width: 100px;
+    height: 30px;
+    top: 0px;
+    left: -23px;
+    display: none;
+}
+
+/* FRAME 2 */
+.heading1 span img {
+    left: 0px;
+    top: -52px;
+}
+
+.heading1 span:nth-child(2) {
+    width: 169px;
+    top: 36px;
+}
+
+.heading1 span:nth-child(2) img {
+    top: -88px;
+}
+
+body.frame2.word3 .heading1 span:nth-child(2), body.frame2.word4 .heading1 span:nth-child(2), body.frame2.word5 .heading1 span:nth-child(2), body.frame2.word6 .heading1 span:nth-child(2), body.frame2.word7 .heading1 span:nth-child(2), body.frame2.word8 .heading1 span:nth-child(2) {
+    width: 269px;
+}
+
+.heading1 span:nth-child(3) {
+    width: 85px;
+    top: 74px;
+}
+
+.heading1 span:nth-child(3) img {
+    top: -126px;
+}
+
+body.frame2.word5 .heading1 span:nth-child(3), body.frame2.word6 .heading1 span:nth-child(3), body.frame2.word7 .heading1 span:nth-child(3), body.frame2.word8 .heading1 span:nth-child(3) {
+    width: 169px;
+}
+
+
+.heading1 span:nth-child(4) {
+    width: 93px;
+    top: 112px;
+}
+
+.heading1 span:nth-child(4) img {
+    top: -164px;
+}
+
+
+body.frame2.word7 .heading1 span:nth-child(4), body.frame2.word8 .heading1 span:nth-child(4) {
+    width: 269px;
+}
+
+
+.heading1 span:nth-child(5) {
+    width: 269px;
+    top: 150px;
+}
+
+.heading1 span:nth-child(5) img {
+    top: -202px;
+}
+
+
+
+
+body.frame2.word1 .heading1 span:nth-child(1), body.frame2.word2 .heading1 span:nth-child(-n+2), body.frame2.word3 .heading1 span:nth-child(-n+2), body.frame2.word4 .heading1 span:nth-child(-n+3), body.frame2.word5 .heading1 span:nth-child(-n+3), body.frame2.word6 .heading1 span:nth-child(-n+4), body.frame2.word7 .heading1 span:nth-child(-n+4), body.frame2.word8 .heading1 span:nth-child(-n+5) {
+    display: block;
+}
+
+body.done2 .heading1 {
+    left: 120%;
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+}
+
+body.done2 .background {
+    left: -150%;
+    -webkit-transition: .4s ease-out;
+    -webkit-transition: 400ms ease-out 0ms;
+    transition: 400ms ease-out 0ms;
+}
+
+.heading2 span, .heading3 span, .heading4 span {
+    -webkit-perspective: 800px;
+    perspective: 800px;
+}
+
+/* FRAME 3 */
+.heading2 {
+    top: 425px;
+    left: 27px;
+    width: 170px;
+    height: 97px;
+}
+
+.heading2 span {
+    width: 70px;
+    height: 35px;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.heading2 span img {
+    left: -2px;
+    top: -245px;
+}
+
+body.frame3.word2 .heading2 span, body.frame3.word3 .heading2 span, body.frame3.word4 .heading2 span, body.frame3.word5 .heading2 span, body.frame3.word6 .heading2 span, body.frame3.word7 .heading2 span, body.frame3.word8 .heading2 span {
+    width: 128px;
+}
+
+body.frame3.word3 .heading2 span, body.frame3.word4 .heading2 span, body.frame3.word5 .heading2 span, body.frame3.word6 .heading2 span, body.frame3.word7 .heading2 span, body.frame3.word8 .heading2 span {
+    width: 300px;
+}
+
+.heading2 span:nth-child(2), body.frame3.word4 .heading2 span:nth-child(2) {
+    width: 45px;
+    top: 36px;
+}
+
+.heading2 span:nth-child(2) img {
+    top: -282px;
+}
+
+body.frame3.word5 .heading2 span:nth-child(2), body.frame3.word6 .heading2 span:nth-child(2), body.frame3.word7 .heading2 span:nth-child(2), body.frame3.word8 .heading2 span:nth-child(2) {
+    width: 152px;
+}
+
+body.frame3.word6 .heading2 span:nth-child(2), body.frame3.word7 .heading2 span:nth-child(2), body.frame3.word8 .heading2 span:nth-child(2) {
+    width: 300px;
+}
+
+.heading2 span:nth-child(3), body.frame3.word7 .heading2 span:nth-child(3) {
+    width: 57px;
+    top: 75px;
+}
+
+.heading2 span:nth-child(3) img {
+    top: -320px;
+}
+
+body.frame3.word8 .heading2 span:nth-child(3) {
+    width: 300px;
+    height: 35px;
+}
+
+body.frame3.word1 .heading2 span:nth-child(1), body.frame3.word2 .heading2 span:nth-child(1), body.frame3.word3 .heading2 span:nth-child(1), body.frame3.word4 .heading2 span:nth-child(-n+2), body.frame3.word5 .heading2 span:nth-child(-n+2), body.frame3.word6 .heading2 span:nth-child(-n+2), body.frame3.word7 .heading2 span:nth-child(-n+3), body.frame3.word8 .heading2 span:nth-child(-n+3) {
+    display: block;
+}
+
+body.done3 .heading2, body.done4 .heading3, body.done5 .heading4 {
+    -webkit-transform: translate(180%, 0%);
+    -ms-transform: translate(180%, 0%);
+    transform: translate(180%, 0%);
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+}
+
+body.done3 .pic1, body.done4 .pic2, body.done5 .pic3 {
+    left: -100%;
+    -webkit-transition: .4s ease-out;
+    transition: .4s ease-out;
+}
+
+/* FRAME 4 */
+.heading3 {
+    top: 131px;
+    left: 28px;
+    width: 162px;
+    height: 32px;
+}
+
+.heading3 span {
+    width: 140px;
+    height: 35px;
+    top: 293px;
+    left: -9px;
+    display: none;
+}
+
+.heading3 span img {
+    left: 6px;
+    top: -368px;
+}
+
+body.frame4.word2 .heading3 span {
+    width: 200px;
+}
+
+.heading3 span:nth-child(2) {
+    width: 233px;
+    top: 321px;
+}
+
+.heading3 span:nth-child(2) img {
+    top: -519px;
+}
+
+body.frame4.word1 .heading3 span:nth-child(1), body.frame4.word2 .heading3 span:nth-child(1) {
+    display: block;
+}
+
+/* FRAME 5 */
+.heading4 {
+    top: 423px;
+    left: 16px;
+    width: 261px;
+    height: 62px;
+}
+
+.heading4 span {
+    width: 36px;
+    height: 35px;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.heading4 span img {
+    left: 10px;
+    top: -420px;
+}
+
+.heading4 span:nth-child(2) img {
+    top: -457px;
+}
+
+body.frame5.word2 .heading4 span, body.frame5.word3 .heading4 span, body.frame5.word4 .heading4 span {
+    width: 247px;
+}
+
+.heading4 span:nth-child(2) {
+    width: 190px;
+    top: 38px;
+}
+
+.heading4 span:nth-child(3) {
+    width: 190px;
+    top: 72px;
+}
+
+.heading4 span:nth-child(3) img {
+    top: -492px;
+}
+
+body.frame5.word1 .heading4 span:nth-child(1), body.frame5.word2 .heading4 span:nth-child(1), body.frame5.word3 .heading4 span:nth-child(-n+2), body.frame5.word4 .heading4 span:nth-child(-n+3) {
+    display: block;
+}
+
+.png-shadow {
+    -webkit-filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.6));
+    -moz-filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.6));
+    filter: url(#drop-shadow);/* have to make this for IE10 */
+    filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.6));
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=15, OffY=15, Color='#60000000')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=15, OffY=15, Color='#60000000')";
+}
+
+/* squadless logo */
+#squadLogo {
+    width: 230px;
+    height: 235px;
+    top: 183px;
+    left: 36px;
+}
+
+body.frame6 #squadLogo {
+}
+
+#squadLogo .orange {
+    opacity: 0;
+    -webkit-transform: scale(5);
+    -ms-transform: scale(5);
+    transform: scale(5);
+    -webkit-transform-origin: 110px 118px;
+    -ms-transform-origin: 110px 118px;
+    transform-origin: 110px 118px;
+    -webkit-transition: opacity 0s ease-in 2s, -webkit-transform .2s ease-in 2s;
+    transition: opacity 0s ease-in 2s, -webkit-transform .2s ease-in 2s;
+    transition: transform .2s ease-in 2s, opacity 0s ease-in 2s;
+    transition: transform .2s ease-in 2s, opacity 0s ease-in 2s, -webkit-transform .2s ease-in 2s;
+}
+
+body.frame6 #squadLogo .orange {
+    opacity: 1;
+    -webkit-transform: scale(.68);
+    -ms-transform: scale(.68);
+    transform: scale(1.19);
+}
+
+#squadLogo .orange:before, #squadLogo .orange:after {
+    content: "";
+    width: 106px;
+    height: 106px;
+    border-top: 57px solid #f36e21;
+    border-left: 57px solid #f36e21;
+    left: 106px;
+    top: 36px;
+    position: absolute;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#squadLogo .orange:after {
+    left: -43px;
+    top: 36px;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+#squadLogo .dont-go {
+    background-color: #ffffff;
+    width: 75px;
+    height: 27px;
+    top: 35px;
+    left: 77px;    /* transform: scale(.68); */
+    -webkit-transform: skew(-21deg) translateX(-200px);
+    -ms-transform: skew(-21deg) translateX(-200px);
+    transform: skew(-21deg) translateX(-200px);
+    overflow: hidden;
+    -webkit-transition: .25s ease-in 2.25s;
+    transition: .25s ease-in 2.25s;
+}
+
+body.frame6 #squadLogo .dont-go {
+    -webkit-transform: skew(-21deg) translateX(0px);
+    -ms-transform: skew(-21deg) translateX(0px);
+    transform: skew(-21deg) scale(1.2) translateX(0px);
+}
+
+#squadLogo .dont-go img {
+    -webkit-transform: skew(21deg) scale(.76);
+    -ms-transform: skew(21deg) scale(.76);
+    transform: skew(21deg) scale(.76);
+    left: -345px;
+    top: -427px;
+}
+
+#squadLogo .squadless {
+    top: -85px;
+    left: -127px;
+    -webkit-transform: scale(.47);
+    -ms-transform: scale(.47);
+    transform: scale(.47);
+    width: 455px;
+    height: 386px;
+    background-image: url('images/squadLess_type.png');    /*background-size: 1270px 616px;*/
+    background-position: 1000px 0px;
+    background-repeat: no-repeat;
+}
+
+/* CTA */
+#cta {
+    top: 523px;
+    width: 114px;
+    height: 25px;
+    left: 320px;
+    background-color: #ffffff;
+    overflow: hidden;
+    -webkit-transition: .25s ease-in 2s;
+    -webkit-transition: 250ms ease-in 2000ms;
+    transition: 250ms ease-in 2000ms;
+    -webkit-transform: scale( 1.15 );
+    transform: scale( 1.15 );
+}
+
+body.cta #cta {
+    left: 188px;
+}
+
+body.watch.cta #cta {
+    left: 178px;
+    top: 528px;
+    width: 114px;
+    height: 25px;
+}
+
+body.subscribe #cta .textHolder {
+    left: 5px;
+    top: 4px;
+    width: 92px;
+    height: 16px;
+}
+
+body.watch #cta .textHolder {
+    left: 9px;
+    top: 5px;
+    width: 105px;
+    height: 16px;
+}
+
+#cta .arrow {
+    left: 65px;
+    top: 4px;
+    width: 10px;
+    height: 16px;
+    -webkit-transform: scaleY(.6);
+    -ms-transform: scaleY(.6);
+    transform: scaleY(.6);
+    overflow: hidden;
+}
+
+#cta .arrow .inner {
+    left: -16px;
+    top: -2px;
+    width: 20px;
+    height: 20px;
+    background-color: #000000;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#cta .textHolder img {
+    left: 10px;
+    top: -214px;
+}
+
+body.enlist #cta .textHolder img {
+    left: -277px;
+    top: -390px;
+}
+
+body.enlist #cta .arrow {
+    left: 90px;
+}
+
+body.watch #cta .textHolder img {
+    left: -297px;
+    top: -418px;    /* right: -21px; */
+}
+
+body.watch #cta .arrow {
+    left: 65px;
+}
+
+body.subscribe #cta .textHolder img {
+    left: -202px;
+    top: -217px;
+}
+
+body.subscribe #cta .arrow {
+    left: 82px;
+    top: 0px;
+}
+
+body.watch #cta .arrow {
+    left: 91px;
+    top: -1px;
+}
+
+#hitter {
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    font-size: 0px;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.gone {
+    display: none;
+}
+
+.template {
+    width: 100%;
+    height: 100%;
+    -moz-opacity: .5;
+    -webkit-opacity: .5;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+body.testing #container {
+    overflow: visible;
+}
+
+</style>
+
+
+</head>
+<body id="body" onload="init();" class="">
+    <div id="container" class="gone">
+    	<div class="pic4 picHolder">
+    		<img class="pic" src="images/backgrounds.jpg" width="0" height="1" alt="Kids outside playing" />
+        <div class="overlay"></div>
+    		<div class="cover"></div>
+    		<div class="dots"></div>
+        <div class="dots bottom"></div>
+        <div class="halftone"></div>
+    	</div>
+       <div class="pic3 picHolder">
+    		<img class="pic" src="images/backgrounds.jpg" width="0" height="1" alt="Photoshopped image" />
+        <div class="overlay">
+            <div class="dots"></div>
+            <div class="halftone"></div>
+        </div>
+    	</div>
+       <div class="pic2 picHolder">
+    		<img class="pic" src="images/backgrounds.jpg" width="0" height="1" alt="Working on computer" />
+        <div class="overlay">
+            <div class="dots"></div>
+            <div class="halftone"></div>
+        </div>
+    	</div>
+       <div class="pic1 picHolder">
+    		<img class="pic" src="images/backgrounds.jpg" width="0" height="1" alt="Person at home" />
+        <div class="overlay">
+            <div class="dots"></div>
+            <div class="halftone"></div>
+        </div>
+    	</div>
+      
+    	<div class="background">
+       	<div class="dots"></div>
+       	  <div class="dots bottom"></div>
+       	<div class="halftone"></div>
+       </div>
+       <div id="squadLogo">
+       	<div class="orange"></div>
+       	<div class="dont-go"><img class="text" src="images/sprite.png" width="0" height="1" alt="" /></div>
+       	<div class="squadless"></div>
+       </div>
+       <div id="truthLogo"><img class="text" src="images/sprite.png" width="0" height="1" alt="Truth logo" /></div>
+       
+       <h1 class="heading1">
+       	<span class="textHolder"><img class="text" src="images/sprite.png" width="0" height="1" alt="" />FACT:</span>
+       	<span class="textHolder"><img class="text" src="images/sprite.png" width="0" height="1" alt="" />SMOKERS EARN</span>
+       	<span class="textHolder"><img class="text" src="images/sprite.png" width="0" height="1" alt="" />20% LESS</span>
+       	<span class="textHolder"><img class="text" src="images/sprite.png" width="0" height="1" alt="" />CASH THAN</span>
+        <span class="textHolder"><img class="text" src="images/sprite.png" width="0" height="1" alt="" />NON-SMOKERS-</span>
+        
+       </h1>
+       
+       <h1 class="heading2">
+       	<span class="textHolder"><img class="text" src="images/sprite.png" width="0" height="1" alt="" />GOT NO CASH</span>
+       	<span class="textHolder"><img class="text" src="images/sprite.png" width="0" height="1" alt="" />TO HANG WITH</span>
+       	<span class="textHolder"><img class="text" src="images/sprite.png" width="0" height="1" alt="" />MY SQUAD</span>
+       </h1>
+       
+       <h1 class="heading3">
+       	<span class="textHolder"><img class="text" src="images/sprite.png" width="0" height="1" alt="" />THAT'S OK</span>
+       
+       <h1 class="heading4">
+       	<span class="textHolder"><img class="text" src="images/sprite.png" width="0" height="1" alt="" />I'M A</span>
+       	<span class="textHolder"><img class="text" src="images/sprite.png" width="0" height="1" alt="" />PHOTOSHOP</span>
+        <span class="textHolder"><img class="text" src="images/sprite.png" width="0" height="1" alt="" />GOD</span>
+       </h1>
+       
+       <a href="#" onclick="clickthrough();" id="cta">
+       	<div class="textHolder"><img class="text" src="images/sprite.png" width="0" height="1" alt="" />ENLIST<div class="arrow"><div class="inner"></div></div></div>
+       </a>
+       <a href="#" onclick="clickthrough();" id="hitter"><!--&nbsp;--></a>
+       
+       <!--<img src="tempImages/Truth_SquadLess_1_EN_300x600_HTML5_template_01.jpg" class="template" />-->
+       
+       <svg height="0" width="0" xmlns="http://www.w3.org/2000/svg">
+		<filter id="drop-shadow">
+			<feGaussianBlur in="SourceAlpha" stdDeviation="2.2"/>
+			<feOffset dx="15" dy="15" result="offsetblur"/>
+			<feFlood flood-color="rgba(0,0,0,0.6)"/>
+			<feComposite in2="offsetblur" operator="in"/>
+			<feMerge>
+				<feMergeNode/>
+				<feMergeNode in="SourceGraphic"/>
+			</feMerge>
+		</filter>
+		</svg>
+	</div>
+</body>
+</html>
