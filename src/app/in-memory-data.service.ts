@@ -162,8 +162,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageDescription: "",
 
       },
-      {
-        id: 6,
+      { id: 6,
         name: "Audi Financial Course",
         client: "Audi Academy",
         role: "Senior Developer",
@@ -189,34 +188,41 @@ export class InMemoryDataService implements InMemoryDbService {
           image:""}],
         urls: [{ title:"View Project",
           link:"#"}],
-        carousel:[{ title:"Audi", image:"../assets/images/gallery/slides/cranemorley/audi-carousel-img1.jpg"},
-          { title:"Audi", image:"../assets/images/gallery/slides/cranemorley/audi-carousel-img2.jpg"},
-          { title:"Audi", image:"../assets/images/gallery/slides/cranemorley/audi-carousel-img3.jpg"}]
-      },{
-        id: 7,
-        name: "Tron Legacy website",
-        client: "Disney",
-        agency: "BLT Communication",
+        carousel:[{ title:"Audi", image:"../assets/images/gallery/slides/cranemorley/audi-carousel-img2.jpg"},
+          { title:"Audi", image:"../assets/images/gallery/slides/cranemorley/audi-carousel-img3.jpg"},
+          { title:"Audi", image:"../assets/images/gallery/slides/cranemorley/audi-carousel-img1.jpg"}]
+      },
+      { id: 7,
+        name: "Yamaha Boats",
+        client: "Yamaha",
         role: "Senior Developer",
         type: "Website",
-        year: 2013,
-        description:["Tron Legacy", "Worked as a team to develop websites, Facebook applications, games, and rich media ad campaigns, Worked with Adobe Flash Media Server for recording/ sharing streaming videoss within the Facebook app",
-         ["Flash", "HTML", "PHP"]],
-        technology: ["Flash", "HTML", "PHP"],
-        techIcon: ["devicon-bootstrap-plain-wordmark"],
-        imageFull: "../assets/images/gallery/slideImages/pov/productivity_hardware_large.jpg",
-        imageThumb: "../assets/images/gallery/slideImages/modernica.png",
+        bulletPoints:[{name:"role", value:"Senior Developer"},
+          {name:"agency", value:"CraneMorley"},
+          {name:"year", value:"2015"}
+        ],
+        description: [ "Yamaha Boats Course","Developed interactive On-Boarding and Coaching Applications for learning management systems. Clients include GM, Yamaha, Hyundai and Mercedes-Benz. Responsible for UX, prototyping, front end development, mobile testing, debugging and deployment",
+          "Technology",
+          ["AngularJS", "JavaScript", "Node.js", "Bootstrap", "HTML5", "Git"]],
+        technology: ["jQuery", "AngularJS", "JavaScript", "Node.js", "Bootstrap", "HTML5", "CSS3", "LESS", "Git"],
+        techIcon: [ {name:"AngularJS", link:"devicon-angularjs-plain"},
+          {name:"HTML5", link:"devicon-html5-plain-wordmark"},
+          {name:"Javascript", link:"devicon-javascript-plain"},
+          {name:"Bootstrap", link:"devicon-bootstrap-plain"}],
+        imageFull: "../assets/images/gallery/slides/cranemorley/yamaha-full.jpg",
+        imageThumb: "../assets/images/gallery/slides/cranemorley/yamaha-thumb.jpg",
         imageDescription: "",
-        videos:[{ title:"Minion Mayhem The Ride",
-          link:"https://www.youtube.com/embed/AYH2-otsUHg?rel=0&amp;controls=0&amp;showinfo=0"
-        }],
+        videos:"",
         awards:"",
-        urls: [{ title:"View Agency",
-          link:"http://www.BLTCommunications.com"},
-          {
-          title:"View Tron Project",
-          link: "http://disney.com.au/tron/"}]
-      }, {
+        statements:[{text:'"I used phpStorm and live watch for rapid a development process"',
+          image:""}],
+        urls: [{ title:"View Project",
+          link:"#"}],
+        carousel:[{ title:"Audi", image:"../assets/images/gallery/slides/cranemorley/yamaha-carousel-img1.jpg"},
+          { title:"Audi", image:"../assets/images/gallery/slides/cranemorley/yamaha-carousel-img2.jpg"},
+          { title:"Audi", image:"../assets/images/gallery/slides/cranemorley/yamaha-carousel-img3.jpg"}]
+      },
+      {
         id: 8,
         name: "Twilight Saga: Eclipse",
         client: "Disney",
@@ -383,6 +389,31 @@ export class InMemoryDataService implements InMemoryDbService {
         urls: [{ title:"View Agency",
           link:"http://www.MOceanLA.com"}]
       },
+      {
+        id: 17,
+        name: "Tron Legacy website",
+        client: "Disney",
+        agency: "BLT Communication",
+        role: "Senior Developer",
+        type: "Website",
+        year: 2013,
+        description:["Tron Legacy", "Worked as a team to develop websites, Facebook applications, games, and rich media ad campaigns, Worked with Adobe Flash Media Server for recording/ sharing streaming videoss within the Facebook app",
+          ["Flash", "HTML", "PHP"]],
+        technology: ["Flash", "HTML", "PHP"],
+        techIcon: ["devicon-bootstrap-plain-wordmark"],
+        imageFull: "../assets/images/gallery/slideImages/pov/productivity_hardware_large.jpg",
+        imageThumb: "../assets/images/gallery/slideImages/modernica.png",
+        imageDescription: "",
+        videos:[{ title:"Minion Mayhem The Ride",
+          link:"https://www.youtube.com/embed/AYH2-otsUHg?rel=0&amp;controls=0&amp;showinfo=0"
+        }],
+        awards:"",
+        urls: [{ title:"View Agency",
+          link:"http://www.BLTCommunications.com"},
+          {
+            title:"View Tron Project",
+            link: "http://disney.com.au/tron/"}]
+      }
     ];
     return {gallery};
   }
