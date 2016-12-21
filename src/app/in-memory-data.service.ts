@@ -161,8 +161,39 @@ export class InMemoryDataService implements InMemoryDbService {
         imageThumb: "../assets/images/gallery/slides/axis-studios/teavana-thumb.jpg",
         imageDescription: "",
 
-      },{
+      },
+      {
         id: 6,
+        name: "Audi Financial Course",
+        client: "Audi Academy",
+        role: "Senior Developer",
+        type: "Website",
+        bulletPoints:[{name:"role", value:"Senior Developer"},
+          {name:"agency", value:"CraneMorley"},
+          {name:"year", value:"2015"}
+        ],
+        description: [ "Audi Financial Course","Developed interactive On-Boarding and Coaching Applications for learning management systems. Clients include GM, Yamaha, Hyundai and Mercedes-Benz. Responsible for UX, prototyping, front end development, mobile testing, debugging and deployment",
+          "Technology",
+          ["AngularJS", "JavaScript", "Node.js", "Bootstrap", "HTML5", "Git"]],
+        technology: ["jQuery", "AngularJS", "JavaScript", "Node.js", "Bootstrap", "HTML5", "CSS3", "LESS", "Git"],
+        techIcon: [ {name:"AngularJS", link:"devicon-angularjs-plain"},
+          {name:"HTML5", link:"devicon-html5-plain-wordmark"},
+          {name:"Javascript", link:"devicon-javascript-plain"},
+          {name:"Bootstrap", link:"devicon-bootstrap-plain"}],
+        imageFull: "../assets/images/gallery/slides/cranemorley/audi-full.jpg",
+        imageThumb: "../assets/images/gallery/slides/cranemorley/audi-thumb.jpg",
+        imageDescription: "",
+        videos:"",
+        awards:"",
+        statements:[{text:'"I used phpStorm and live watch for rapid a development process"',
+          image:""}],
+        urls: [{ title:"View Project",
+          link:"#"}],
+        carousel:[{ title:"Audi", image:"../assets/images/gallery/slides/cranemorley/audi-carousel-img1.jpg"},
+          { title:"Audi", image:"../assets/images/gallery/slides/cranemorley/audi-carousel-img2.jpg"},
+          { title:"Audi", image:"../assets/images/gallery/slides/cranemorley/audi-carousel-img3.jpg"}]
+      },{
+        id: 7,
         name: "Tron Legacy website",
         client: "Disney",
         agency: "BLT Communication",
@@ -186,7 +217,7 @@ export class InMemoryDataService implements InMemoryDbService {
           title:"View Tron Project",
           link: "http://disney.com.au/tron/"}]
       }, {
-        id: 7,
+        id: 8,
         name: "Twilight Saga: Eclipse",
         client: "Disney",
         agency: "The Cimarron Group",
@@ -204,7 +235,7 @@ export class InMemoryDataService implements InMemoryDbService {
         awards:"",
         urls: []
       }, {
-        id: 8,
+        id: 9,
         name: "The Simpsons Movie",
         client: "FOX",
         agency: "65 Media",
@@ -224,7 +255,7 @@ export class InMemoryDataService implements InMemoryDbService {
         awards:["webby"],
         urls: []
       }, {
-        id: 9,
+        id: 10,
         name: "The Curse of the Were-Rabbit",
         client: "DreamWorks",
         agency: "The Cannery Agency",
@@ -243,7 +274,7 @@ export class InMemoryDataService implements InMemoryDbService {
         urls: [{ title:"Wallace and Gromit",
           link:"http://adgallery.zenfs.com/uk/uip/wallaceandgromit/index.html"}]
       }, {
-        id: 10,
+        id: 11,
         name: "KISSFMi",
         client: "KISSFM",
         agency: "FMiTV Networks",
@@ -260,7 +291,7 @@ export class InMemoryDataService implements InMemoryDbService {
         awards:[],
         urls: []
       }, {
-        id: 11,
+        id: 12,
         name: "GoPortfolio",
         client: "",
         agency: "",
@@ -277,7 +308,7 @@ export class InMemoryDataService implements InMemoryDbService {
         awards:[],
         urls: []
       }, {
-        id: 12,
+        id: 13,
         name: "Modernica.com",
         client: "Modernica",
         agency: "",
@@ -294,7 +325,7 @@ export class InMemoryDataService implements InMemoryDbService {
         awards:[],
         urls: []
       }, {
-        id: 13,
+        id: 14,
         name: "NoogNetwork.com",
         client: "NoogNetwork",
         agency: "",
@@ -313,7 +344,7 @@ export class InMemoryDataService implements InMemoryDbService {
           link:"https://itunes.apple.com/us/app/the-noog-network/id1000772961"}]
       },
       {
-        id: 4,
+        id: 15,
         name: "WaveRunners Walk Around",
         client: "Yamaha",
         agency: "Crane Morley",
@@ -333,7 +364,7 @@ export class InMemoryDataService implements InMemoryDbService {
           link:"http://www.CraneMorley.com"}]
       },
       {
-        id: 5,
+        id: 16,
         name: "Disney’s Story App",
         client: "Disney",
         agency: "MOcean",
