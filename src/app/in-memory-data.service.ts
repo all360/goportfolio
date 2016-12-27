@@ -268,7 +268,6 @@ export class InMemoryDataService implements InMemoryDbService {
         imageFull: "../assets/images/gallery/slides/noog-network/noog-full.jpg",
         imageThumb: "../assets/images/gallery/slides/noog-network/noog-thumb.jpg",
         imageDescription: "",
-        videos:"",
         videos:[{ title:"Noog Network",
           link:"https://www.youtube.com/embed/fHk4r90rStk?rel=0&amp;controls=0&amp;showinfo=0"
         }],
@@ -301,7 +300,6 @@ export class InMemoryDataService implements InMemoryDbService {
           "Technology",
           ["GreenSock Animation Platform (GSAP)", "HTML5", "CSS3"]],
         technology: ["GreenSock Animation Platform (GSAP)", "HTML5", "CSS3"],
-        techIcon: ["devicon-bootstrap-plain-wordmark"],
         iframeFull: ["./assets/images/gallery/slides/mocean/ads/index.html", "app-iframe-300x250"],
         imageThumb: "../assets/images/gallery/slides/mocean/story-thumb.jpg",
         imageDescription: "",
@@ -310,7 +308,7 @@ export class InMemoryDataService implements InMemoryDbService {
         statements:[{text:'"I used phpStorm and live watch for rapid a development process"',
           image:""}],
         techIcon: [ {name:"HTML5", link:"devicon-html5-plain"},
-          {name:"CSS3", link:"devicon-css3-plain"} ],
+            {name:"CSS3", link:"devicon-css3-plain"} ],
         carousel:[{ title:"Audi", image:"../assets/images/gallery/slides/mocean/story-carousel-img1.jpg"},
           { title:"Audi", image:"../assets/images/gallery/slides/mocean/story-carousel-img2.jpg"}]
       },
@@ -386,7 +384,6 @@ export class InMemoryDataService implements InMemoryDbService {
           link:"https://www.youtube.com/embed/pYOadl1agyQ?rel=0&amp;controls=0&amp;showinfo=0"
         }],
         awards:["webby"],
-        urls: [],
         urls: [{ title:"webby awards",
           image:"../assets/images/gallery/slides/65media/Dual_2008.png",
           link: "http://webbyawards.com/winners/2008/web/general-website/movie-film/simpsons-movie/"}],
@@ -509,44 +506,6 @@ export class InMemoryDataService implements InMemoryDbService {
         awards:[],
         urls: []
       },
-      /*
-      {
-        id: 19,
-        name: "The Curse of the Were-Rabbit",
-        client: "DreamWorks",
-        agency: "The Cannery Agency",
-        role: "Senior Flash Developer",
-        type: "Website",
-        year: 2006,
-        description: [ "Wallace & Gromit","Developed flash theatrical websites and games",
-          ["Flash"]],
-        technology: ["Flash"],
-        techIcon: ["devicon-css3-plain-wordmark"],
-        imageFull: "../assets/images/gallery/slideImages/pov/overview_retina_large.jpg",
-        imageThumb: "../assets/images/gallery/slideImages/kiteRunner3.png",
-        imageDescription: "",
-        videos:"",
-        awards:[],
-        urls: [{ title:"Wallace and Gromit",
-          link:"http://adgallery.zenfs.com/uk/uip/wallaceandgromit/index.html"}]
-      }, {
-        id: 11,
-        name: "KISSFMi",
-        client: "KISSFM",
-        agency: "FMiTV Networks",
-        role: "Flash Developer",
-        type: "Website",
-        year: 2001,
-        description: ["KISSFMi", "",
-          ["Flash"]],
-        technology: ["Flash"],
-        imageFull: "../assets/images/gallery/slideImages/pov/pro_finalcut_large.png",
-        imageThumb: "../assets/images/gallery/slideImages/goportfolio2.png",
-        imageDescription: "",
-        videos:"",
-        awards:[],
-        urls: []
-      },*/
     ];
     return {gallery};
   }
