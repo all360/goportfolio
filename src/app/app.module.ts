@@ -21,8 +21,8 @@ import { SafePipePipe } from './safe-pipe.pipe';
 import { FooterComponent } from './footer/footer.component';
 import { ProfileComponent } from './profile/profile.component';
 
-import {enableProdMode} from '@angular/core';
-enableProdMode();
+/*import {enableProdMode} from '@angular/core';
+enableProdMode();*/
 
 
 @NgModule({

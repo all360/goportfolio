@@ -1,7 +1,22 @@
-.app-image-main{
-  /*border-bottom: 1px solid;
-  border-bottom-color: rgba(0, 0, 0, 0.1);*/
+.app-main-img-horiz{
+  width: 100%;
+  max-width: 500px;
 }
+
+.app-main-img-vertical{
+  width: auto;
+  max-height: 550px;
+}
+
+.border-bottom{
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.app-block-main .image-holder{
+  text-align: right;
+}
+
 
 .app-iframe-300x600{
   height: 620px;
@@ -21,11 +36,6 @@
 }
 .app-block-main {
   overflow: hidden
-}
-
-.app-block-main img{
-  height: 100%;
-  max-height: 400px;
 }
 
 .app-block-main .image-holder, .app-block-carousel .image-holder{
@@ -88,6 +98,16 @@ h1{
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px ) {
+  .app-main-img-vertical {
+    width: auto;
+    max-height: 450px;
+  }
+
+  .app-main-img-horiz{
+    width: 140%;
+    max-width: 600px;
+    margin-top: 40%;
+  }
 
   i{
     font-size: 50px;
@@ -100,6 +120,16 @@ h1{
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px ) {
+  .app-main-img-vertical {
+    width: auto;
+    max-height: 550px;
+  }
+  .app-main-img-horiz{
+    width: 150%;
+    max-width: 600px;
+    margin-top: 25%;
+  }
+
   i{
     font-size: 70px;
   }
@@ -110,17 +140,21 @@ h1{
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  h1{
-    font-size: 72px;
-  }
-  .app-block-main img{
-    height: 100%;
+  .app-main-img-vertical {
+    width: auto;
     max-height: 650px;
   }
 
-  .app-block-main .image-holder{
-    text-align: right;
+  .app-main-img-horiz{
+    width: 130%;
+    max-width: 800px;
+    margin-top: 15%;
   }
+
+  h1{
+    font-size: 72px;
+  }
+
 
   .app-image-btn{
     max-width: 180px;

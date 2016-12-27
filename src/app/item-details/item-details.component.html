@@ -4,7 +4,7 @@
 
       <div class="col-sm-5 col-sm-push-7 col-lg-7 col-lg-push-6">
         <div class="image-holder">
-          <img *ngIf="galleryItem.imageFull" class="app-image-main" [src]="galleryItem.imageFull">
+          <img *ngIf="galleryItem.imageFull" [class]="galleryItem.imageFull[1]" [src]="galleryItem.imageFull[0]">
           <iframe *ngIf="galleryItem.iframeFull" [class]="galleryItem.iframeFull[1]" [src]="galleryItem.iframeFull[0] | safe"></iframe>
         </div>
       </div>
