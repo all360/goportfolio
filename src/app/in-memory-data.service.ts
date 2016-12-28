@@ -5,6 +5,7 @@ export class InMemoryDataService implements InMemoryDbService {
     let gallery = [
       {
         id: 1,
+        featured: 1,
         name: "Spiritual Me",
         client: "App Store",
         bulletPoints:[{name:"role", value:"Creator"},
@@ -47,6 +48,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 2,
+        featured: 1,
         type: "website",
         name: "Union Gospel Mission",
         client: "UGM Dallas",
@@ -109,6 +111,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 4,
+        featured: 1,
         name: "Truth",
         client: "72andSunny",
         type: "Rich Media Ads",
@@ -192,6 +195,7 @@ export class InMemoryDataService implements InMemoryDbService {
           { title:"Audi", image:"../assets/images/gallery/slides/cranemorley/audi-carousel-img1.jpg"}]
       },
       { id: 7,
+        featured: 1,
         name: "Yamaha Boats",
         client: "Yamaha",
         type: "Website",
@@ -253,6 +257,7 @@ export class InMemoryDataService implements InMemoryDbService {
           { title:"Audi", image:"../assets/images/gallery/slides/cranemorley/msf-carousel-img4.jpg"}]
       }, {
         id: 9,
+        featured: 1,
         name: "Noog Network Games",
         client: "Noog Network LLC",
         type: "ios App",
@@ -316,6 +321,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 11,
+        featured: 1,
         name: "Tron Legacy website",
         client: "Disney",
         type: "Website",
@@ -365,6 +371,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 13,
+        featured: 1,
         name: "The Simpsons Movie",
         client: "FOX",
         role: "Senior Flash Developer",
