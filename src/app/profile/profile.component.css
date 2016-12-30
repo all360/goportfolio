@@ -1,9 +1,11 @@
 .app-profile-container{
   margin-top: 90px;
   width: 280px;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
-  position: fixed;
+  padding-bottom: 90px;
+  /*position: fixed;*/
 }
 
 li>i{
