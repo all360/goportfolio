@@ -13,4 +13,9 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {}
 
+  pageUp():void{
+
+    window.scrollTo(0, 0);
+  }
+
 }
