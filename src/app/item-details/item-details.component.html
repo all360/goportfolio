@@ -134,11 +134,11 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" *ngIf="galleryItem">
       <nav aria-label="Page navigation">
         <ul class="pager">
-          <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> PREVIOUS</a></li>
-          <li class="next"><a href="#">NEXT <span aria-hidden="true">&rarr;</span></a></li>
+          <li class="previous" [ngClass]="{'disabled': galleryItem.id === 1 }" (click)="gotoPreviousSlide( galleryItem.id )"role="button"><a role="button"><span class="icon icon-chevron-thin-left" aria-hidden="true"></span> PREVIOUS</a></li>
+          <li class="next" [ngClass]="{'disabled': galleryItem.id === 18 }" (click)="gotoNextSlide( galleryItem.id )"role="button" ><a role="button">NEXT <span class="icon icon-chevron-thin-right" aria-hidden="true"></span></a></li>
         </ul>
       </nav>
     </div>

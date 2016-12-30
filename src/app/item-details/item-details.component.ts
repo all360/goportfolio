@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
-
+import { Router }            from '@angular/router';
 import {GalleryItem} from "../gallery/galleryItem";
 
 import 'rxjs/add/operator/switchMap';
@@ -17,7 +17,8 @@ export class ItemDetailsComponent implements OnInit {
   constructor(
     private galleryService: GalleryService,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -25,11 +26,32 @@ export class ItemDetailsComponent implements OnInit {
     this.route.params
       .switchMap((params: Params) => this.galleryService.getGalleryItem(+params['id']))
       .subscribe(item => this.galleryItem = item);
+
+    this.router.events.subscribe((path) => {
+      if (path.url != this.url) {
+        window.scrollTo(0, 0);
+      }
+    });
+
   }
 
   goBack(): void {
     this.location.back();
+    this.location.go()
   }
+
+  gotoNextSlide(id): void {
+    let link = ['/detail', id + 1];
+    this.router.navigate(link);
+    this.name = "";
+  }
+
+  gotoPreviousSlide(id): void {
+    let link = ['/detail', id - 1];
+    this.router.navigate(link);
+    this.name = "";
+  }
+
 
   @Input()
   galleryItem: GalleryItem;
