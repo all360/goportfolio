@@ -28,28 +28,23 @@ export class ItemDetailsComponent implements OnInit {
       .subscribe(item => this.galleryItem = item);
 
     this.router.events.subscribe((path) => {
-      if (path.url != this.url) {
-        window.scrollTo(0, 0);
-      }
+     window.scrollTo(0, 0);
     });
 
   }
 
   goBack(): void {
     this.location.back();
-    this.location.go()
   }
 
   gotoNextSlide(id): void {
     let link = ['/detail', id + 1];
     this.router.navigate(link);
-    this.name = "";
   }
 
   gotoPreviousSlide(id): void {
     let link = ['/detail', id - 1];
     this.router.navigate(link);
-    this.name = "";
   }
 
 
