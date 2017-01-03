@@ -305,7 +305,7 @@ export class InMemoryDataService implements InMemoryDbService {
           {name:"year", value:"2013"}
         ],
         description:["Disney’s Story",
-          "Developed rich media ads for Disney’s Story iPhone App, Responsible for storyboarding, creating animated transitions and optimizing the design for file size",
+          "Disney's Story App is designed to help you organize your digital media into a sharable storyline. The objective of the ad campaign for the app was to show this in a clear and concise way. Part of the development process was working with Art director and Disney interactive team to storyboard the HTML5 ad. I used GreenSock Animation Platform (TweenMax) for the animation.",
           "Technology",
           ["GreenSock Animation Platform (GSAP)", "HTML5", "CSS3"]],
         technology: ["GreenSock Animation Platform (GSAP)", "HTML5", "CSS3"],
@@ -333,7 +333,7 @@ export class InMemoryDataService implements InMemoryDbService {
           {name:"year", value:"2011"}
         ],
         description:["Tron Legacy",
-          "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+          "The development of the Tron Legacy theatrical website was assigned to BLT by Disney after it was originally built by a different agency. I was the lead developer on the project, which meant I had to go through thousands of lines of code written from programmers at a different agency. Initially most of the change request from Disney where bug fixes which made the project a long exercise of patience and understanding.",
           "Technology",
           ["Flash"]],
         technology: ["Flash"],
@@ -358,8 +358,8 @@ export class InMemoryDataService implements InMemoryDbService {
           {name:"agency", value:"The Cimarron Group"},
           {name:"year", value:"2010"}
         ],
-        description: [ "Twilight Saga",
-          "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+        description: [ "Twilight Saga: Eclipse",
+          "The Eclipse Theatrical website was all about highlighting the main characters and creating anticipation for the move release. I was the lead developer on the project and I worked closely with the art director to create the page transitions, animation, and special effects.",
           "Technology",
           ["Flash", "jQuery", "PHP", "FLEX"]],
         technology: ["Flash", "jQuery", "PHP", "FLEX"],
@@ -386,11 +386,11 @@ export class InMemoryDataService implements InMemoryDbService {
           {name:"agency", value:"65 Media"},
           {name:"year", value:"2007"}
         ],
-        description: [ "The Simpsons Movie",
-                      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-          "Technology",
-                      ["Flash"]],
-        technology: ["Flash"],
+        description: ["The Simpsons Movie",
+                      "The Simpsons Movie website was an elaborate project taking a year to create. The website included interactive environments, games, user account manager, and an avatar creator. The Simpsons avatar creator went viral and website won many awards including the Webby. I was one of three developers that worked the long hours to complete this project.",
+                      "Technology",
+                      ["Flash, PHP, MySql"]],
+        technology: ["Flash, PHP, MySql"],
         imageFull: ["../assets/images/gallery/slides/65media/simpsons-full.jpg",
           "app-main-img-horiz-center drop-shadow"],
         imageThumb: "../assets/images/gallery/slides/65media/simpsons-thumb.jpg",
@@ -415,7 +415,7 @@ export class InMemoryDataService implements InMemoryDbService {
           {name:"year", value:"2007"}
         ],
         description: [ "Terminator Ambush",
-          "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+          "Terminator Ambush application is part of a multi-platform battle that pits Man vs. Machine. There are two forms of gameplay as players will compete online on the website or through the iPhone app. The iPhone player's goal is to survive within a virtual city by setting their location through GPS and avoiding traps set by their online opponents. The online player's goal is to predict the movement of their targets in a virtual city and set traps to terminate their iPhone opponents.",
           "Technology",
           ["Flash"]],
         technology: ["Flash"],
@@ -424,7 +424,7 @@ export class InMemoryDataService implements InMemoryDbService {
         imageThumb: "../assets/images/gallery/slides/65media/ambush-thumb.jpg",
         imageDescription: "",
         videos:[{ title:"Terminator Ambush",
-          link:"https://www.youtube.com/embed/DVJy_uCmis0?rel=0&amp;controls=0&amp;showinfo=0"
+          link:"https://www.youtube.com/embed/ULcDsyxy35s?rel=0&amp;controls=0&amp;showinfo=0"
         }],
         carousel:[{ title:"Audi", image:"../assets/images/gallery/slides/65media/ambush-carousel-img1.jpg"}],
         awards:[],
@@ -442,7 +442,7 @@ export class InMemoryDataService implements InMemoryDbService {
           {name:"year", value:"2007"}
         ],
         description: [ "Jim Carrey",
-          "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+          "The Official Site of Jim Carrey was designed to explore the eccentric, psychedelic corners of Jim Carrey's mind. JimCarrey.com was an interactive flash video site. I programmed the animated interactions, transitions, menus, dynamic content and social feeds.",
           "Technology",
           ["Flash"]],
         technology: ["Flash"],
