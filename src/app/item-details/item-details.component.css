@@ -45,8 +45,10 @@
 }
 
 .app-image-btn{
-  width: 100%;
+  width: auto;
   max-width: 150px;
+  height: auto;
+  max-height: 120px;
 }
 .app-block-main {
   overflow: hidden
