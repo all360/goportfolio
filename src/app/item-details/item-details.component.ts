@@ -33,14 +33,41 @@ export class ItemDetailsComponent implements OnInit {
 
   }
 
-  source: string = '';
+  carouselSlides = [];
+  iframeCarouselNumber: number = 0;
 
-  onLoadFunc(myIframe) {
-    this.source = myIframe.contentWindow.location.href;
-    if(myIframe.contentWindow.myFunction != null){
-      myIframe.contentWindow.myFunction();
+  onLoadFunc( myIframe, index) {
+    //this.source = myIframe.contentWindow.location.href;
+    this.carouselSlides[index] = myIframe.contentWindow || myIframe.contentDocument;
+
+    if( index === 0){
+      this.iframeContentInit();
     }
-    console.log( "this.source", this.source );
+  }
+
+
+
+  nextSlide():void {
+    this.iframeCarouselNumber++;
+    if( this.iframeCarouselNumber >= this.carouselSlides.length ){
+      this.iframeCarouselNumber = 0;
+    }
+    this.iframeContentInit();
+  }
+
+  prevSlide():void {
+    this.iframeCarouselNumber--;
+    if( this.iframeCarouselNumber < 0 ){
+      this.iframeCarouselNumber = this.carouselSlides.length -1;
+    }
+    this.iframeContentInit();
+  }
+
+  iframeContentInit(): void{
+
+    if( this.carouselSlides[this.iframeCarouselNumber].start != null){
+      this.carouselSlides[this.iframeCarouselNumber].start();
+    }
   }
 
 
