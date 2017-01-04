@@ -14,7 +14,7 @@ export class InMemoryDataService implements InMemoryDbService {
         ],
         type: "Mobile App",
         description: ["Spiritual Me",
-          "Developed Spiritual Me App (Lifestyle app) that guides users through a series of exercises allowing them to practice meditation, whilst being inspired by nature, art and spiritual quotes. The exercises range from drawing to games of physics. Launched in the Android and Apple AppStore which ranked #1 in its category - Responsible for all phases, from design, writing code, testing, debugging and deployment - Localized the app for seven languages - Implemented in-app-purchases and push notification",
+          "I created the Spiritual Me App to guide users through a series of exercises allowing them to practice meditation, while being inspired by nature, art and spiritual quotes. The exercises range from drawing to games of physics. The app ranked #1 in its category in the Apple and Amazon App Store. I was responsible for all phases of development, from design, writing code, testing, debugging and deployment. In-app-purchases and push notification were implemented.  The Spiritual Me App for Android and iOS was localized for seven languages.",
           "Technology",
           ["Objective-C" , "Haxe", "openFL"]],
         technology: ["Objective-C" , "Haxe", "openFL"],
@@ -470,8 +470,8 @@ export class InMemoryDataService implements InMemoryDbService {
           {name:"agency", value:"65 Media"},
           {name:"year", value:"2007"}
         ],
-        description: [ "mummy",
-          "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+        description: [ "Mummy",
+          "The Mummy Tomb of the Dragon Emperor website include all the features of a theatrical website plus eight games with a universal scoreboard and a user login system. As the lead developer of the project I practice Object Oriented Analysis and prepared UML documents which included use cases, domain models, class diagrams and sequences diagrams. I developed two of the games and the main site using Object Oriented Programming.",
           "Technology",
           ["Flash"]],
         technology: ["Flash"],
@@ -494,7 +494,7 @@ export class InMemoryDataService implements InMemoryDbService {
           {name:"year", value:"2005"}
         ],
         description: ["Modernica",
-          "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+          "Modernica is Furniture Company with products from the North American Modernism movement. I work with the client under my own company to build their ecommerce site Modernica.net. The clients principles for the there new website where simple design, and high-functionality. Part of the project was to develop applications for customers to customize their Case Study Fiberglass Shell Chairs, Case Study Shelving Units and Case Study Desks.",
           "Technology",
           ["Flash"]],
         technology: ["Flash"],
@@ -516,7 +516,7 @@ export class InMemoryDataService implements InMemoryDbService {
           {name:"year", value:"2004"}
         ],
         description: [ "Go Portfolio",
-          "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+          "GoPortfolio.com was originally a talent communality for photographers, makeup artists, models and stylists to display and network there portfolio. A major part of the website was the content management system which allowed the user to customize there portfolio color scheme, fonts, and upload images. As the owner and creator of go portfolio.com I played many roles. I designed all the graphics including the logo, the color scheme and page templates. I program the frontend and the backend using Flash, PHP, and MySQL.",
           "Technology",
           ["Flash"]],
         technology: ["Flash"],

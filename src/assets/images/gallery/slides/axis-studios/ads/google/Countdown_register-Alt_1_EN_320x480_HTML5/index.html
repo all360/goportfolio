@@ -79,6 +79,17 @@ function alog(message){
         }
     }
 };
+
+window.myFunction = function() {
+   callIt();
+}
+
+
+function callIt(){
+    console.log("...........myFunction 2");
+}
+
+
 function checkLocal(){
     // This just sets the background color and centers the unit if you're either on a local server or on the Axis client server
     var isLocal = location.href.indexOf("file") > -1 || location.href.indexOf("127.0.0.1") > -1;

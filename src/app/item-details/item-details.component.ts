@@ -33,6 +33,17 @@ export class ItemDetailsComponent implements OnInit {
 
   }
 
+  source: string = '';
+
+  onLoadFunc(myIframe) {
+    this.source = myIframe.contentWindow.location.href;
+    if(myIframe.contentWindow.myFunction != null){
+      myIframe.contentWindow.myFunction();
+    }
+    console.log( "this.source", this.source );
+  }
+
+
   goBack(): void {
     this.location.back();
   }

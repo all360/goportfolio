@@ -61,6 +61,16 @@ chompData = window.chompData || {
     currentElementId: 'startFrame'
 };
 
+window.myFunction = function() {
+   callIt();
+}
+
+
+function callIt(){
+	console.log("...........myFunction 0");
+}
+
+
 function alog(message){
     if(console){
         if(console.log){
@@ -116,7 +126,7 @@ function formatDate( dateA ){
         dateA = dateA['RawValue'];
     }
     // convert to short date
-    alog( "dateA", dateA );
+    
     if( dateA.indexOf("/") == -1){
         var dateB = dateA.slice(0, 10).split('-');   
         var dateC = dateB[1] +'/'+ dateB[2] +'/'+ dateB[0];
@@ -147,8 +157,7 @@ function init(){
 
             var h1 = document.getElementById('dynamicState');
 
-            console.log( "endDate =", votingDeadline  );
-
+            
             if ((!isNaN( startDate.getTime()) && !isNaN( endDate.getTime()))){
                if(startDate.getTime()){} 
                 var stateText = devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0].state_text;
@@ -173,7 +182,7 @@ function init(){
 function init2() {
     if(loopCount == 0){
         setTimeout(function(){
-            alog('TIME IS UP');
+        
         }, 14500);
     }
 
@@ -288,8 +297,6 @@ function buildCountdownClock(){
 
         function updateSeconds(){
             var time = getTimeRemaining( votingDeadline );
-            alog( time.total );
-
             seconds = ('0' + time.seconds).slice(-2);
 
             secondsUpActive.innerHTML = secondsDownActive.innerHTML = seconds;
@@ -358,8 +365,7 @@ function buildCountdownClock(){
         function findNewSecond(){
             var newSeconds = getTimeRemaining( votingDeadline ).seconds;
             if( newSeconds  != seconds ){
-                alog( seconds );
-                alog( newSeconds );
+             
                 clearInterval( startInterval );
                 startCountDown();
             }

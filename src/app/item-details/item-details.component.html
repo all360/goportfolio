@@ -97,7 +97,7 @@
       <div class="carousel-inner" role="listbox">
         <div *ngFor="let slide of galleryItem.carousel; let id = index" [ngClass]="{active: id === 0 }" class="item">
           <img *ngIf="slide.image" class="img-responsive center-block" [src]="slide.image" [alt]="slide.title">
-          <iframe *ngIf="slide.iframe" class="img-responsive center-block" [src]="slide.iframe | safe"></iframe>
+          <iframe #myIframe (load)="onLoadFunc(myIframe)" *ngIf="slide.iframe" class="img-responsive center-block" [src]="slide.iframe | safe"></iframe>
         </div>
       </div>
 
