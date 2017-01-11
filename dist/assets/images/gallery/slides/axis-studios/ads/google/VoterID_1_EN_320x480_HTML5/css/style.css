@@ -1,0 +1,878 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+div,
+img,
+a,
+h1,
+h2,
+h3,
+h4,
+p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 10px;
+    color: #585959;
+}
+
+a {
+    font-size: 6px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#container {
+    position: absolute;
+    overflow: hidden;
+    width: 320px;
+    height: 480px;
+    background-color: #ffffff;
+}
+
+#container.local {
+    top: 50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+body.start #footer {
+    opacity: 1;
+}
+
+#closeX {
+    width: 17px;
+    height: 17px;
+    left: auto;
+    right: 12px;
+    top: 12px;
+}
+
+#chomper,
+#startFrame,
+#endFrame {
+    width: 100%;
+    height: 100%;
+}
+
+.imageHolder,
+.textHolder {
+    overflow: hidden;    /*border: 1px solid red;*/
+    box-sizing: border-box;    /*background-color: rgba(255, 0, 0, .5);*/
+}
+
+.text,
+.image {
+    width: 400px;
+    height: 563px;
+}
+
+.text {
+    position: relative;
+}
+
+.inputBox {
+    border: 1px solid rgb(232, 232, 232);
+    width: 260px;
+    height: 45px;
+    left: 30px;
+    top: 214px;
+    box-shadow: 0 2px 3px 0 rgba(194, 194, 194, 1);
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+#startFrame {
+
+    -webkit-transform: matrix(1.5, 0, 0, 1.5, 80, 0);
+    -ms-transform: matrix(1.5, 0, 0, 1.5, 80, 0);
+    transform: matrix(1.5, 0, 0, 1.5, 80, 0);
+    -webkit-transition: 600ms ease-out 0ms;
+    transition: 600ms ease-out 0ms;
+}
+
+#startFrame.end {
+
+    /*transform: scale(1) translate(0, 0);*/
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.inputText {
+    font-size: 14px;
+    line-height: 40px;
+    left: 10px;
+    -webkit-transition: all 300ms ease-out 0ms;
+    transition: all 300ms ease-out 0ms;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+#startFrame.end .inputText {
+    font-size: 13px;
+}
+
+.typingCursor {
+    font-size: 130%;
+    color: #000000;
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: top;
+}
+
+.blinking {
+    color: #000000;
+    animation: blink 0.8s steps(1) infinite;
+    -webkit-animation: blink 0.8s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% {
+        color: transparent;
+    }
+
+}
+
+@-webkit-keyframes blink {
+    50% {
+        color: transparent;
+    }
+
+}
+
+.mic {
+    left: auto;
+    right: 0;
+    top: 14px;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    -webkit-transition: 0.25s ease-out 0.25s;
+    transition: 0.25s ease-out 0.25s;
+}
+
+.mic img {
+    top: -80px;
+    left: -8px;
+    width: 720px;
+    height: 205px;
+}
+
+.logo1 {
+    width: 113px;
+    height: 41px;
+    top: 158px;
+    left: 102px;
+}
+
+.logo1 img {
+    top: -37px;
+    right: -38px;
+    width: 720px;
+    height: 205px;
+}
+
+#closeX {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 270px;
+  top: 2px;
+}
+
+#closeX .line{
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color:#adadad;
+  height: 18px;
+  left: 12px;
+  margin-left:12px;
+  top: 12px;
+  width: 1px;
+  z-index:1;
+}
+
+#closeX .line:nth-child(2) {
+  -ms-transform: rotate(-45deg); 
+  -webkit-transform: rotate(-45deg); 
+  transform: rotate(-45deg);
+  z-index:2;
+}
+
+
+.logo {
+    color: #ffffff;
+    height: 35px;
+    left: 19px;
+    top: 434px;
+    width: 100px;
+}
+
+.logo img {
+    height: 205px;
+    left: 0;
+    top: 0;
+    width: 720px;
+}
+.tagline {
+    font-size: 14px;
+    height: 25px;
+    left: 193px;
+    top: 444px;
+    width: 139px;
+}
+
+.googleBlueBack {
+    background-color: #4688f1;
+}
+
+.googleRedBack {
+    background-color: #fc4b43;
+}
+
+.chompLine {
+    height: 4px;
+}
+
+.chompLine.topBar {
+    top: 0;
+    bottom: auto;
+}
+
+.chompLine.botBar {
+    top: auto;
+    bottom: 0;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+#chomper {
+    top: 0;
+    pointer-events: none;
+}
+
+#chomper .top,
+#chomper .bot {
+    width: 100%;
+    height: 50%;
+    background-color: #ffffff;
+}
+
+#chomper .top {
+    top: -240px;
+}
+
+#chomper .bot {
+    top: 480px;
+}
+
+#chomper .top.clear,
+#chomper .bot.clear {
+    background-color: transparent;
+}
+
+#endFrame h1 {
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+    top: 197px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    line-height: 29px;
+}
+
+#bill,
+#driverLic,
+#idCard {
+    font-size: 19px;
+    width: 100%;
+    text-align: center;
+    top: 15%;
+    height: 196px;
+    position: absolute;
+}
+
+#driverLic {
+    opacity: 1;
+}
+
+#bill .section {
+    top: 67px;
+    left: 85px;
+    position: relative;
+    display: block;
+    width: 55%;
+    height: 240px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#bill .section .imageHolder {
+    top: -32px;
+    height: 246px;
+    left: 2px;
+    width: 146px;
+    color: #ffffff;
+}
+
+#bill .section img {
+    top: 30px;
+    left: -131px;
+    width: 720px;
+    height: 205px;
+}
+#idCard .section,
+#driverLic .section {
+    top: 98px;
+    left: 56px;
+    position: relative;
+    display: block;
+    width: 69%;
+    height: 191px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+#driverLic .section .imageHolder,
+#idCard .section .imageHolder {
+    top: -27px;
+    height: 170px;
+    left: 0px;
+    width: 207px;
+    color: #ffffff;
+}
+
+
+#driverLic .section img {
+    top: 25px;
+    left: -288px;
+    width: 720px;
+    height: 205px;
+}
+
+#idCard .section img {
+    top: 25px;
+    left: -506px;
+    width: 720px;
+    height: 205px;
+}
+
+.section .title {
+    top: 131px;
+    font-size: 12px;
+    width: 720px;
+    left: 12px;
+    height: 22px;
+}
+
+#bill .voteWrapper,
+#endFrame .text {
+    width: 100%;
+    height: 0;
+}
+
+#bill,
+#idCard {
+    left: 275px;
+}
+
+body.showBill #bill,
+body.showIdCard #idCard {
+    -webkit-transition: 250ms 250ms ease-out;
+    transition: 250ms 250ms ease-out;
+    transform: translateX(-275px);
+}
+
+body.hideDriverLic #driverLic,
+body.hideBill #bill {
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
+    transform: translateX(-275px);
+}
+
+body.hideBill #bill {
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
+    transform: translateX(-525px);
+}
+
+#footer {
+    opacity: 0;
+}
+
+body.chomp2 #footer {
+    -webkit-transition: 1750ms cubic-bezier(0, 0, 0.05, 1) 1000ms;
+    transition: 1750ms cubic-bezier(0, 0, 0.05, 1) 1000ms;
+    opacity: 1;
+}
+
+#cta {
+    background-color: #4688f1;
+    border-radius: 3px;
+    box-sizing: border-box;
+    height: 35px;
+    left: 104px;
+    overflow: hidden;
+    top: 275px;
+    width: 112px;
+}
+
+#cta h2 {
+    color: #ffffff;
+    font-size: 12px;
+    height: 30px;
+    line-height: 35px;
+    text-align: center;
+    width: 113px;
+}
+
+#cta .bg,
+#cta.reset .bg {
+    width: 420px;
+    height: 43px;
+    left: -310px;
+    background: rgba(59, 115, 203, 0);
+    background: -moz-linear-gradient(-45deg, rgba(59, 115, 203, 0) 0%, rgba(59, 115, 203, 0) 34%, rgba(59, 115, 203, 1) 35%, rgba(59, 115, 203, 1) 66%, rgba(59, 115, 203, 0) 67%, rgba(59, 115, 203, 0) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(59, 115, 203, 0)), color-stop(34%, rgba(59, 115, 203, 0)), color-stop(35%, rgba(59, 115, 203, 1)), color-stop(66%, rgba(59, 115, 203, 1)), color-stop(67%, rgba(59, 115, 203, 0)), color-stop(100%, rgba(59, 115, 203, 0)));
+    background: -webkit-linear-gradient(-45deg, rgba(59, 115, 203, 0) 0%, rgba(59, 115, 203, 0) 34%, rgba(59, 115, 203, 1) 35%, rgba(59, 115, 203, 1) 66%, rgba(59, 115, 203, 0) 67%, rgba(59, 115, 203, 0) 100%);
+    background: -o-linear-gradient(-45deg, rgba(59, 115, 203, 0) 0%, rgba(59, 115, 203, 0) 34%, rgba(59, 115, 203, 1) 35%, rgba(59, 115, 203, 1) 66%, rgba(59, 115, 203, 0) 67%, rgba(59, 115, 203, 0) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(59, 115, 203, 0) 0%, rgba(59, 115, 203, 0) 34%, rgba(59, 115, 203, 1) 35%, rgba(59, 115, 203, 1) 66%, rgba(59, 115, 203, 0) 67%, rgba(59, 115, 203, 0) 100%);
+    background: linear-gradient(135deg, rgba(59, 115, 203, 0) 0%, rgba(59, 115, 203, 0) 34%, rgba(59, 115, 203, 1) 35%, rgba(59, 115, 203, 1) 66%, rgba(59, 115, 203, 0) 67%, rgba(59, 115, 203, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ededed', GradientType=1);
+    -webkit-transition: 0.4s ease-out;
+    -moz-transition: 0.4s ease-out;
+    -ms-transition: 0.4s ease-out;
+    transition: 0.4s ease-out;
+}
+
+#cta.reset .bg {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    transition: none;
+}
+
+#cta.over .bg {
+    left: -160px;
+}
+
+#cta.over.out .bg {
+    left: 167px;
+}
+#hitter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 480px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    font-size: 0;
+}
+
+.gone {
+    display: none;
+}
+
+.template {
+    width: 320px;
+    height: 480px;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Chomp 1 */
+body.chomp1.chompStart #chomperTop {
+    -webkit-animation: chomp1TopAnimationStart 0.25s ease-in;
+    animation: chomp1TopAnimationStart 0.25s ease-in;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+body.chomp1.chompStart #chomperBot {
+    -webkit-animation: chomp1BotAnimationStart 0.25s ease-in;
+    animation: chomp1BotAnimationStart 0.25s ease-in;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+body.chomp1.chompEnd #chomperTop {
+    -webkit-animation: chomp1TopAnimationEnd 0.5s cubic-bezier(0, 0, 0.22, 1);
+    animation: chomp1TopAnimationEnd 0.5s cubic-bezier(0, 0, 0.22, 1);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+body.chomp1.chompEnd #chomperBot {
+    -webkit-animation: chomp1BotAnimationEnd 0.5s cubic-bezier(0, 0, 0.22, 1);
+    animation: chomp1BotAnimationEnd 0.5s cubic-bezier(0, 0, 0.22, 1);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes chomp1TopAnimationStart {
+    0% {
+        top: -240px;
+        width: 320px;
+        left: 0;
+    }
+
+    100% {
+        top: 0;
+        width: 320px;
+        left: 0;
+    }
+
+}
+
+@keyframes chomp1TopAnimationStart {
+    0% {
+        top: -240px;
+        width: 320px;
+        left: 0;
+    }
+
+    100% {
+        top: 0;
+        width: 320px;
+        left: 0;
+    }
+
+}
+
+@-webkit-keyframes chomp1TopAnimationEnd {
+    0% {
+        top: 0;
+        width: 320px;
+        left: 0;
+    }
+
+    100% {
+        top: -191px;
+        width: 320px;
+        left: 0;
+    }
+
+}
+
+@keyframes chomp1TopAnimationEnd {
+    0% {
+        top: 0;
+        width: 320px;
+        left: 0;
+    }
+
+    100% {
+        top: -191px;
+        width: 320px;
+        left: 0;
+    }
+
+}
+
+@-webkit-keyframes chomp1BotAnimationStart {
+    0% {
+        top: 480px;
+        width: 320px;
+        left: 0;
+    }
+
+    100% {
+        top: 220px;
+        width: 320px;
+        left: 0;
+    }
+
+}
+
+@keyframes chomp1BotAnimationStart {
+    0% {
+        top: 480px;
+        width: 320px;
+        left: 0;
+    }
+
+    100% {
+        top: 220px;
+        width: 320px;
+        left: 0;
+    }
+
+}
+
+@-webkit-keyframes chomp1BotAnimationEnd {
+    0% {
+        top: 220px;
+        width: 320px;
+        left: 0;
+    }
+
+    100% {
+        top: 411px;
+        width: 320px;
+        left: 0;
+    }
+
+}
+
+@keyframes chomp1BotAnimationEnd {
+    0% {
+        top: 220px;
+        width: 320px;
+        left: 0;
+    }
+
+    100% {
+        top: 411px;
+        width: 320px;
+        left: 0;
+    }
+
+}
+
+body.chomp1.chompEnd #bill .voteWrapper {
+    -webkit-animation: chomp1VoteWrapperAnimation 0.5s cubic-bezier(0, 0, 0.22, 1);
+    animation: chomp1VoteWrapperAnimation 0.5s cubic-bezier(0, 0, 0.22, 1);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes chomp1VoteWrapperAnimation {
+    0% {
+        top: 220px;
+        height: 0;
+    }
+
+    100% {
+        top: 74px;
+        height: 304px;
+    }
+
+}
+
+@keyframes chomp1VoteWrapperAnimation {
+    0% {
+        top: 220px;
+        height: 0;
+    }
+
+    100% {
+        top: 74px;
+        height: 304px;
+    }
+
+}
+
+/* Reset for after chomp1 is done */
+body.chomp1 #bill .voteWrapper {
+    top: 74px;
+    height: 304px;
+}
+
+body.chomp1 #chomperTop {
+    top: -191px;
+    width: 320px;
+    left: 0;
+}
+
+body.chomp1 #chomperBot {
+    top: 411px;
+    width: 320px;
+    left: 0;
+}
+
+/* Close vote wrapper */
+body.chomp2.chompStart #bill .voteWrapper {
+    -webkit-animation: chomp2VoteWrapperAnimation 0.25s ease-in;
+    animation: chomp2VoteWrapperAnimation 0.25s ease-in;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes chomp2VoteWrapperAnimation {
+    0% {
+        top: 74px;
+        height: 304px;
+    }
+
+    100% {
+        top: 220px;
+        height: 0;
+    }
+
+}
+
+@keyframes chomp2VoteWrapperAnimation {
+    0% {
+        top: 74px;
+        height: 304px;
+    }
+
+    100% {
+        top: 220px;
+        height: 0;
+    }
+
+}
+
+/* Chomp 2 */
+body.chomp2.chompStart #chomperTop {
+    -webkit-animation: chomp2TopAnimationStart 0.25s ease-in;
+    animation: chomp2TopAnimationStart 0.25s ease-in;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+body.chomp2.chompStart #chomperBot {
+    -webkit-animation: chomp2BotAnimationStart 0.25s ease-in;
+    animation: chomp2BotAnimationStart 0.25s ease-in;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+body.chomp2.chompEnd #chomperTop {
+    -webkit-animation: chomp2TopAnimationEnd 0.5s cubic-bezier(0, 0, 0.22, 1);
+    animation: chomp2TopAnimationEnd 250ms cubic-bezier(0, 0, 0.22, 1) 0ms;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+body.chomp2.chompEnd #chomperBot {
+    -webkit-animation: chomp2BotAnimationEnd 0.5s cubic-bezier(0, 0, 0.22, 1);
+    animation: chomp2BotAnimationEnd 250ms cubic-bezier(0, 0, 0.22, 1) 0ms;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes chomp2TopAnimationStart {
+    0% {
+        top: -191px;
+        width: 320px;
+        left: 0;
+    }
+
+    100% {
+        top: -45px;
+    }
+
+}
+
+@keyframes chomp2TopAnimationStart {
+    0% {
+        top: -191px;
+        width: 320px;
+        left: 0;
+    }
+
+    100% {
+        top: -45px;
+    }
+
+}
+
+@-webkit-keyframes chomp2TopAnimationEnd {
+    0% {
+        top: -45px;
+    }
+
+    100% {
+        left: 40px;
+        top: -92px;
+        width: 240px;
+    }
+
+}
+
+@keyframes chomp2TopAnimationEnd {
+    0% {
+        top: -45px;
+    }
+
+    100% {
+        top: -92px;
+        width: 240px;
+        left: 40px;
+    }
+
+}
+
+@-webkit-keyframes chomp2BotAnimationStart {
+    0% {
+        top: 411px;
+        width: 320px;
+        left: 0;
+    }
+
+    100% {
+        top: 240px;
+    }
+
+}
+
+@keyframes chomp2BotAnimationStart {
+    0% {
+        top: 411px;
+        width: 320px;
+        left: 0;
+    }
+
+    100% {
+        top: 195px;
+    }
+
+}
+
+@-webkit-keyframes chomp2BotAnimationEnd {
+    0% {
+        top: 220px;
+    }
+
+    100% {
+        top: 140px;
+        width: 240px;
+        left: 40px;
+    }
+
+}
+
+@keyframes chomp2BotAnimationEnd {
+    0% {
+        top: 195px;
+    }
+
+    100% {
+        top: 248px;
+        width: 240px;
+        left: 40px;
+    }
+
+}
