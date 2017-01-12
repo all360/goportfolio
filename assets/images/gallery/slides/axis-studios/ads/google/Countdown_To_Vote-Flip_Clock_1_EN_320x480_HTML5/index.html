@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="ad.size" content="width=300,height=250">
+<title>Countdown_To_Vote-Flip_Clock_1_EN_320x480_HTML5</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+<script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!--
+ * Dynamic Content Enable code for Profile: 1090960
+ *
+ * The following code initializes the following dynamic variables for
+ * development testing and live serving of Fields associated to the above profile
+-->
+
+<!-- DynamicContent Start: HTML5 invocation code. -->
+<script type="text/javascript">
+
+// Dynamic Content variables and sample values
+    Enabler.setProfileId(1090960);
+    var devDynamicContent = {};
+
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1= [{}];
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0]._id = 0;
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0].ID = 0;
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0].is_default = "YES";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0].reporting_label = "default";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0].state_text = "New York";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0].start_date = "10/10/2027";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0].end_date = "2027/10/12";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0].poll_close_time = "23:45:00";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0].clickthrough_english = {};
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0].clickthrough_english.Url = "https://www.google.com/#q=register+to+vote";
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0].clickthrough_spanish = {};
+    devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0].clickthrough_spanish.Url = "https://www.google.com/#q=register+to+vote";
+    Enabler.setDevDynamicContent(devDynamicContent);
+
+</script>
+
+<!--
+ * You may access the variables in the following manner
+ * AFTER the Studio Enabler is initialized.
+ * var ID = devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0].ID;
+ * Note: be sure to use "dynamicContent", not "devDynamicContent"
+ * Note: be sure to use ExitOverride to create your exit URL dynamically; follow the instructions on our Help center: https://support.google.com/richmedia/answer/2664807
+-->
+
+<script>
+
+var bannerSize = {width: 320, height:480};
+var body, container, hitter, cta, chompInterval, selectedCandidate, selectedIssue;
+var currentFrame = 1;
+var loopCount = 0;
+var loopLimit = 2;
+var votingDeadline;
+var dynamicContent = null;
+var bannerTime = new Date().getTime();
+chompData = window.chompData || {
+    currentElementId: 'startFrame'
+};
+
+window.start = function() {
+   callIt();
+}
+
+
+function callIt(){
+    
+	if( !hasInit )
+    {
+        init();
+        hasInit = true;
+    }   
+}
+var hasInit = false;
+
+
+function alog(message){
+    if(console){
+        if(console.log){
+            console.log(message);
+        }
+    }
+};
+function checkLocal(){
+    // This just sets the background color and centers the unit if you're either on a local server or on the Axis client server
+    var isLocal = location.href.indexOf("file") > -1 || location.href.indexOf("127.0.0.1") > -1;
+    var isAxis = location.href.indexOf("axis-studios.com") > -1;
+    if(isLocal || isAxis){
+        document.getElementById('body').classList.add('local');
+        document.getElementById('container').classList.add('local');
+    }
+};
+
+function setButton(tgt){
+    // Umm, need a comment?
+    tgt.addEventListener('mouseover', overButton);
+    tgt.addEventListener('mouseout', outButton);
+}
+function overButton(evt){
+    var tgt = evt.currentTarget;// Get the current target to account for bubbled events
+    switch(tgt.id){
+        case 'hitter':
+        case 'cta':
+            cta.classList.add('over');
+            break;
+    }
+}
+function outButton(evt){
+    var tgt = evt.currentTarget;
+    switch(tgt.id){
+        case 'hitter':
+        case 'cta':
+            cta.classList.remove('over');
+            break;
+    }
+}
+function clickthrough(){
+    var url = devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0].clickthrough_english.Url;
+    var state = devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0].reporting_label;
+    if(url == null || url == undefined || url == 'undefined' || url == ''){
+        Enabler.exit('clickthrough');
+    }else{
+        Enabler.exitOverride('Clickthrough_'+state, url);
+    }
+}
+
+function formatDate( dateA ){
+    if(typeof(dateA)  == 'object'){
+        dateA = dateA['RawValue'];
+    }
+    // convert to short date
+    
+    if( dateA.indexOf("/") == -1){
+        var dateB = dateA.slice(0, 10).split('-');   
+        var dateC = dateB[1] +'/'+ dateB[2] +'/'+ dateB[0];
+
+        return dateC;
+    }
+    else{
+        return dateA;
+    }  
+}
+
+
+function init(){
+    var dcInterval = setInterval(function(){
+        if(dynamicContent){
+            clearInterval(dcInterval);
+            // Dynamic state content
+            var timeDeadline = devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0].poll_close_time;
+            var timeArr = timeDeadline.split(':');
+
+            votingDeadline = new Date(formatDate(devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0].end_date));
+            votingDeadline.setHours( timeArr[0], timeArr[1], timeArr[2] );
+            
+
+            var today = new Date();
+            var startDate = new Date( formatDate(devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0].start_date));
+            var endDate = votingDeadline;
+
+            var h1 = document.getElementById('dynamicState');
+
+            
+            if ((!isNaN( startDate.getTime()) && !isNaN( endDate.getTime()))){
+               if(startDate.getTime()){} 
+                var stateText = devDynamicContent.Google_Elections_Dynamic_Banners__GOTV__Countdown_to_Vote__Hours__160902_Sheet1[0].state_text;
+                
+                var tx = h1.innerHTML;
+                tx = tx.split('{State}').join(stateText);
+
+                h1.innerHTML = tx;
+            }
+            else
+            {
+                h1.innerHTML = "Polls are closing soon.";
+                votingDeadline = new Date();
+                votingDeadline.setHours( "00", "00", "00" );
+            }
+
+            init2();
+        }
+    }, 50);
+}
+
+function init2() {
+    if(loopCount == 0){
+        setTimeout(function(){
+        
+        }, 14500);
+    }
+
+    body = document.getElementById('body');
+    container = document.getElementById('container');
+    container.classList.remove('gone');
+    hitter = document.getElementById('hitter');
+    cta = document.getElementById('cta');
+    
+    setButton(hitter);
+    setButton(cta);
+    checkLocal();
+    
+    // Set local
+    var local = body.className.indexOf('local') > -1 ? 'local' : '';
+    var prefix = local + '';
+    body.className = prefix;
+
+    // set the chomp lines as accessible variables
+    var topChomper = document.getElementById('chomperTop');
+    var botChomper = document.getElementById('chomperBot');
+    
+    // Add listener for chomper animations
+    // this function just sets all of the platform prefixes
+    var pfx = ["webkit", "moz", "MS", "o", ""];
+    function prefixedEventListener(element, type, callback) {
+        for (var p = 0; p < pfx.length; p++) {
+            if (!pfx[p]) type = type.toLowerCase();
+            element.addEventListener(pfx[p]+type, callback, false);
+        }
+    }
+    prefixedEventListener(topChomper, 'AnimationEnd', function(evt){
+        switch(evt.animationName){
+            case 'chomp1TopAnimationStart':// Signifies the end of the first half of the first chomp animation
+                //document.getElementById('startFrame').classList.add('gone');// This hides the start frame
+                document.getElementById('startFrame').classList.remove('gone');// Make 'vote' div visible
+                body.classList.remove('chompStart');// First half of chomp done
+                body.classList.add('chompEnd');// This fires the second half of the first chomp animation which reveals the vote text
+                break;
+            case 'chomp2TopAnimationEnd':
+                body.classList.add('bannerEnd');// Now the second chomp is done, setting this class makes the cta and footer stuff appear
+                break;
+        }
+    });
+    
+    setTimeout(function(){
+        
+        //document.getElementById('startFrame').classList.add('end');// Animate first text field zooming out
+        setChompState(1);// When chomp state is set to 1 the class 'chomp1' gets added to body which sets it to play the first chomp
+        body = document.getElementById('body');
+        body.classList.add('chompStart');// This fires the first half of the first chomp animation 
+        //}, 1200);
+        
+
+    }, 400);// Animate first text field zooming out
+    
+    buildCountdownClock();
+}
+
+
+function setChompState(state){
+    var cn = body.className.split(' ');
+    for(var i=0;i<cn.length;i++){
+        if(cn[i].indexOf('chomp') > -1){
+            cn[i] = 'chomp'+state;
+            body.className = cn.join(' ');
+            return;
+        }
+    }
+    cn[cn.length] = 'chomp'+state;
+    body.className = cn.join(' ');
+    return;
+}
+
+function buildCountdownClock(){
+        
+        var secondsUpActive = document.getElementById("secondsUpActive");
+        var secondsDownActive = document.getElementById("secondsDownActive");
+        var secondsUpBefore = document.getElementById("secondsUpBefore");
+        var secondsDownBefore = document.getElementById("secondsDownBefore");
+
+        var minutesUpActive = document.getElementById("minutesUpActive");
+        var minutesDownActive = document.getElementById("minutesDownActive");
+        var minutesUpBefore = document.getElementById("minutesUpBefore");
+        var minutesDownBefore = document.getElementById("minutesDownBefore");
+
+        var hoursUpActive = document.getElementById("hoursUpActive");
+        var hoursDownActive = document.getElementById("hoursDownActive");
+        var hoursUpBefore = document.getElementById("hoursUpBefore");
+        var hoursDownBefore = document.getElementById("hoursDownBefore");
+
+        var flipOutSecs = 900;
+        var timeinterval;
+
+        function endCountdown(){
+
+            secondsUpActive.innerHTML = secondsDownActive.innerHTML = "00";
+            minutesUpActive.innerHTML = minutesDownActive.innerHTML = "00";
+            hoursUpActive.innerHTML = hoursDownActive.innerHTML = "00";
+
+            body.classList.add('flip');
+            body.classList.add('minutes');
+            body.classList.add('hours');
+
+            setTimeout(function(){
+                body.classList.remove('flip');
+                body.classList.remove('minutes');
+                body.classList.remove('hours');
+                secondsUpBefore.innerHTML = secondsDownBefore.innerHTML = "00";
+                minutesUpBefore.innerHTML = minutesDownBefore.innerHTML = "00";
+                hoursUpBefore.innerHTML = hoursDownBefore.innerHTML = "00";
+            }, flipOutSecs);
+        }
+
+
+        function updateSeconds(){
+            var time = getTimeRemaining( votingDeadline );
+            seconds = ('0' + time.seconds).slice(-2);
+
+            secondsUpActive.innerHTML = secondsDownActive.innerHTML = seconds;
+            body.classList.add('flip');
+            body.classList.add('seconds');
+
+            setTimeout(function(){
+                body.classList.remove('flip');
+                body.classList.remove('seconds');
+                secondsUpBefore.innerHTML = secondsDownBefore.innerHTML = seconds;
+            }, flipOutSecs);
+
+
+            if( time.minutes != minutes ){
+                updateMinutes();
+            }
+
+            if( time.hours != hours ){
+                updateHours();
+            }
+
+            if(time.total<=0){
+                clearInterval(timeinterval);
+            }
+        }
+
+        function updateMinutes(){
+            minutes = getTimeRemaining( votingDeadline ).minutes;
+            minutes = ('0' + minutes ).slice(-2);
+
+            minutesUpActive.innerHTML = minutesDownActive.innerHTML = minutes;
+            body.classList.add('minutes');
+
+            setTimeout(function(){
+                body.classList.remove('minutes');
+                minutesUpBefore.innerHTML = minutesDownBefore.innerHTML = minutes;
+            }, flipOutSecs);
+
+            return minutes;
+        }
+
+        function updateHours(){
+            hours = getTimeRemaining( votingDeadline ).hours;
+            hours = ('0' + hours ).slice(-2);
+
+            hoursUpActive.innerHTML = hoursDownActive.innerHTML = hours;
+            body.classList.add('hours');
+            
+            setTimeout(function(){
+                body.classList.remove('hours');
+                hoursUpBefore.innerHTML = hoursDownBefore.innerHTML = hours;
+            }, flipOutSecs);
+
+            return hours;
+        }
+
+        if( getTimeRemaining( votingDeadline ).total <= 0 )
+        {
+            endCountdown();
+
+        } else {
+            var seconds = getTimeRemaining( votingDeadline ).seconds;
+            var startInterval = setInterval( findNewSecond, 100);
+        }
+
+        function findNewSecond(){
+            var newSeconds = getTimeRemaining( votingDeadline ).seconds;
+            if( newSeconds  != seconds ){
+             
+                clearInterval( startInterval );
+                startCountDown();
+            }
+        }
+
+        function startCountDown()
+        {
+            var minutes = updateMinutes();
+            var hours = updateHours();
+            updateSeconds();
+            timeinterval = setInterval(updateSeconds,1000);
+        }
+    }
+
+    function getTimeRemaining(endtime){
+      var timeRemaining = Date.parse(endtime) - Date.parse(new Date());
+      var seconds = Math.floor( (timeRemaining /1000) % 60 );
+      var minutes = Math.floor( (timeRemaining /1000/60) % 60 );
+      var hours = Math.floor( ( timeRemaining /(1000*60*60)) % 24 );
+      var days = Math.floor( timeRemaining /(1000*60*60*24) );
+      return {
+        'total': timeRemaining,
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+      };
+}
+
+// Easing
+// t: current time, b: begInnIng value, c: change In value, d: duration
+function easeInQuad(t, b, c, d) {
+    return c*(t/=d)*t + b;
+}
+function easeOutQuad(t, b, c, d) {
+    return -c *(t/=d)*(t-2) + b;
+}
+function easeInCubic(t, b, c, d) {
+    return c*(t/=d)*t*t + b;
+}
+function easeOutCubic(t, b, c, d){// Cubic
+    var tc = (t/=d)*t*t;
+    return b+c*(tc);
+};
+function easeInExpo(t, b, c, d) {
+    return (t==0) ? b : c * Math.pow(2, 10 * (t/d - 1)) + b;
+}
+function easeOutExpo(t, b, c, d) {// Exponential
+    return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
+};
+function easeInQuint(t, b, c, d) {
+    return c*(t/=d)*t*t*t*t + b;
+}
+function easeOutQuint(t, b, c, d) {// Quintic
+    var ts = (t/=d)*t;
+    var tc = ts*t;
+    return b+c*(tc*ts);
+};
+function easeInSine(t, b, c, d) {
+    return -c * Math.cos(t/d * (Math.PI/2)) + c + b;
+}
+function easeOutSine(t, b, c, d) {
+    return c * Math.sin(t/d * (Math.PI/2)) + b;
+};
+
+
+// Class list support for #$&!@>% IE
+if("document"in self){if(!("classList"in document.createElement("_"))||document.createElementNS&&!("classList"in document.createElementNS("http://www.w3.org/2000/svg","g"))){(function(t){"use strict";if(!("Element"in t))return;var e="classList",i="prototype",n=t.Element[i],s=Object,r=String[i].trim||function(){return this.replace(/^\s+|\s+$/g,"")},a=Array[i].indexOf||function(t){var e=0,i=this.length;for(;e<i;e++){if(e in this&&this[e]===t){return e}}return-1},o=function(t,e){this.name=t;this.code=DOMException[t];this.message=e},l=function(t,e){if(e===""){throw new o("SYNTAX_ERR","An invalid or illegal string was specified")}if(/\s/.test(e)){throw new o("INVALID_CHARACTER_ERR","String contains an invalid character")}return a.call(t,e)},c=function(t){var e=r.call(t.getAttribute("class")||""),i=e?e.split(/\s+/):[],n=0,s=i.length;for(;n<s;n++){this.push(i[n])}this._updateClassName=function(){t.setAttribute("class",this.toString())}},u=c[i]=[],f=function(){return new c(this)};o[i]=Error[i];u.item=function(t){return this[t]||null};u.contains=function(t){t+="";return l(this,t)!==-1};u.add=function(){var t=arguments,e=0,i=t.length,n,s=false;do{n=t[e]+"";if(l(this,n)===-1){this.push(n);s=true}}while(++e<i);if(s){this._updateClassName()}};u.remove=function(){var t=arguments,e=0,i=t.length,n,s=false,r;do{n=t[e]+"";r=l(this,n);while(r!==-1){this.splice(r,1);s=true;r=l(this,n)}}while(++e<i);if(s){this._updateClassName()}};u.toggle=function(t,e){t+="";var i=this.contains(t),n=i?e!==true&&"remove":e!==false&&"add";if(n){this[n](t)}if(e===true||e===false){return e}else{return!i}};u.toString=function(){return this.join(" ")};if(s.defineProperty){var h={get:f,enumerable:true,configurable:true};try{s.defineProperty(n,e,h)}catch(d){if(d.number===-2146823252){h.enumerable=false;s.defineProperty(n,e,h)}}}else if(s[i].__defineGetter__){n.__defineGetter__(e,f)}})(self)}else{(function(){"use strict";var t=document.createElement("_");t.classList.add("c1","c2");if(!t.classList.contains("c2")){var e=function(t){var e=DOMTokenList.prototype[t];DOMTokenList.prototype[t]=function(t){var i,n=arguments.length;for(i=0;i<n;i++){t=arguments[i];e.call(this,t)}}};e("add");e("remove")}t.classList.toggle("c3",false);if(t.classList.contains("c3")){var i=DOMTokenList.prototype.toggle;DOMTokenList.prototype.toggle=function(t,e){if(1 in arguments&&!this.contains(t)===!e){return e}else{return i.call(this,t)}}}t=null})()}}
+</script>
+</head>
+<body id="body" class="">
+    <div id="container" class="gone">
+        <div id="startFrame" class="main gone">
+
+            <a href="#" id="cta" onclick="clickthrough();">
+                <div class="bg"></div>
+                <h2>FIND POLLING PLACE</h2>
+            </a>
+
+            <div class="countdown" >
+                <div class="text">Hours</div>
+                <div class="card">
+                    <div class="counter-before">
+                        <div class="up">
+                            <div class="shadow hours"></div>
+                            <div id="hoursUpBefore" class="inn">--</div>
+                        </div>
+                        <div class="down">
+                            <div class="shadow hours"></div>
+                            <div id="hoursDownBefore" class="inn">--</div>
+                        </div>      
+                    </div>
+                    <div class="counter-active">
+                        <div class="up">
+                            <div class="shadow hours"></div>
+                            <div id="hoursUpActive" class="inn">--</div>
+                        </div>
+                        <div class="down">
+                            <div class="shadow hours"></div>
+                            <div id="hoursDownActive" class="inn">--</div>
+                        </div>      
+                    </div>
+                </div>
+            </div>  
+            
+            <div class="countdown" >
+                <div class="text">Minutes</div>
+                 <div class="card">
+                    <div class="counter-before">
+                        <div class="up">
+                            <div class="shadow minutes"></div>
+                            <div id="minutesUpBefore" class="inn">--</div>
+                        </div>
+                        <div class="down">
+                            <div class="shadow minutes"></div>
+                            <div id="minutesDownBefore" class="inn">--</div>
+                        </div>      
+                    </div>
+                    <div class="counter-active">
+                        <div class="up">
+                            <div class="shadow minutes"></div>
+                            <div id="minutesUpActive" class="inn">--</div>
+                        </div>
+                        <div class="down">
+                            <div class="shadow minutes"></div>
+                            <div id="minutesDownActive" class="inn">--</div>
+                        </div>      
+                    </div>
+                </div>    
+            </div>
+
+            <div class="countdown" >
+                <div class="text">Seconds</div>
+                 <div class="card">
+                    <div class="counter-before">
+                        <div class="up">
+                            <div class="shadow seconds"></div>
+                            <div id="secondsUpBefore" class="inn">--</div>
+                        </div>
+                        <div class="down">
+                            <div class="shadow seconds"></div>
+                            <div id="secondsDownBefore" class="inn">--</div>
+                        </div>      
+                    </div>
+                    <div class="counter-active">
+                        <div class="up">
+                            <div class="shadow seconds"></div>
+                            <div id="secondsUpActive" class="inn">--</div>
+                        </div>
+                        <div class="down">
+                            <div class="shadow seconds"></div>
+                            <div id="secondsDownActive" class="inn">--</div>
+                        </div>      
+                    </div>
+                </div>    
+            </div>
+
+            <div class="header">
+                <h1 id="dynamicState"> Hey {State}, polls close in:</h1>
+            </div>      
+            
+        </div>
+
+        <div id="chomper">
+            <div class="top" id="chomperTop"><div class="googleRedBack chompLine fullWidth botBar"></div></div>
+            <div class="bot" id="chomperBot"><div class="googleBlueBack chompLine fullWidth topBar"></div></div>
+        </div>
+        <div id="footer">
+            <h1 class="textHolder logo"><img class="text" src="images/sprite.png" width="0" height="1" alt="" />Google</h1>
+            <h1 class="tagline">#EveryoneIn2026</h1>
+        </div>
+        
+        <a href="#" onclick="clickthrough();" id="hitter"><!--&nbsp;--></a>
+        
+        <a href="#" onclick="" id="closeX">
+            <div class="line"></div>
+            <div class="line"></div>
+        </a>
+        
+        <a href="#" onclick="" id="closeX">
+            <div class="line"></div>
+            <div class="line"></div>
+        </a>
+       
+      
+          <!--<img src="tempImages/Countdown2VOTE_hours_640x960.jpg" class="template"/>-->
+       </div>
+    
+</body>
+</html>
