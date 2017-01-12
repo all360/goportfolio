@@ -1,0 +1,44 @@
+<nav class="navbar navbar-default navbar-fixed-top navbar-padded text-uppercase p-l-md">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed p-x-0" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="./">
+        <span>{{title}}</span>
+      </a>
+    </div>
+
+    <div class="navbar-collapse collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav navbar-left">
+        <li >
+          <a data-target="#stage" data-toggle="stage" data-distance="280" (click)="pageUp()" role="button">Profile</a>
+        </li>
+        <li class="active dropdown" role="presentation">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Gallery <span class="icon icon-chevron-small-down"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li ><a routerLink="/gallery/featured/1">Featured</a></li>
+            <li><a routerLink="/gallery">All</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a routerLink="/gallery/type/website">Websites</a></li>
+            <li><a routerLink="/gallery/type/app">Apps</a></li>
+            <li><a routerLink="/gallery/type/ads">Rich Media Ads</a></li>
+            <li role="separator" class="divider"></li>
+            <li class="hidden-xs"><a routerLink="/gallery/technology/html5">HTML5 / CSS3</a></li>
+            <li class="hidden-xs"><a routerLink="/gallery/technology/Angular">Angular</a></li>
+          </ul>
+        </li>
+      </ul>
+      <gallery-search></gallery-search>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+

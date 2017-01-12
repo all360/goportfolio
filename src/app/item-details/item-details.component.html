@@ -1,0 +1,192 @@
+<div class="p-y-lg app-block-main" *ngIf="galleryItem">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-5 col-sm-push-7 col-lg-7 col-lg-push-6">
+        <div class="image-holder">
+          <img *ngIf="galleryItem.imageFull" [class]="galleryItem.imageFull[1]" [src]="galleryItem.imageFull[0]">
+          <iframe *ngIf="galleryItem.iframeFull" [class]="galleryItem.iframeFull[1]" [src]="galleryItem.iframeFull[0] | safe"></iframe>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-sm-pull-5 col-lg-5 col-lg-pull-8 ">
+        <h6 class="text-muted text-uppercase">{{galleryItem.type}}</h6>
+        <h1 class="m-t-0 block-title">{{galleryItem.description[0]}}</h1>
+        <p class="lead m-b-md">{{galleryItem.description[1]}}</p>
+
+        <div *ngIf="galleryItem.bulletPoints && galleryItem.description[2]" class="row">
+          <div class="col-sm-6 m-b-md">
+            <h5 class="m-y-0 text-muted text-uppercase">{{galleryItem.description[2]}}</h5>
+            <p>{{galleryItem.description[3].join(", ") }}</p>
+          </div>
+
+          <div class="col-sm-6 m-b-md">
+            <h5 class="m-y-0 text-muted text-uppercase">{{galleryItem.bulletPoints[0].name}}</h5>
+            <p>{{galleryItem.bulletPoints[0].value}}</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6 m-b-md">
+            <h5 class="m-y-0 text-muted text-uppercase">{{galleryItem.bulletPoints[1].name}}</h5>
+            <p>{{galleryItem.bulletPoints[1].value}}</p>
+          </div>
+          <div class="col-sm-6 m-b-md">
+            <h5 class="m-y-0 text-muted text-uppercase">{{galleryItem.bulletPoints[2].name}}</h5>
+            <p>{{galleryItem.bulletPoints[2].value}}</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6 m-b-md" *ngFor="let btn of galleryItem.urls">
+
+            <span [ngSwitch]="btn.image">
+              <a *ngSwitchCase="null" class="btn btn-default" [href]="btn.link" target="_blank" role="button">{{btn.title | uppercase }}</a>
+              <a *ngSwitchCase="''" class="btn btn-default" [href]="btn.link" target="_blank" role="button">{{btn.title | uppercase }}</a>
+              <a *ngSwitchDefault [href]="btn.link" target="_blank">
+                <img class="app-image-btn" [src]="btn.image" >
+              </a>
+            </span>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="block block-inverse app-block-video p-x-0" *ngIf="galleryItem && galleryItem.videos">
+  <div class="container p-x-0">
+    <div class="row m-y-lg">
+        <div class="col-sm-12">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe [src]="galleryItem.videos[0].link | safe" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="block app-block-quote" *ngIf="galleryItem && galleryItem.quotes">
+  <div class="container">
+    <div class="row m-y-lg">
+      <div class="col-sm-12">
+        <blockquote class="pull-quote" *ngFor="let quote of galleryItem.quotes">
+          <img class="img-circle" [src]="quote.image">
+          <p>
+            “<strong>{{quote.title}}</strong>{{quote.text}}”
+          </p>
+          <cite>{{quote.cite}}</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="block block-inverse app-block-carousel p-x-0" *ngIf="galleryItem && galleryItem.carousel">
+  <div class="container-fluid p-x-0">
+    <div id="app-carousel" class="carousel carousel-light slide" data-ride="carousel" data-interval="false" >
+
+      <ol class="carousel-indicators">
+        <li *ngFor="let slide of galleryItem.carousel; let idx = index" [ngClass]="{active: idx === 0 }"
+            data-target="#app-carousel" [attr.data-slide-to]="idx" ></li>
+      </ol>
+
+      <div class="carousel-inner" role="listbox">
+        <div *ngFor="let slide of galleryItem.carousel; let id = index" [ngClass]="{active: id === 0 }" class="item">
+          <img *ngIf="slide.image" class="img-responsive center-block" [src]="slide.image" [alt]="slide.title">
+          <iframe #myIframe (load)="onLoadFunc(myIframe, id)" *ngIf="slide.iframe" class="img-responsive center-block" [src]="slide.iframe | safe"></iframe>
+        </div>
+      </div>
+
+      <a class="left carousel-control" (click)="prevSlide()" href="#app-carousel" role="button" data-slide="prev">
+        <span class="icon icon-chevron-thin-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+
+      <a class="right carousel-control" (click)="nextSlide()" href="#app-carousel" role="button" data-slide="next">
+        <span class="icon icon-chevron-thin-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<div class="block app-block-tech-icons">
+  <div class="container">
+
+    <div class="row" *ngIf="galleryItem && galleryItem.statements">
+      <div class="col-sm-8 col-sm-offset-2 text-center m-b-lg" *ngFor="let statement of galleryItem.statements">
+        <p class="lead m-x-auto">{{statement.text}}</p>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="galleryItem && galleryItem.techIcon">
+      <div class="col-sm-12">
+        <ul class="list-inline text-center">
+          <li *ngFor="let icon of galleryItem.techIcon">
+           <i [class]="icon.link"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="galleryItem">
+      <nav aria-label="Page navigation">
+        <ul class="pager">
+          <li class="previous" [ngClass]="{'disabled': galleryItem.id === 1 }" (click)="gotoPreviousSlide( galleryItem.id )"role="button"><a role="button"><span class="icon icon-chevron-thin-left" aria-hidden="true"></span> PREVIOUS</a></li>
+          <li class="next" [ngClass]="{'disabled': galleryItem.id === 18 }" (click)="gotoNextSlide( galleryItem.id )"role="button" ><a role="button">NEXT <span class="icon icon-chevron-thin-right" aria-hidden="true"></span></a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<!--<li><i class="devicon-css3-plain-wordmark" style="font-size: 75px"></i></li>
+          <li><i class="devicon-git-plain-wordmark" style="font-size: 75px"></i></li>
+          <li><i class="devicon-gulp-plain" style="font-size: 75px"></i></li>
+          <li><i class="devicon-html5-plain-wordmark" style="font-size: 75px"></i></li>
+          <li><i class="devicon-php-plain" style="font-size: 75px"></i></li>
+          <li><i class="devicon-javascript-plain" style="font-size: 75px"></i></li>
+          <li><i class="devicon-sass-original" style="font-size: 75px"></i></li>
+          <li><i class="devicon-photoshop-plain" style="font-size: 75px"></i></li>
+          <li><i class="devicon-bootstrap-plain-wordmark" style="font-size: 75px"></i></li>
+          <li><i class="devicon-mysql-plain-wordmark" style="font-size: 75px"></i></li>
+          <li><i class="devicon-angularjs-plain" style="font-size: 75px"></i></li>
+          <li><i class="devicon-less-plain-wordmark" style="font-size: 75px"></i></li>
+          <li><i class="devicon-react-original-wordmark" style="font-size: 75px"></i></li>
+          <li><i class="devicon-ssh-plain-wordmark" style="font-size: 75px"></i></li>
+          <li><i class="devicon-wordpress-plain-wordmark" style="font-size: 75px"></i></li>
+          <li><i class="devicon-illustrator-plain"></i></li>
+          <li><i class="devicon-apple-original"></i></li>
+          <li><i class="devicon-android-plain"></i></li>-->
+<!--
+
+
+<div class="block block-inverse block-secondary app-code-block" *ngIf="galleryItem">
+  <div class="container">
+    <div class="row app-align-center">
+      <div class="col-sm-5 col-sm-push-7">
+        <img class="app-iphone" [src]="galleryItem.imageFull" style="width: 100%;">
+      </div>
+
+      <div class="col-sm-6 col-sm-pull-5">
+        <h6 class="text-muted text-uppercase">Easy development</h6>
+        <h3 class="m-t-0">Natural language queries make mining data easy for anyone.</h3>
+        <p class="lead m-b-md text-muted">Rather than force everyone at your company to learn incredibly difficult terminal commands, we allow anyone to query the data with natural language to return data.</p>
+        <button class="btn btn-default btn-lg btn-borderless">
+          Read our docs
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+

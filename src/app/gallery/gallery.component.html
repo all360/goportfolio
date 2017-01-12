@@ -1,0 +1,26 @@
+ <div class="container-fluid app-gallery-container">
+   <div class="row">
+     <div class="col-md-12 app-gallery-slides">
+       <section *ngFor="let item of gallery" [class.selected]="item === selectedItem" >
+            <div class="slide" >
+
+              <span class="slide-image-filter" >
+                <img class="slide-image" [ngClass]="getFilterClass(item)" [src]="item.imageThumb" [alt]="item.name">
+              </span>
+
+              <img class="slide-case" src="../../assets/images/gallery/slides/slide3.png">
+              <h3 class="slide-title">{{item.name}}</h3>
+              <!--<h3 class="slide-client">{{item.client}}</h3>-->
+              <span *ngIf="item.techIcon">
+                <i class="slide-icon" [ngClass]="item.techIcon[0].link"></i>
+              </span>
+              <a [routerLink]="'/detail/' + item.id" (mouseover)="setFilterClassOver(item)" (mouseleave)="setFilterClassLeave(item)" class="hitter"></a>
+            </div>
+       </section>
+     </div>
+   </div>
+</div>
+
+<!--
+ [class.slide-mouseover-filter]="isMouseOver === true"-->
+ <!--<img class="slide-image slide-image-filter slide-mouseover-filter"  [src]="item.imageThumb" [alt]="item.name">-->

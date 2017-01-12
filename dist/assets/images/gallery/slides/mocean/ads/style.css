@@ -1,0 +1,463 @@
+
+body, body * {
+  vertical-align: baseline;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+
+  /* Fallback font */
+  font-family: 'Roboto', sans-serif;
+  font-size: 9pt;
+  color: #333;
+}
+
+
+#main-container {
+  position: absolute;
+  width: 300px;
+  height: 250px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #EEE;
+
+}
+
+#exit {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.iphone {
+  top: -45px;
+  left: -120px;
+  width: 135%;
+  height: 135%;
+  position: absolute;
+}
+
+.grey-overlay {
+  background-color: rgba(5,4,2,0.7);
+  top: 88px;
+  left: 116px;
+  width:223px;
+  height: 160px;
+  position: absolute;
+  background-size: contain;
+}
+
+
+.photo-story {
+  top: 80px;
+  left: 100px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#photo-story-quote-0{
+  top: 75px;
+  left: 55px;
+  width: 100%;
+  height: 100%;
+  font-size: 190%;
+  opacity: 0;
+  color: rgb(56,56,56);
+  text-align: left;
+  position: absolute;
+}
+
+#fanfold-holder{
+  left: 60px;
+  width: 278px;
+  height: 250px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.fanfold {
+  top: 86px;
+  left: 344px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#fanfold-pages{
+  position: absolute;
+  top: 0px;
+  left: -161px;
+  width: 100%;
+  height: 100%;
+}
+
+#fanfold-controls {
+  position: absolute;
+  top: 2px;
+  left: -66px;
+  width: 278px;
+  height: 159px;
+  background-color: #C7BFB4;
+  background-image: url(imgs/controls.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: 100% 0%;
+}
+
+.fanfold-quote{
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  /*opacity: 0;*/
+  color: rgb(56,56,56);
+  text-align: center;
+  position: absolute;
+}
+
+#fanfold-quote-0{
+  top: 65px;
+  left: 191px;
+}
+
+#fanfold-quote-1{
+  top: 65px;
+  left: 477px;
+}
+
+#fanfold-pages-bg {
+  position: absolute;
+  top: 26px;
+  left: 0px;
+  width: 760px;
+  height: 100%;
+  background-image: url(imgs/page.png);
+  background-repeat: repeat-x;
+}
+#fanfold-page-img-0
+{
+  position: absolute;
+  top: 37px;
+  left: 104px;
+  width: 63%;
+  height: 63%;
+  background-image: url(imgs/photo1.png);
+  background-repeat: no-repeat;
+  clip: rect(0px,80px,108px,0px);
+  background-size: contain;
+  background-position: 0px -50px;
+}
+
+#fanfold-page-img-1
+{
+  position: absolute;
+  top: 37px;
+  left: 198px;
+  width: 64%;
+  height: 64%;
+  background-image: url(imgs/photo3.png);
+  background-repeat: no-repeat;
+  clip: rect(0px,80px,108px,0px);
+  background-size: contain;
+  background-position: -80px 0px;
+}
+
+#fanfold-drop-img-0
+{
+  position: absolute;
+  top: -190px;
+  left: 198px;
+  width: 66%;
+  height: 66%;
+  background-image: url(imgs/photo1.png);
+  background-repeat: no-repeat;
+  clip: rect(0px,80px,108px,0px);
+  background-size: contain;
+  background-position: -5px -55px;
+}
+
+#fanfold-drop-img-1
+{
+  position: absolute;
+  top: -190px;
+  left: 290px;
+  width: 43%;
+  height: 43%;
+  background-image: url(imgs/photo1.png);
+  background-repeat: no-repeat;
+  clip: rect(0px,80px,108px,0px);
+  background-size: contain;
+  background-position: 0px 0px;
+}
+
+#fanfold-drop-img-2
+{
+  position: absolute;
+  top: -187px;
+  left: 390px;
+  width: 31%;
+  height: 31%;
+  background-image: url(imgs/photo3.png);
+  background-repeat: no-repeat;
+  clip: rect(0px,80px,52px,0px);
+  background-size: contain;
+  background-position: 0px 0px;
+}
+
+#fanfold-drop-img-3
+{
+  position: absolute;
+  top: -143px;
+  left: 390px;
+  width: 31%;
+  height: 31%;
+  background-image: url(imgs/photo2.png);
+  background-repeat: no-repeat;
+  clip: rect(0px,80px,52px,0px);
+  background-size: contain;
+  background-position: 0px 0px;
+}
+
+.quotes{
+  top: 130px;
+  left: 30px;
+  width: 100%;
+  height: 100%;
+  font-size: 175%;
+  opacity: 0;
+  color: white;
+  text-align: center;
+  position: absolute;
+}
+
+.end-quote{
+  top: 175px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  font-size: 175%;
+  opacity: 0;
+  color: rgb(56,56,56);
+  text-align: center;
+  position: absolute;
+}
+
+
+#iphone-img-0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(imgs/iphone.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+#texture-bg-img-0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(imgs/texture.png);
+  background-repeat: repeat;
+}
+
+#thumb-img-0 {
+  position: absolute;
+  top: 59px;
+  left: -48px;
+  width: 50%;
+  height: 50%;
+  background-image: url(imgs/thumb.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+#end-img-0 {
+  position: absolute;
+  top: 50px;
+  left: 105px;
+  width: 70%;
+  height: 70%;
+  opacity: 0;
+  background-image: url(imgs/logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+#photo-story-img-0
+{
+  position: absolute;
+  width: 35%;
+  height: 35%;
+  background-image: url(imgs/photo1.png);
+  background-repeat: no-repeat;
+  clip: rect(08px,55px,55px,0px);
+  background-size: contain;
+  background-position: -15px -50px;
+}
+
+#photo-story-img-1
+{
+  position: absolute;
+
+  left: 60px;
+  width: 35%;
+  height: 35%;
+  background-image: url(imgs/photo1.png);
+  background-repeat: no-repeat;
+  clip: rect(08px,55px,55px,0px);
+  background-size: contain;
+  background-position: 0px -40px;
+}
+
+#photo-story-img-2
+{
+  position: absolute;
+  left: 120px;
+  width: 50%;
+  height: 50%;
+  background-image: url(imgs/photo1.png);
+  background-repeat: no-repeat;
+  clip: rect(08px,55px,55px,0px);
+  background-size: contain;
+  background-position: 0px 0px;
+}
+
+#photo-story-img-3
+{
+  position: absolute;
+  left: 180px;
+  width: 25%;
+  height: 25%;
+  background-image: url(imgs/photo1.png);
+  background-repeat: no-repeat;
+  clip: rect(08px,55px,55px,0px);
+  background-size: contain;
+  background-position: 0px -19px;
+}
+
+#photo-story-img-4
+{
+  position: absolute;
+  top: 60px;
+  width: 45%;
+  height: 45%;
+  background-image: url(imgs/photo1.png);
+  background-repeat: no-repeat;
+  clip: rect(0px,55px,55px,0px);
+  background-size: contain;
+  background-position: 0px -55px;
+}
+
+#photo-story-img-5
+{
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  width: 25%;
+  height: 25%;
+  background-image: url(imgs/photo1.png);
+  background-repeat: no-repeat;
+  clip: rect(0px,55px,55px,0px);
+  background-size: contain;
+  background-position: -3px -3px;
+}
+
+#photo-story-img-6
+{
+  position: absolute;
+  top: 60px;
+  left: 120px;
+  width: 25%;
+  height: 25%;
+  background-image: url(imgs/photo3.png);
+  background-repeat: no-repeat;
+  clip: rect(0px,55px,55px,0px);
+  background-size: contain;
+  background-position: -20px 0px;
+}
+
+#photo-story-img-7
+{
+  position: absolute;
+  top: 60px;
+  left: 180px;
+  width: 25%;
+  height: 25%;
+  background-image: url(imgs/photo2.png);
+  background-repeat: no-repeat;
+  clip: rect(0px,55px,55px,0px);
+  background-size: contain;
+  background-position: -18px -6px;
+}
+
+#photo-story-img-8
+{
+  position: absolute;
+  top: 120px;
+  width: 25%;
+  height: 25%;
+  background-image: url(imgs/photo3.png);
+  background-repeat: no-repeat;
+  clip: rect(0px,55px,47px,0px);
+  background-size: contain;
+  background-position: -40px 0px;
+}
+
+#photo-story-img-9
+{
+  position: absolute;
+  top: 120px;
+  left: 60px;
+  width: 25%;
+  height: 25%;
+  background-image: url(imgs/photo3.png);
+  background-repeat: no-repeat;
+  clip: rect(0px,55px,47px,0px);
+  background-size: contain;
+  background-position: -20px 0px;
+}
+
+#photo-story-img-10
+{
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  width: 20%;
+  height: 20%;
+  background-image: url(imgs/photo2.png);
+  background-repeat: no-repeat;
+  clip: rect(0px,55px,47px,0px);
+  background-size: contain;
+  background-position: -3px 0px;
+}
+
+#photo-story-img-11
+{
+  position: absolute;
+  top: 120px;
+  left: 180px;
+  width: 30%;
+  height: 30%;
+  background-image: url(imgs/photo2.png);
+  background-repeat: no-repeat;
+  clip: rect(0px,55px,47px,0px);
+  background-size: contain;
+  background-position: 0px -20px;
+}
+
+
+:focus {
+  outline:none;
+}
+::-moz-focus-inner {
+  border:0;
+}
